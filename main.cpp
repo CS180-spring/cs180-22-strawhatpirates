@@ -1,13 +1,54 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int printMenu();
 int sortMenu();
 
+//add an entry into a JSON file
+int addEntry()
+{
+	string name;
+	string lastName;
+	string major;
+	string year;
+	string gpa;
+	string sid;
+	string data;
+	fstream file;
+	file.open("student1.json", ios::app);
+	cout << "Enter the student's name: ";
+	cin >> name;
+	cout << "Enter the student's last name: ";
+	cin >> lastName;
+	cout << "Enter the student's major: ";
+	cin >> major;
+	cout << "Enter the student's year: ";
+	cin >> year;
+	cout << "Enter the student's GPA: ";
+	cin >> gpa;
+	cout << "Enter the student's SID: ";
+	cin >> sid;
+	file << "{\n";
+	file << "\t\"First Name\": \"" << name << "\",\n";
+	file << "\t\"Last Name\": \"" << lastName << "\",\n";
+	file << "\t\"GPA\": \"" << gpa << "\",\n";
+	file << "\t\"Major\": \"" << major << "\",\n";
+	file << "\t\"SID\": \"" << sid << "\",\n";
+	file << "\t\"Year\": \"" << year << "\"\n";
+	file << "},\n";
+	file.close();
+	return 0;
+}
+
 int main()
 {
 	int a = printMenu();
 	cout << "The menu selection is: " << a << endl;
+	if(a == 1)
+	{
+		addEntry();
+	}
 	return 0;
 }
 
@@ -49,10 +90,6 @@ int printMenu()
 	else if(menuChoice == 5)
 	{
 		return sortMenu();
-	}
-	else
-	{
-		;
 	}
 
 	return printMenu();
