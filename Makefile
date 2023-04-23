@@ -1,5 +1,5 @@
 all:
-	g++ -o main main.cpp
-	./main
+	g++ -o test test.cpp
+	./test
 clean:
-	rm -f main
+	rm -f test
