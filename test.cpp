@@ -57,7 +57,7 @@ void addStudent()
 
     cout << "Enter the name of the file you want to open: ";
     cin >> fileName;
-    fileC.open(fileName);
+    // fileC.open(fileName);
 
     cout << "Enter the student's first name: ";
     cin >> firstName;
@@ -82,10 +82,12 @@ void addStudent()
     {"Year:", year}
     };
 
+    //prints out the json object with 4 spaces
     std::cout << j.dump(4) << std::endl;
-    fileC << j;
-    
-    fileC.close();
+    //writes to file
+    // fileC << j;
+    // //closes file
+    // fileC.close();
 
     ofstream o(fileName);
     o << setw(4) << j << std::endl;
@@ -116,7 +118,7 @@ void searchStudent()
 void createFile()
 {
     cout << "\nYou have chosen to create a new file" << endl;
-    
+
     string fileName;
     ofstream fileC;
     cout << "Enter the name of the file you want to create: ";
@@ -129,14 +131,14 @@ void createFile()
 
 void readFile()
 {
-    // string fileName;
-    // ofstream fileC;
-    // cout << "Enter the name of the file you want to read: ";
-    // cin >> fileName;
-    // ifstream i(fileName);
-    // json j;
-    // i >> j;
-    // cout << j.dump(4) << endl;
+        // string fileName;
+        // ofstream fileC;
+        // cout << "Enter the name of the file you want to read: ";
+        // cin >> fileName;
+        // ifstream i(fileName);
+        // json j;
+        // i >> j;
+        // cout << j.dump(4) << endl;
 
 }
 
