@@ -1,5 +1,5 @@
 all:
-	g++ -o test test.cpp
-	./test
+	g++ -o StudentDB main.cpp
+	./StudentDB
 clean:
-	rm -f test
+	rm -f StudentDB
