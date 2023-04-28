@@ -1,59 +1,42 @@
 #include <iostream>
-using namespace std;
+#include <fstream>
+#include <algorithm>
+#include <limits>
+#include "json.hpp"
+#include "createfile.h"
+#include "menu.h"
+#include "addstudent.h"
+#include "deletestudent.h"
+#include "editstudent.h"
+#include "sortstudent.h"
+#include "searchstudent.h"
+#include "readfile.h"
 
-int printMenu();
-int sortMenu();
+using namespace nlohmann;
+using namespace std;
 
 int main()
 {
-	int a = printMenu();
-	cout << "The menu selection is: " << a << endl;
-	return 0;
-}
+    do {
+        int a = menu();
 
-int sortMenu()
-{
-	int menuChoice;
-	cout << "6 - Sort by GPA (Ascending order): \n";
-	cout << "7 - Sort by GPA (Descending order): \n";
-	cout << "8 - Sort by Year Number (Ascending order): \n";
-	cout << "9 - Sort by Year Number (Descending order): \n";
-	cout << "10 - Sort by SID: \n";
-	cout << "11 - Sort by Major: \n";
-	cout << "12 - Sort by FIrst Name: \n";
-	cout << "13 - Sort by Last Name: \n";
-	cin >> menuChoice;
+        if (a == 1)
+            addStudent();
+        else if (a == 2)
+            deleteStudent();
+        else if (a == 3)
+            editStudent();
+        else if (a == 4)
+            sortStudent();
+        else if (a == 5)
+            searchStudent();
+        else if (a == 6)
+            createFile();
+        else if (a == 7)
+            readFile();
+        else if (a == 8)
+            exit(0);
+    } while (true);
 
-	if(menuChoice >= 6 && menuChoice <= 13)
-	{
-		return menuChoice;
-	}
-	return sortMenu();
-}
-
-int printMenu()
-{
-	int menuChoice;
-
-	cout << "1 - Add a student: \n";
-	cout << "2 - Print student details: \n";
-	cout << "3 - Update a students info: \n";
-	cout << "4 - Remove a student: \n";
-	cout << "5 - Sort student database: \n";
-	cin >> menuChoice;
-
-	if(menuChoice >= 1 && menuChoice <= 4)
-	{
-		return menuChoice;
-	}
-	else if(menuChoice == 5)
-	{
-		return sortMenu();
-	}
-	else
-	{
-		;
-	}
-
-	return printMenu();
+    return 0;
 }
