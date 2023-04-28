@@ -3,14 +3,14 @@
 #include <algorithm>
 #include <limits>
 #include "json.hpp"
-#include "createfile.h"
+#include "header/createfile.h"
 #include "menu.h"
-#include "addstudent.h"
-#include "deletestudent.h"
-#include "editstudent.h"
-#include "sortstudent.h"
-#include "searchstudent.h"
-#include "readfile.h"
+#include "header/addstudent.h"
+#include "header/deletestudent.h"
+#include "header/editstudent.h"
+#include "header/sortstudent.h"
+#include "header/searchstudent.h"
+#include "header/readfile.h"
 
 using namespace nlohmann;
 using namespace std;

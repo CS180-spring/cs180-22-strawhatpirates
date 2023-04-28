@@ -1,4 +1,4 @@
-#include "Student.h"
+#include "../header/Student.h"
 #include "iostream"
 
 using namespace std;
