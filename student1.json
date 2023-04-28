@@ -1,11 +1,14 @@
+[
+
 {
 	"First_Name" : "Cole",
 	"Last_Name" : "Colton",
 	"GPA" : 5.0,
 	"Major" : "Gender_Studies",
-	"SID" : 1,
+	"SID" : "1",
 	"Year_Number" : 3
 },
+
 {
 	"First Name": "Saul",
 	"Last Name": "Mendoza",
@@ -14,6 +17,7 @@
 	"SID": "1234567",
 	"Year": "4"
 },
+
 {
 	"First Name": "Minh",
 	"Last Name": "Ho",
@@ -22,6 +26,7 @@
 	"SID": "12345",
 	"Year": "5"
 },
+
 {
 	"First Name": "Tyler",
 	"Last Name": "tyler",
@@ -29,4 +34,6 @@
 	"Major": "CS",
 	"SID": "128573",
 	"Year": "4"
-},
+}
+
+]
