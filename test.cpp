@@ -2,7 +2,8 @@
 #include <fstream>
 #include <algorithm>
 #include <limits>
-#include "json-develop/single_include/nlohmann/json.hpp"
+#include "json.hpp"
+#include "createfile.h"
 
 using namespace nlohmann;
 using namespace std;
@@ -32,8 +33,6 @@ int menu()
         }
         else if (menuChoice < 1 || menuChoice > 8)
                 cout << "\nInvalid selection" << endl;
-        
-
     }while(menuChoice < 1 || menuChoice > 8);
 
     return menuChoice;
@@ -84,10 +83,6 @@ void addStudent()
 
     //prints out the json object with 4 spaces
     std::cout << j.dump(4) << std::endl;
-    //writes to file
-    // fileC << j;
-    // //closes file
-    // fileC.close();
 
     ofstream o(fileName);
     o << setw(4) << j << std::endl;
@@ -115,19 +110,7 @@ void searchStudent()
     cout << "\nYou have chosen to search for a student" << endl;
 }
 
-void createFile()
-{
-    cout << "\nYou have chosen to create a new file" << endl;
 
-    string fileName;
-    ofstream fileC;
-    cout << "Enter the name of the file you want to create: ";
-    cin >> fileName;
-    fileName += ".json";
-    fileC.open(fileName);
-    fileC.close();
-
-}
 
 void readFile()
 {
