@@ -11,6 +11,7 @@
 #include "header/sortstudent.h"
 #include "header/searchstudent.h"
 #include "header/readfile.h"
+#include "lib/Student.cpp"
 
 using namespace nlohmann;
 using namespace std;
@@ -23,7 +24,8 @@ int main()
         if (a == 1)
             addStudent();
         else if (a == 2)
-            deleteStudent();
+            continue;
+            //deleteStudent();
         else if (a == 3)
             editStudent();
         else if (a == 4)
@@ -32,8 +34,13 @@ int main()
             searchStudent();
         else if (a == 6)
             createFile();
-        else if (a == 7)
-            readFile();
+        else if (a == 7) {
+            vector<string> data = readFile();
+            for (int i = 0; i < data.size(); ++i) {
+                cout << data.at(i) << endl;
+            }
+            //add info in vector to student object
+        }
         else if (a == 8)
             exit(0);
     } while (true);

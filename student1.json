@@ -1,39 +1,35 @@
-[
-
 {
-	"First_Name" : "Cole",
-	"Last_Name" : "Colton",
-	"GPA" : 5.0,
-	"Major" : "Gender_Studies",
-	"SID" : "1",
-	"Year_Number" : 3
-},
-
-{
-	"First Name": "Saul",
-	"Last Name": "Mendoza",
-	"GPA": "6.0",
-	"Major": "CEN",
-	"SID": "1234567",
-	"Year": "4"
-},
-
-{
-	"First Name": "Minh",
-	"Last Name": "Ho",
-	"GPA": "12",
-	"Major": "CS",
-	"SID": "12345",
-	"Year": "5"
-},
-
-{
-	"First Name": "Tyler",
-	"Last Name": "tyler",
-	"GPA": "19",
-	"Major": "CS",
-	"SID": "128573",
-	"Year": "4"
-}
-
-]
+	"students": [
+	{
+		"First Name" : "Cole",
+		"Last Name" : "Colton",
+		"GPA" : "5.0",
+		"Major" : "Gender_Studies",
+		"SID" : "1",
+		"Year" : "3"
+	},
+	{
+		"First Name": "Saul",
+		"Last Name": "Mendoza",
+		"GPA": "6.0",
+		"Major": "CEN",
+		"SID": "1234567",
+		"Year": "4"
+	},
+	{
+		"First Name": "Minh",
+		"Last Name": "Ho",
+		"GPA": "12",
+		"Major": "CS",
+		"SID": "12345",
+		"Year": "5"
+	},
+	{
+		"First Name": "Tyler",
+		"Last Name": "tyler",
+		"GPA": "19",
+		"Major": "CS",
+		"SID": "128573",
+		"Year": "4"
+	}
+]}
