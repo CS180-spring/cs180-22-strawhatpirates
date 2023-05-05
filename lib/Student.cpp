@@ -19,10 +19,6 @@ Student::Student(string name, string GPA, string SID, string yearNumber, string 
     this->major = major;
 }   
 
-string Student::getName() {
-    return name;
-}
-
 string Student::getGPA() {
     return GPA;
 }
@@ -37,10 +33,6 @@ string Student::getYearNumber() {
 
 string Student::getMajor() {
     return major;
-}
-
-void Student::changeName(string name) {
-    this->name = name;
 }
 
 void Student::changeGPA(string GPA) {

@@ -5,7 +5,7 @@
 #include "json.hpp"
 #include "header/createfile.h"
 #include "menu.h"
-#include "header/addstudent.h"
+#include "header/addStudent.h"
 #include "header/deletestudent.h"
 #include "header/editstudent.h"
 #include "header/sortstudent.h"
