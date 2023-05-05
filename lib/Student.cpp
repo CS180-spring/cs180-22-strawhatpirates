@@ -5,13 +5,13 @@ using namespace std;
 
 Student::Student() {
     name = "";
-    GPA = 0.0;
-    SID = 0;
-    yearNumber = 0;
+    GPA = "";
+    SID = "";
+    yearNumber = "";
     major = "";
 }
 
-Student::Student(string name, double GPA, int SID, int yearNumber, string major) {
+Student::Student(string name, string GPA, string SID, string yearNumber, string major) {
     this->name = name;
     this->GPA = GPA;
     this->SID = SID;
@@ -23,15 +23,15 @@ string Student::getName() {
     return name;
 }
 
-double Student::getGPA() {
+string Student::getGPA() {
     return GPA;
 }
 
-int Student::getSID() {
+string Student::getSID() {
     return SID;
 }
 
-int Student::getYearNumber() {
+string Student::getYearNumber() {
     return yearNumber;
 }
 
@@ -43,15 +43,15 @@ void Student::changeName(string name) {
     this->name = name;
 }
 
-void Student::changeGPA(double GPA) {
+void Student::changeGPA(string GPA) {
     this->GPA = GPA;
 }
 
-void Student::changeSID(int SID) {
+void Student::changeSID(string SID) {
     this->SID = SID;
 }
 
-void Student::changeYearNumber(int yearNumber) {
+void Student::changeYearNumber(string yearNumber) {
     this->yearNumber = yearNumber;
 }
 
@@ -59,7 +59,7 @@ void Student::changeMajor(string major) {
     this->major = major;
 }
 
-void Student::changeInfo(string name, double GPA, int SID, int yearNumber, string major) {
+void Student::changeInfo(string name, string GPA, string SID, string yearNumber, string major) {
     changeName(name);
     changeGPA(GPA);
     changeYearNumber(yearNumber);
