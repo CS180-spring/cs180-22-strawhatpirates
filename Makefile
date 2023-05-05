@@ -162,6 +162,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named googletest
+
+# Build rule for target.
+googletest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 googletest
+.PHONY : googletest
+
+# fast build rule for target.
+googletest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/googletest.dir/build.make CMakeFiles/googletest.dir/build
+.PHONY : googletest/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -334,6 +347,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... googletest"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
