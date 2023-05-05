@@ -1,20 +1,21 @@
 #include "iostream"
+#include "Person.h"
 
 using namespace std;
 
-class Student {
+class Student : public Person {
 public: 
 
     Student();
     Student(string name, double GPA, int SID, int yearNumber, string major);
 
-    string getName();
+    // string getName();
     double getGPA();
     int getSID();
     int getYearNumber();
     string getMajor();
 
-    void changeName(string name);
+    // void changeName(string name);
     void changeGPA(double GPA);
     void changeSID(int SID);
     void changeYearNumber(int yearNumber);
@@ -24,7 +25,7 @@ public:
     string getStudentInfo();
 
 private:
-    string name;
+    // string name;
     double GPA;
     int SID;
     int yearNumber;

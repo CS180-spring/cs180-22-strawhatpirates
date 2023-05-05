@@ -12,16 +12,16 @@ Student::Student() {
 }
 
 Student::Student(string name, double GPA, int SID, int yearNumber, string major) {
-    this->name = name;
+    changeName(name);
     this->GPA = GPA;
     this->SID = SID;
     this->yearNumber = yearNumber;
     this->major = major;
 }   
 
-string Student::getName() {
-    return name;
-}
+// string Student::getName() {
+//     return name;
+// }
 
 double Student::getGPA() {
     return GPA;
@@ -39,9 +39,9 @@ string Student::getMajor() {
     return major;
 }
 
-void Student::changeName(string name) {
-    this->name = name;
-}
+// void Student::changeName(string name) {
+//     this->name = name;
+// }
 
 void Student::changeGPA(double GPA) {
     this->GPA = GPA;

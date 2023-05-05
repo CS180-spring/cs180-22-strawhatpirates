@@ -1,4 +1,5 @@
 #include "../header/Student.h"
+#include "../header/Professor.h"
 
 #include "gtest/gtest.h"
 #include <iostream>
@@ -38,4 +39,30 @@ TEST(studentTest, getMajor) {
     string expected = "CS";
 
     EXPECT_EQ(student->getMajor(), expected);
+}
+
+TEST(professorTest, getName) {
+    Professor *professor = new Professor("John Dwill", "Computer Science & Engineer", "Tenure-Track");
+    string expected = "John Dwill";
+
+    EXPECT_EQ(professor->getName(), expected);
+}
+
+TEST(professorTest, getDepartment) {
+    Professor *professor = new Professor("John Dwill", "Computer Science & Engineer", "Tenure-Track");
+    string expected = "Computer Science & Engineer";
+
+    EXPECT_EQ(professor->getDepartment(), expected);
+}
+
+TEST(professorTest, getRank) {
+    Professor *professor = new Professor("John Dwill", "Computer Science & Engineer", "Tenure-Track");
+    string expected = "Tenure-Track";
+
+    EXPECT_EQ(professor->getRank(), expected);
+}
+
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
