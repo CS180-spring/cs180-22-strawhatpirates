@@ -9,14 +9,12 @@ int menu()
 
     do{
         cout << "\nWelcome to the UCR Student Database" << endl;
-        cout << "1. Add a student" << endl;
-        cout << "2. Delete a student" << endl;
-        cout << "3. Edit a student" << endl;
-        cout << "4. Sort students" << endl;
-        cout << "5. Search for a student" << endl;
-        cout << "6. Create a new file" << endl;
-        cout << "7. Read a file" << endl;
-        cout << "8. Exit" << endl;
+        cout << "1. Add a person" << endl;
+        cout << "2. Delete a person" << endl;
+        cout << "3. Edit a person" << endl;
+        cout << "4. Sort persons" << endl;
+        cout << "5. Search for a person" << endl;
+        cout << "6. Switch mode (Default mode is student)"
         cout << "Enter your selection: ";
 
         cin >> menuChoice;
