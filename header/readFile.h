@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Student.h"
 
 using namespace std;
 
@@ -7,6 +8,7 @@ vector<string> readFile()
         string fileName;
         ofstream fileC;
         vector<string> info;
+        // vector<Student> stu;
         // cout << "Enter the name of the file you want to read: ";
         // cin >> fileName;
         ifstream fin("student1.json");
@@ -14,7 +16,12 @@ vector<string> readFile()
 
 
         for (int i = 0; i < 4; ++i) {
-                
+                // stu.push_back(new Student("ye",
+                // data["students"][i].value("GPA", "not found"),
+                // data["students"][i].value("Major", "not found"),
+                // data["students"][i].value("SID", "not found"),
+                // data["students"][i].value("Year", "not found")));
+
                 info.push_back(data["students"][i].value("First Name", "not found") + " " + data["students"][i].value("Last Name", "not found"));
                 info.push_back(data["students"][i].value("GPA", "not found"));
                 info.push_back(data["students"][i].value("Major", "not found"));
@@ -30,5 +37,6 @@ vector<string> readFile()
                 // cout << endl;
         }
 
+        // return stu;
         return info;
 }

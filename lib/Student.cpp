@@ -53,11 +53,14 @@ void Student::changeMajor(string major) {
 
 void Student::changeInfo(string name, string GPA, string SID, string yearNumber, string major) {
     changeName(name);
+    // this->name = name;
     changeGPA(GPA);
     changeYearNumber(yearNumber);
     changeMajor(major);
 }
 
 string Student::getStudentInfo() {
+    // return "Name: " << name << "\n"
+    //     << "GPA: " << gpa << "\n";
     return "despair";
 }

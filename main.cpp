@@ -2,16 +2,16 @@
 #include <fstream>
 #include <algorithm>
 #include <limits>
-#include "json.hpp"
-#include "header/createfile.h"
+#include "lib/json.hpp"
+#include "header/createFile.h"
 #include "menu.h"
 #include "header/addStudent.h"
-#include "header/deletestudent.h"
-#include "header/editstudent.h"
-#include "header/sortstudent.h"
-#include "header/searchstudent.h"
-#include "header/readfile.h"
-#include "lib/Student.cpp"
+#include "header/deleteStudent.h"
+#include "header/editStudent.h"
+#include "header/sortStudent.h"
+#include "header/searchStudent.h"
+#include "header/readFile.h"
+// #include "lib/Student.cpp"
 
 using namespace nlohmann;
 using namespace std;
@@ -35,10 +35,15 @@ int main()
         else if (a == 6)
             createFile();
         else if (a == 7) {
+			// vector<Student> student = readFile();
             vector<string> data = readFile();
             for (int i = 0; i < data.size(); ++i) {
                 cout << data.at(i) << endl;
             }
+
+			// for(int i = 0; i < student.size(); i++) {
+			// 	cout << student[i] << endl;
+			// }
             //add info in vector to student object
         }
         else if (a == 8)
