@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dieyes/Documents/GitHub/cs180-22-strawhatpirates
+CMAKE_SOURCE_DIR = "/Users/dieyes/Documents/CS180 PROJECT/cs180-22-strawhatpirates"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dieyes/Documents/GitHub/cs180-22-strawhatpirates
+CMAKE_BINARY_DIR = "/Users/dieyes/Documents/CS180 PROJECT/cs180-22-strawhatpirates"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dieyes/Documents/GitHub/cs180-22-strawhatpirates/CMakeFiles /Users/dieyes/Documents/GitHub/cs180-22-strawhatpirates//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/dieyes/Documents/CS180 PROJECT/cs180-22-strawhatpirates/CMakeFiles" "/Users/dieyes/Documents/CS180 PROJECT/cs180-22-strawhatpirates//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dieyes/Documents/GitHub/cs180-22-strawhatpirates/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/dieyes/Documents/CS180 PROJECT/cs180-22-strawhatpirates/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -160,19 +160,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named googletest
-
-# Build rule for target.
-googletest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 googletest
-.PHONY : googletest
-
-# fast build rule for target.
-googletest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/googletest.dir/build.make CMakeFiles/googletest.dir/build
-.PHONY : googletest/fast
 
 #=============================================================================
 # Target rules for targets named test
@@ -347,7 +334,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... googletest"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"

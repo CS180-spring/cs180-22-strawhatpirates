@@ -3,7 +3,17 @@ CMakeFiles/
 CMakeLists.txt
 Makefile
 cmake_install.cmake
-# lib/
+
+bin/
+
 gtest/gtest.h
 gtest/gtest-all.cc
-# test
+_deps/
+
+test
+a.out
+
+lib/libgmock_main.a
+lib/libgmock.a
+lib/libgtest_main.a
+lib/libgtest.a
