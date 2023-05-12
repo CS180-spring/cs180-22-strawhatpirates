@@ -3,7 +3,22 @@ CMakeFiles/
 CMakeLists.txt
 Makefile
 cmake_install.cmake
-# lib/
+
+bin/
+
+googletest-build/
+googletest-prefix/
+googletest-src/
 gtest/gtest.h
 gtest/gtest-all.cc
+_deps/
+.github/
+.vscode/
+
 # test
+a.out
+
+lib/libgmock_main.a
+lib/libgmock.a
+lib/libgtest_main.a
+lib/libgtest.a
