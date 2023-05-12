@@ -1,9 +1,11 @@
 CMakeCache.txt
 CMakeFiles/
-CMakeLists.txt
+# CMakeLists.txt
 Makefile
 cmake_install.cmake
+
 gtest/gtest.h
 gtest/gtest-all.cc
+
 main
 test
