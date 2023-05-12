@@ -6,14 +6,23 @@ cmake_install.cmake
 
 bin/
 
+googletest-build/
+googletest-prefix/
+googletest-src/
 gtest/gtest.h
 gtest/gtest-all.cc
 _deps/
+.github/
+.vscode/
 
-test
+# test
 a.out
 
 lib/libgmock_main.a
 lib/libgmock.a
 lib/libgtest_main.a
 lib/libgtest.a
+gtest/gtest.h
+gtest/gtest-all.cc
+# main
+# test
