@@ -1,18 +1,21 @@
 #include "../header/Student.h"
 #include "iostream"
+#include <string>
 
 using namespace std;
 
 Student::Student() {
-    name = "";
+    firstName = "";
+    lastName = "";
     GPA = "";
     SID = "";
     yearNumber = "";
     major = "";
 }
 
-Student::Student(string name, string GPA, string SID, string yearNumber, string major) {
-    this->name = name;
+Student::Student(string firstName, string lastName, string GPA, string SID, string yearNumber, string major) {
+    this->firstName = firstName;
+    this->lastName = lastName;
     this->GPA = GPA;
     this->SID = SID;
     this->yearNumber = yearNumber;
@@ -52,15 +55,18 @@ void Student::changeMajor(string major) {
 }
 
 void Student::changeInfo(string name, string GPA, string SID, string yearNumber, string major) {
-    changeName(name);
-    // this->name = name;
+    changeName(firstName, lastName);
     changeGPA(GPA);
     changeYearNumber(yearNumber);
     changeMajor(major);
 }
 
 string Student::getStudentInfo() {
-    // return "Name: " << name << "\n"
-    //     << "GPA: " << gpa << "\n";
-    return "despair";
+    string out = "Name: " + this->firstName + " " + this->lastName + "\n"
+        + "GPA: " + GPA + "\n"
+        + "Major: " + major + "\n"
+        + "SID: " + SID + "\n"
+        + "Year: " + yearNumber;
+    return out;
+    // return "despair";
 }

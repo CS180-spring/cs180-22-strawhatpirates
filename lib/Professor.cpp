@@ -4,13 +4,15 @@
 using namespace std;
 
 Professor::Professor() {
-    name = "";
+    firstName = "";
+    lastName = "";
     department = "";
     rank = "";
 }
 
-Professor::Professor(string name, string department, string rank) {
-    this->name = name;
+Professor::Professor(string firstName, string lastName, string department, string rank) {
+    this->firstName = firstName;
+    this->lastName = lastName;
     this->department = department;
     this->rank = rank;
 }   
@@ -31,8 +33,8 @@ void Professor::changeRank(string rank) {
     this->rank = rank;
 }
 
-void Professor::changeInfo(string name, string department, string rank) {
-    changeName(name);
+void Professor::changeInfo(string firstName, string lastName, string department, string rank) {
+    changeName(firstName, lastName);
     changeDepartment(department);
     changeRank(rank);
 }

@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
+# project(project-thing)
+# ADD_SUBDIRECTORY(googletest)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
 
 # GoogleTest requires at least C++14
 set(CMAKE_CXX_STANDARD 14)
@@ -12,7 +16,6 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-
 ADD_EXECUTABLE(test
     lib/Person.cpp
     lib/Professor.cpp
@@ -20,8 +23,8 @@ ADD_EXECUTABLE(test
     lib/test.cpp
 )
 
-ADD_EXECUTABLE(main
-    main.cpp
+ADD_EXECUTABLE(run
+  main.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)

@@ -7,12 +7,12 @@ class Professor : public Person {
 public: 
 
     Professor();
-    Professor(string name, string department, string rank);
+    Professor(string firstName, string lastName, string department, string rank);
 
     string getDepartment();
     string getRank();
 
-    void changeInfo(string name, string department, string rank);
+    void changeInfo(string firstName, string lastName, string department, string rank);
     void changeDepartment(string department);
     void changeRank(string rank);
 
