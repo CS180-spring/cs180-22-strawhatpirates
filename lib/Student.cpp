@@ -52,8 +52,8 @@ void Student::changeMajor(string major) {
 }
 
 void Student::changeInfo(string name, string GPA, string SID, string yearNumber, string major) {
-    changeName(name);
-    // this->name = name;
+    // changeName(name);
+    this->name = name;
     changeGPA(GPA);
     changeYearNumber(yearNumber);
     changeMajor(major);
