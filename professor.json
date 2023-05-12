@@ -4,5 +4,11 @@
 	    "Last_Name" : "Chungus",
 	    "Department": "Mathematics",
 	    "Rank" : "Researcher"
+    },
+    {
+        "First_Name" : "Morty",
+        "Last_Name" : "Chungus",
+        "Department": "Mathematics",
+        "Rank" : "Researcher"
     }
 ]
