@@ -1,12 +1,18 @@
 #include "../header/Person.h"
-#include "iostream"
+#include <iostream>
 
 using namespace std;
 
-string Person::getName() {
-    return name;
+string Person::getFirstName() {
+    return first_Name;
 }
 
-void Person::changeName(string name) {
-    this->name = name;
+string Person::getLastName()
+{
+    return last_Name
+}
+
+void Person::changeName(string first_Name, string last_Name) {
+    this->first_Name = first_Name;
+    this->last_Name = last_Name;
 }

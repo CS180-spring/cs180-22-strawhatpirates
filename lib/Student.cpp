@@ -4,15 +4,17 @@
 using namespace std;
 
 Student::Student() {
-    name = "";
+    first_Name = "";
+    last_Name = "";
     GPA = "";
     SID = "";
     yearNumber = "";
     major = "";
 }
 
-Student::Student(string name, string GPA, string SID, string yearNumber, string major) {
-    this->name = name;
+Student::Student(string first_Name, string last_Name, string GPA, string SID, string yearNumber, string major) {
+    this->first_Name = first_Name;
+    this->last_Name = last_Name;
     this->GPA = GPA;
     this->SID = SID;
     this->yearNumber = yearNumber;
@@ -51,7 +53,7 @@ void Student::changeMajor(string major) {
     this->major = major;
 }
 
-void Student::changeInfo(string name, string GPA, string SID, string yearNumber, string major) {
+void Student::changeInfo(string first_Name, string last_Name, string GPA, string SID, string yearNumber, string major) {
     changeName(name);
     changeGPA(GPA);
     changeYearNumber(yearNumber);

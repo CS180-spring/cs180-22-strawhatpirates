@@ -1,21 +1,23 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include "iostream"
+#include <iostream>
 
 using namespace std;
 
 class Person {
 public:
 
-    string getName();
+    string getFirstName();
+    string getLastName();
 
-    void changeName(string name);
+    void changeName(string first_Name, string last_Name);
 
     // string getInfo();
 
 protected:
-    string name;
+    string first_Name;
+    string last_Name;
 
 };
 
