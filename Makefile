@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dieyes/Documents/GitHub/cs180-22-strawhatpirates
+CMAKE_SOURCE_DIR = "/Users/dieyes/Documents/CS180 PROJECT/cs180-22-strawhatpirates"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dieyes/Documents/GitHub/cs180-22-strawhatpirates
+CMAKE_BINARY_DIR = "/Users/dieyes/Documents/CS180 PROJECT/cs180-22-strawhatpirates"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dieyes/Documents/GitHub/cs180-22-strawhatpirates/CMakeFiles /Users/dieyes/Documents/GitHub/cs180-22-strawhatpirates//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/dieyes/Documents/CS180 PROJECT/cs180-22-strawhatpirates/CMakeFiles" "/Users/dieyes/Documents/CS180 PROJECT/cs180-22-strawhatpirates//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dieyes/Documents/GitHub/cs180-22-strawhatpirates/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/dieyes/Documents/CS180 PROJECT/cs180-22-strawhatpirates/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -173,19 +173,6 @@ test: cmake_check_build_system
 test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
-
-#=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -335,30 +322,6 @@ lib/test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/lib/test.cpp.s
 .PHONY : lib/test.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -375,7 +338,6 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... main"
 	@echo "... test"
 	@echo "... lib/Person.o"
 	@echo "... lib/Person.i"
@@ -389,9 +351,6 @@ help:
 	@echo "... lib/test.o"
 	@echo "... lib/test.i"
 	@echo "... lib/test.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 
