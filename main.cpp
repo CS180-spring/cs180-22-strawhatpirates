@@ -2,15 +2,15 @@
 #include <fstream>
 #include <algorithm>
 #include <limits>
-#include "json.hpp"
-#include "header/createfile.h"
-#include "menu.h"
+#include "lib/json.hpp"
+#include "header/createFile.h"
+#include "header/menu.h"
 #include "header/addStudent.h"
-#include "header/deletestudent.h"
-#include "header/editstudent.h"
-#include "header/sortstudent.h"
-#include "header/searchstudent.h"
-#include "header/readfile.h"
+#include "header/deleteStudent.h"
+#include "header/editStudent.h"
+#include "header/sortStudent.h"
+#include "header/searchStudent.h"
+#include "header/readFile.h"
 #include "lib/Student.cpp"
 
 using namespace nlohmann;
