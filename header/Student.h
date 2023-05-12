@@ -12,13 +12,13 @@ public:
     Student();
     Student(string name, string GPA, string SID, string yearNumber, string major);
 
-    // string getName();
+    string getName();
     string getGPA();
     string getSID();
     string getYearNumber();
     string getMajor();
 
-    // void changeName(string name);
+    void changeName(string name);
     void changeGPA(string GPA);
     void changeSID(string SID);
     void changeYearNumber(string yearNumber);

@@ -1,5 +1,6 @@
 #include "../header/Student.h"
 #include "iostream"
+#include <string>
 
 using namespace std;
 
@@ -18,6 +19,14 @@ Student::Student(string name, string GPA, string SID, string yearNumber, string 
     this->yearNumber = yearNumber;
     this->major = major;
 }   
+
+string Student::getName() {
+    return name;
+}
+
+void Student::changeName(string name) {
+    this->name = name;
+}
 
 string Student::getGPA() {
     return GPA;
@@ -60,7 +69,11 @@ void Student::changeInfo(string name, string GPA, string SID, string yearNumber,
 }
 
 string Student::getStudentInfo() {
-    // return "Name: " << name << "\n"
-    //     << "GPA: " << gpa << "\n";
-    return "despair";
+    string out = "Name: " + this->name + "\n"
+        + "GPA: " + GPA + "\n"
+        + "Major: " + major + "\n"
+        + "SID: " + SID + "\n"
+        + "Year: " + yearNumber;
+    return out;
+    // return "despair";
 }

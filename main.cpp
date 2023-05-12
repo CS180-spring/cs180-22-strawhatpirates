@@ -12,6 +12,7 @@
 #include "header/searchStudent.h"
 #include "header/readFile.h"
 #include "lib/Student.cpp"
+#include <string>
 
 using namespace nlohmann;
 using namespace std;
@@ -35,9 +36,10 @@ int main()
         else if (a == 6)
             createFile();
         else if (a == 7) {
-            vector<string> data = readFile();
+            vector<Student> data = readFileStu();
+            // vector<string> data = readFile();
             for (int i = 0; i < data.size(); ++i) {
-                cout << data.at(i) << endl;
+                cout << data.at(i).getStudentInfo() << "\n" << endl;
             }
             //add info in vector to student object
         }
