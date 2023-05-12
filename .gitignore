@@ -1,8 +1,9 @@
 CMakeCache.txt
 CMakeFiles/
 CMakeLists.txt
-Makefile
+/Makefile
 cmake_install.cmake
+testfileforignore
 
 bin/
 
