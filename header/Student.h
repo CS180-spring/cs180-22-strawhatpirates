@@ -18,7 +18,7 @@ public:
     string getYearNumber();
     string getMajor();
 
-    // void changeName(string name);
+    // void changeName(string firstName, string lastName);
     void changeGPA(string GPA);
     void changeSID(string SID);
     void changeYearNumber(string yearNumber);

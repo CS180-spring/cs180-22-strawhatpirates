@@ -4,7 +4,7 @@
 using namespace std;
 
 string Person::getName() {
-    return firstName + lastName;
+    return firstName +  " " + lastName;
 }
 
 void Person::changeName(string firstName, string lastName) {
