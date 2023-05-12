@@ -60,7 +60,7 @@ vector<Student> readFileStu()
                 // data["students"][i].value("SID", "not found"),
                 // data["students"][i].value("Year", "not found")));
                 Student stu;
-                stu.changeName(data["students"][i].value("First Name", "not found") + " " + data["students"][i].value("Last Name", "not found"));
+                stu.changeName(data["students"][i].value("First Name", "not found"), data["students"][i].value("Last Name", "not found"));
                 stu.changeGPA(data["students"][i].value("GPA", "not found"));
                 stu.changeMajor(data["students"][i].value("Major", "not found"));
                 stu.changeSID(data["students"][i].value("SID", "not found"));

@@ -4,9 +4,18 @@
 using namespace std;
 
 string Person::getName() {
-    return name;
+    return firstName +  " " + lastName;
 }
 
-void Person::changeName(string name) {
-    this->name = name;
+void Person::changeName(string firstName, string lastName) {
+    this->firstName = firstName;
+    this->lastName = lastName;
+}
+
+void Person::changeFirstName(string firstName) {
+    this->firstName = firstName;
+}
+
+void Person::changeLastName(string lastName) {
+    this->lastName = lastName;
 }
