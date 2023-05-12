@@ -26,4 +26,5 @@ class JsonInterface
 		vector<Student> stuVector;
 		bool mode;
 }
+
 #endif

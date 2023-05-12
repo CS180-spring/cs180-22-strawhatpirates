@@ -23,9 +23,9 @@ ADD_EXECUTABLE(test
     lib/test.cpp
 )
 
-# ADD_EXECUTABLE(run
-#   main.cpp
-# )
+ADD_EXECUTABLE(run
+  main.cpp
+)
 
 TARGET_LINK_LIBRARIES(test gtest)
 TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)
