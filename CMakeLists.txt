@@ -21,10 +21,12 @@ ADD_EXECUTABLE(test
     lib/Professor.cpp
     lib/Student.cpp
     lib/test.cpp
+    lib/JsonInterface.cpp
 )
 
 ADD_EXECUTABLE(run
   main.cpp
+  lib/JsonInterface.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
