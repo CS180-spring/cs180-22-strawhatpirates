@@ -15,6 +15,8 @@ int menu()
         cout << "4. Sort persons" << endl;
         cout << "5. Search for a person" << endl;
         cout << "6. Switch mode (Default mode is student)" << endl;
+        cout << "7. Print all persons" << endl;
+        cout << "8. Exit" << endl;
         cout << "Enter your selection: ";
 
         cin >> menuChoice;
