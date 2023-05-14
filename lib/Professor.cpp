@@ -3,18 +3,24 @@
 
 using namespace std;
 
-Professor::Professor() {
-    firstName = "";
-    lastName = "";
-    department = "";
-    rank = "";
+Professor::Professor() : 
+    Professor("", "", "", "")
+{
+    // firstName = "";
+    // lastName = "";
+    // department = "";
+    // rank = "";
 }
 
-Professor::Professor(string firstName, string lastName, string department, string rank) {
-    this->firstName = firstName;
-    this->lastName = lastName;
-    this->department = department;
-    this->rank = rank;
+Professor::Professor(string firstName, string lastName, string department, string rank) :
+    Person(firstName, lastName),
+    department(department),
+    rank(rank)
+{
+    // this->firstName = firstName;
+    // this->lastName = lastName;
+    // this->department = department;
+    // this->rank = rank;
 }   
 
 string Professor::getDepartment() {
@@ -40,5 +46,9 @@ void Professor::changeInfo(string firstName, string lastName, string department,
 }
 
 string Professor::getProfessorInfo() {
-    return "despair";
+    string out = "Name: " + this->firstName + " " + this->lastName + "\n"
+        + "Department: " + department + "\n"
+        + "Rank: " + rank;
+    return out;
+    // return "despair";
 }

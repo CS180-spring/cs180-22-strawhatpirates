@@ -43,12 +43,20 @@ int main()
         else if (a == 6)
             createFile();
         else if (a == 7) {
-            vector<Student> data = readFileStu();
+            cout << "----- Student info -----" << endl;
+            vector<Student> dataStu = readFileStu();
             // vector<string> data = readFile();
-            for (int i = 0; i < data.size(); ++i) {
-                cout << data.at(i).getStudentInfo() << "\n" << endl;
+            for (int i = 0; i < dataStu.size(); ++i) {
+                cout << dataStu.at(i).getStudentInfo() << "\n" << endl;
             }
             // //add info in vector to student object
+
+            cout << "----- Professor info -----" << endl;
+            vector<Professor> dataProf = readFileProf();
+            // vector<string> data = readFile();
+            for (int i = 0; i < dataProf.size(); ++i) {
+                cout << dataProf.at(i).getProfessorInfo() << "\n" << endl;
+            }
         }
         else if (a == 8)
             exit(0);

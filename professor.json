@@ -1,14 +1,15 @@
-[
+{
+    "professors": [
     {
-        "First_Name" : "Rick",
-	    "Last_Name" : "Chungus",
+        "First Name" : "Rick",
+	    "Last Name" : "Chungus",
 	    "Department": "Mathematics",
 	    "Rank" : "Researcher"
     },
     {
-        "First_Name" : "Morty",
-        "Last_Name" : "Chungus",
+        "First Name" : "Morty",
+        "Last Name" : "Chungus",
         "Department": "Mathematics",
         "Rank" : "Researcher"
     }
-]
+]}
