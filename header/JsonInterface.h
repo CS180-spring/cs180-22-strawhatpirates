@@ -1,5 +1,5 @@
-#ifndef JsonInterface_H
-#define JsonInterface_H
+#ifndef JSONINTERFACE_H
+#define JSONINTERFACE_H
 
 #include <iostream> 
 #include <vector>
@@ -25,6 +25,6 @@ class JsonInterface
 		vector<Professor> profVector;
 		vector<Student> stuVector;
 		bool mode;
-}
+};
 
-#endif
+#endif // JSONINTERFACE_H
