@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Student.h"
+#include "../lib/json.hpp"
+using json = nlohmann::json;
 
 using namespace std;
 
@@ -59,12 +61,17 @@ vector<Student> readFileStu()
                 // data["students"][i].value("Major", "not found"),
                 // data["students"][i].value("SID", "not found"),
                 // data["students"][i].value("Year", "not found")));
-                Student stu;
-                stu.changeName(data["students"][i].value("First Name", "not found"), data["students"][i].value("Last Name", "not found"));
-                stu.changeGPA(data["students"][i].value("GPA", "not found"));
-                stu.changeMajor(data["students"][i].value("Major", "not found"));
-                stu.changeSID(data["students"][i].value("SID", "not found"));
-                stu.changeYearNumber(data["students"][i].value("Year", "not found"));
+                Student stu (data["students"][i].value("First Name", "not found"), 
+                                data["students"][i].value("Last Name", "not found"),
+                                data["students"][i].value("GPA", "not found"),
+                                data["students"][i].value("Major", "not found"),
+                                data["students"][i].value("SID", "not found"),
+                                data["students"][i].value("Year", "not found"));
+                // stu.changeName(data["students"][i].value("First Name", "not found"), data["students"][i].value("Last Name", "not found"));
+                // stu.changeGPA(data["students"][i].value("GPA", "not found"));
+                // stu.changeMajor(data["students"][i].value("Major", "not found"));
+                // stu.changeSID(data["students"][i].value("SID", "not found"));
+                // stu.changeYearNumber(data["students"][i].value("Year", "not found"));
                 // Student *stu = new Student(data["students"][i].value("First Name", "not found") + " " + data["students"][i].value("Last Name", "not found"),
                 //                 data["students"][i].value("GPA", "not found"),
                 //                 data["students"][i].value("Major", "not found"),

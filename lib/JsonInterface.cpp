@@ -6,12 +6,14 @@ JsonInterface::JsonInterface() {
 }
 
 void JsonInterface::addStudent() {
-    string name, GPA, SID, yearNumber, major;
+    string firstName, lastName , GPA, SID, yearNumber, major;
     
     cin.ignore();
     // Get input from user for student info
-    cout << "Enter student name: ";
-    getline(cin, name);
+    cout << "Enter student first name: ";
+    getline(cin, firstName);
+    cout << "Enter student last name: ";
+    getline(cin, lastName);
     cout << "Enter student GPA: ";
     getline(cin, GPA);
     cout << "Enter student ID: ";
@@ -22,7 +24,7 @@ void JsonInterface::addStudent() {
     getline(cin, major);
     
     // Create new student object with input values
-    Student newStudent(name, GPA, SID, yearNumber, major);
+    Student newStudent(firstName, lastName, GPA, SID, yearNumber, major);
     
     // // Add new student to stuVector
     stuVector.push_back(newStudent);

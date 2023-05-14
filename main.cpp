@@ -9,10 +9,10 @@
 #include "header/editStudent.h"
 #include "header/sortStudent.h"
 #include "header/searchStudent.h"
-// #include "header/readFile.h"
+#include "header/readFile.h"
 #include "header/JsonInterface.h"
 // #include "lib/Professor.cpp"
-#include "lib/Student.cpp"
+#include "header/Student.h"
 #include <string>
 #include <vector>
 
@@ -43,11 +43,11 @@ int main()
         else if (a == 6)
             createFile();
         else if (a == 7) {
-            // vector<Student> data = readFileStu();
-            // // vector<string> data = readFile();
-            // for (int i = 0; i < data.size(); ++i) {
-            //     cout << data.at(i).getStudentInfo() << "\n" << endl;
-            // }
+            vector<Student> data = readFileStu();
+            // vector<string> data = readFile();
+            for (int i = 0; i < data.size(); ++i) {
+                cout << data.at(i).getStudentInfo() << "\n" << endl;
+            }
             // //add info in vector to student object
         }
         else if (a == 8)

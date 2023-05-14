@@ -4,22 +4,35 @@
 
 using namespace std;
 
-Student::Student() {
-    firstName = "";
-    lastName = "";
-    GPA = "";
-    SID = "";
-    yearNumber = "";
-    major = "";
+// Triangle::Triangle() : Triangle(3, 4, 6) {}
+Student::Student() :
+    Student("", "", "", "", "", "")
+{
+    // firstName = "";
+    // lastName = "";
+    // GPA = "";
+    // SID = "";
+    // yearNumber = "";
+    // major = "";
 }
 
-Student::Student(string firstName, string lastName, string GPA, string SID, string yearNumber, string major) {
-    this->firstName = firstName;
-    this->lastName = lastName;
-    this->GPA = GPA;
-    this->SID = SID;
-    this->yearNumber = yearNumber;
-    this->major = major;
+// Triangle::Triangle(int a, int b, int c) : a(a), b(b), c(c) {}
+
+Student::Student(string firstName, string lastName, string GPA, string SID, string yearNumber, string major)  : 
+    Person(firstName, lastName),
+    // firstName(firstName),
+    // lastName(lastName),
+    GPA(GPA),
+    SID(SID),
+    yearNumber(yearNumber),
+    major(major)
+{
+    // this->firstName = firstName;
+    // this->lastName = lastName;
+    // this->GPA = GPA;
+    // this->SID = SID;
+    // this->yearNumber = yearNumber;
+    // this->major = major;
 }   
 
 string Student::getGPA() {
@@ -55,6 +68,8 @@ void Student::changeMajor(string major) {
 }
 
 void Student::changeInfo(string name, string GPA, string SID, string yearNumber, string major) {
+    // this->firstName = firstName;
+    // this->lastName = lastName;
     changeName(firstName, lastName);
     changeGPA(GPA);
     changeYearNumber(yearNumber);

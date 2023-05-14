@@ -3,6 +3,16 @@
 
 using namespace std;
 
+Person::Person() {
+    firstName = "";
+    lastName = "";
+}
+
+Person::Person(string firstName, string lastName) {
+    this->firstName = firstName;
+    this->lastName = firstName;
+}
+
 string Person::getName() {
     return firstName +  " " + lastName;
 }
