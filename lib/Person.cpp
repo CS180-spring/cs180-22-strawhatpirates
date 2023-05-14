@@ -10,7 +10,7 @@ Person::Person() {
 
 Person::Person(string firstName, string lastName) {
     this->firstName = firstName;
-    this->lastName = firstName;
+    this->lastName = lastName;
 }
 
 string Person::getName() {
