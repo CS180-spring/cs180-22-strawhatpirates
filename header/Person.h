@@ -8,6 +8,9 @@ using namespace std;
 class Person {
 public:
 
+    Person();
+    Person(string firstName, string lastName);
+
     string getName();
     string getFirstName();
     string getLastName();

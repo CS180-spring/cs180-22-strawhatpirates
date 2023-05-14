@@ -1,3 +1,6 @@
+#ifndef PROFESSOR_H
+#define PROFESSOR_H
+
 #include <iostream>
 #include "Person.h"
 
@@ -23,3 +26,5 @@ private:
     string rank;
 
 };
+
+#endif
