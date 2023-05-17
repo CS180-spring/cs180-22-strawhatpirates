@@ -45,10 +45,23 @@ void Professor::changeInfo(string firstName, string lastName, string department,
     changeRank(rank);
 }
 
-string Professor::getProfessorInfo() {
+string Professor::getInfo() {
     string out = "Name: " + this->firstName + " " + this->lastName + "\n"
         + "Department: " + department + "\n"
         + "Rank: " + rank;
     return out;
     // return "despair";
+}
+
+bool Professor::departmentIsValid(string department) {
+    
+    return 
+}
+
+bool Professor::rankIsValid(string rank) {
+    return 
+}
+
+bool Professor::infoIsValid(string firstName, string lastName, string department, string rank) {
+    return nameIsValid && departmentIsValid && rankIsValid;
 }

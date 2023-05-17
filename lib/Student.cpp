@@ -1,10 +1,7 @@
 #include "../header/Student.h"
-#include "iostream"
-#include <string>
 
 using namespace std;
 
-// Triangle::Triangle() : Triangle(3, 4, 6) {}
 Student::Student() :
     Student("", "", "", "", "", "")
 {
@@ -15,8 +12,6 @@ Student::Student() :
     // yearNumber = "";
     // major = "";
 }
-
-// Triangle::Triangle(int a, int b, int c) : a(a), b(b), c(c) {}
 
 Student::Student(string firstName, string lastName, string GPA, string major, string SID, string yearNumber)  : 
     Person(firstName, lastName),
@@ -72,11 +67,46 @@ void Student::changeInfo(string name, string GPA, string major, string SID, stri
     // this->lastName = lastName;
     changeName(firstName, lastName);
     changeGPA(GPA);
-    changeYearNumber(yearNumber);
     changeMajor(major);
+    changeSID(SID);
+    changeYearNumber(yearNumber);
 }
 
-string Student::getStudentInfo() {
+bool Student::GPAIsValid(string GPA) {
+    return std::regex_match (GPA, std::regex("(\\d\\.\\d\\d)+$"));
+    // int length = GPA.find_last_of('.');
+    // GPA.erase(0,length + 1);
+    // int numOfDecimals = GPA.length();
+
+    // for(int i = 0; i < GPA.length(); i++) {
+
+    // }
+
+    // return (numOfDecimals > 1);
+}
+
+bool Student::SIDIsValid(string SID) {
+    return std::regex_match (GPA, std::regex("\\d\\d\\d\\d\\d\\d\\d\\d\\d"));
+}
+
+bool Student::yearNumberIsValid(string yearNumber) {
+    return std::regex_match (GPA, std::regex("\\d"));
+}
+
+bool Student::majorIsValid(string major) {
+    return std::regex_match (GPA, std::regex("^[0-9]+$"));
+    
+}
+
+bool Student::infoIsValid(string firstName, string lastName, string GPA, string major, string SID, string yearNumber) {
+    return nameIsValid(firstName, lastName)
+        && GPAIsValid(GPA) 
+        && SIDIsValid(major) 
+        && yearNumberIsValid(SID)
+        && majorIsValid(yearNumber);
+}
+
+string Student::getInfo() {
     string out = "Name: " + this->firstName + " " + this->lastName + "\n"
         + "GPA: " + GPA + "\n"
         + "Major: " + major + "\n"

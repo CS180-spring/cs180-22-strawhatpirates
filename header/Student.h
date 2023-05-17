@@ -3,6 +3,9 @@
 
 #include "iostream"
 #include "Person.h"
+#include <string>
+#include <regex>
+#include <iostream>
 
 using namespace std;
 
@@ -25,10 +28,17 @@ public:
     void changeMajor(string major);
     void changeInfo(string name, string GPA, string major, string SID, string yearNumber);
 
-    string getStudentInfo();
+    bool GPAIsValid(string GPA);
+    bool SIDIsValid(string SID);
+    bool yearNumberIsValid(string yearNumber);
+    bool majorIsValid(string major);
+    bool infoIsValid(string firstName, string lastName, string GPA, string major, string SID, string yearNumber);
+
+    string getInfo();
 
 private:
     // string name;
+    enum major {Freshman, Sophomore, Junior, Senior};
     string GPA;
     string SID;
     string yearNumber;

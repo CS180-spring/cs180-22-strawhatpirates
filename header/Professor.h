@@ -19,12 +19,15 @@ public:
     void changeDepartment(string department);
     void changeRank(string rank);
 
-    string getProfessorInfo();
+    string getInfo();
+
+    bool departmentIsValid(string department);
+    bool rankIsValid(string rank);
+    bool infoIsValid(string firstName, string lastName, string department, string rank);
 
 private:
     string department;
     string rank;
-
 };
 
 #endif

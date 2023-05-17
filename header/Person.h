@@ -2,6 +2,7 @@
 #define PERSON_H
 
 #include <iostream>
+#include <regex>
 
 using namespace std;
 
@@ -20,6 +21,10 @@ public:
     void changeLastName(string lastName);
 
     // string getInfo();
+
+    bool firstNameIsValid(string firstName);
+    bool lastNameIsValid(string lastName);
+    bool nameIsValid(string firstName, string lastName);
 
 protected:
     string firstName;
