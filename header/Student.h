@@ -10,7 +10,7 @@ class Student : public Person {
 public: 
 
     Student();
-    Student(string firstName, string lastName, string GPA, string SID, string yearNumber, string major);
+    Student(string firstName, string lastName, string GPA, string major, string SID, string yearNumber);
 
     // string getName();
     string getGPA();
@@ -23,7 +23,7 @@ public:
     void changeSID(string SID);
     void changeYearNumber(string yearNumber);
     void changeMajor(string major);
-    void changeInfo(string name, string GPA, string SID, string yearNumber, string major);
+    void changeInfo(string name, string GPA, string major, string SID, string yearNumber);
 
     string getStudentInfo();
 

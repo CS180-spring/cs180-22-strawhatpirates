@@ -18,7 +18,7 @@ Student::Student() :
 
 // Triangle::Triangle(int a, int b, int c) : a(a), b(b), c(c) {}
 
-Student::Student(string firstName, string lastName, string GPA, string SID, string yearNumber, string major)  : 
+Student::Student(string firstName, string lastName, string GPA, string major, string SID, string yearNumber)  : 
     Person(firstName, lastName),
     // firstName(firstName),
     // lastName(lastName),
@@ -67,7 +67,7 @@ void Student::changeMajor(string major) {
     this->major = major;
 }
 
-void Student::changeInfo(string name, string GPA, string SID, string yearNumber, string major) {
+void Student::changeInfo(string name, string GPA, string major, string SID, string yearNumber) {
     // this->firstName = firstName;
     // this->lastName = lastName;
     changeName(firstName, lastName);

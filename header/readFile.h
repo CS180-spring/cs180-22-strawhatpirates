@@ -49,11 +49,14 @@ vector<Student> readFileStu()
         string fileName;
         ofstream fileC;
         vector<Student> info;
-        ifstream fin("student1.json");
+        ifstream fin("student2.json");
         json data = json::parse(fin);
 
+        int stuSize = data["students"].size();
 
-        for (int i = 0; i < 4; ++i) {
+        cout << "\nAmount of Objects: " << stuSize << endl << endl;
+
+        for (int i = 0; i < stuSize; ++i) {
                 Student stu (data["students"][i].value("First Name", "not found"), 
                                 data["students"][i].value("Last Name", "not found"),
                                 data["students"][i].value("GPA", "not found"),
