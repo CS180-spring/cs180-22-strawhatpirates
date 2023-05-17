@@ -17,6 +17,14 @@ string Person::getName() {
     return firstName +  " " + lastName;
 }
 
+string Person::getFirstName() {
+    return firstName;
+}
+
+string Person::getLastName() {
+    return lastName;
+}
+
 void Person::changeName(string firstName, string lastName) {
     this->firstName = firstName;
     this->lastName = lastName;

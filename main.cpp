@@ -28,7 +28,8 @@ int main()
         int a = menu();
 
         if (a == 1){
-            jsonInterface.addStudent();
+            vector<Student> dataStu = readFileStu();
+            jsonInterface.addStudent(dataStu);
         }
 
         else if (a == 2)

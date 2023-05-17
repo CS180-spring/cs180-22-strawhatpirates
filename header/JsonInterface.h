@@ -13,7 +13,7 @@ class JsonInterface
 	public:
 		JsonInterface(); //mode = true
 		void addProfessor();
-		void addStudent();
+		void addStudent(vector<Student> &dataStu);
 		void removeProfessor();
 		void removeStudent();
 		void editProfessor();
