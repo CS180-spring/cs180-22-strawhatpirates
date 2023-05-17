@@ -1,3 +1,6 @@
+#ifndef READFILE_H
+#define READFILE_H
+
 #include <iostream>
 #include "Student.h"
 #include "Professor.h"
@@ -91,3 +94,5 @@ vector<Professor> readFileProf()
         // return stu;
         return info;
 }
+
+#endif

@@ -51,7 +51,7 @@ void JsonInterface::addStudent(vector<Student> &dataStu) {
 
     // Write new student to file
     ofstream file;
-    file.open("student2.json");
+    file.open("student1.json");
     file << "{\n\t\"students\": [\n";
     for (int i = 0; i < dataStu.size(); i++) {
         file << "\t\t{\n";
@@ -86,4 +86,28 @@ void JsonInterface::addStudent(vector<Student> &dataStu) {
     //         cout << "Major: " << student.getMajor() << endl;
     //     }
     // }
+}
+
+void JsonInterface::removeStudent(string SID)
+{
+    string fileName;
+    ofstream fileC;
+    ifstream fin("student1.json");
+    json data = json::parse(fin);
+
+    cout << "\nYou have chosen to delete a student" << endl;
+    vector<Student> theInfo = readFileStu();
+
+    for(int i = 0; i < theInfo.size(); ++i)
+    {
+        if(theInfo.at(i).getSID().compare(SID) == 0)
+        {
+            theInfo.erase(theInfo.begin() + i);
+            i += theInfo.size();
+        }
+    }
+    data.clear();
+
+    this->addStudent(theInfo);
+    return;
 }
