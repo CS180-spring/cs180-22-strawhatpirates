@@ -8,7 +8,7 @@
 #include "header/deleteStudent.h"
 #include "header/editStudent.h"
 #include "header/sortStudent.h"
-#include "header/searchStudent.h"
+// #include "header/searchStudent.h"
 #include "header/readFile.h"
 #include "header/JsonInterface.h"
 // #include "lib/Professor.cpp"
@@ -39,8 +39,10 @@ int main()
             editStudent();
         else if (a == 4)
             sortStudent();
-        else if (a == 5)
-            searchStudent();
+        else if (a == 5) {
+            vector<Student> dataStu = readFileStu();
+            jsonInterface.searchStudent(dataStu);
+        }
         else if (a == 6)
             createFile();
         else if (a == 7) {

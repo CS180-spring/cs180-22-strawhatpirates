@@ -19,7 +19,7 @@ class JsonInterface
 		void editProfessor();
 		void editStudent();
 		void searchProfessor();
-		void searchStudent(vector<Student>);
+		void searchStudent(vector<Student> &list);
 		void changeMode();
 	private:
 		vector<Professor> profVector;

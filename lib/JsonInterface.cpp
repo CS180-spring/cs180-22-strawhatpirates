@@ -87,3 +87,45 @@ void JsonInterface::addStudent(vector<Student> &dataStu) {
     //     }
     // }
 }
+
+void JsonInterface::searchStudent(vector<Student> &list) {
+    cout << "\nYou have chosen to search for a student" << endl;
+
+    int choice;
+
+    cout << "1. Search by first name" << endl;
+    cout << "2. Search by last name" << endl;
+    cout << "3. Search by GPA" << endl;
+    cout << "4. Search by SID" << endl;
+    cout << "5. Search by Major" << endl;
+
+    cin >> choice;
+
+    if (choice == 1) {
+        cin.ignore();
+        string first;
+        cout << "Search by name: " << endl;
+        cout << "First Name: " << endl;
+        getline(cin, first);
+
+        vector<Student> firstNames;
+
+        for (int i = 0; i < list.size(); ++i) {
+            if (list[i].getFirstName() == first) {
+                firstNames.push_back(list[i]);
+            } 
+        }
+
+
+        cout << "\nList of students with first name:\n" << first << endl;
+        if (firstNames.size() != 0) {
+            for (int i = 0; i < firstNames.size(); ++i) {
+                firstNames.at(i).getStudentInfo();
+                cout << endl;
+            }
+        } else {
+            cout << "Student not found!" << endl;
+        }
+        
+    }
+}

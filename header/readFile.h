@@ -49,7 +49,7 @@ vector<Student> readFileStu()
         string fileName;
         ofstream fileC;
         vector<Student> info;
-        ifstream fin("student2.json");
+        ifstream fin("student1.json");
         json data = json::parse(fin);
 
         int stuSize = data["students"].size();
