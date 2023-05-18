@@ -1,11 +1,11 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#include "iostream"
 #include "Person.h"
 #include <string>
 #include <regex>
 #include <iostream>
+#include <list>
 
 using namespace std;
 
@@ -38,11 +38,14 @@ public:
 
 private:
     // string name;
-    enum major {Freshman, Sophomore, Junior, Senior};
     string GPA;
     string SID;
     string yearNumber;
     string major;
+    enum major {Freshman, Sophomore, Junior, Senior};
+    list<string> majorList{"Computer Science, Computer Engineering",
+                            "Mechanical Engineering", "Electrical Engineering",
+                            "Biology", "Chemistry", "Physics"};
 };
 
 #endif

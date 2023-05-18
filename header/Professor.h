@@ -1,8 +1,9 @@
 #ifndef PROFESSOR_H
 #define PROFESSOR_H
 
-#include <iostream>
 #include "Person.h"
+#include <iostream>
+#include <list>
 
 using namespace std;
 
@@ -28,6 +29,9 @@ public:
 private:
     string department;
     string rank;
+
+    list<string> departmentList{"Computer Science and Engineering"};
+    list<string> rankList{"Tenure"};
 };
 
 #endif
