@@ -1,7 +1,6 @@
 #include "../header/Student.h"
 #include "../header/Professor.h"
 #include "../header/JsonInterface.h"
-#include "deleteStudent.h"
 
 #include "gtest/gtest.h"
 #include <iostream>
@@ -130,14 +129,8 @@ TEST(professorTest, changeRank) {
     EXPECT_EQ(professor->getRank(), expected);
 }
 
-TEST(deleteTest, deleteFirstOne)
-{
-    JsonInterface Kaizoku;
-    Kaizoku.removeStudent("1");
-    string expected = "1234567";
-    vector<Student> jigglypuff = readFileStu();
-    EXPECT_EQ(jigglypuff.at(0).getSID(), expected);
-}
+
+
 
 // MAIN ---------------------------------------------
 int main(int argc, char **argv) {

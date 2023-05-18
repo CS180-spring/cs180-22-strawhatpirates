@@ -12,7 +12,6 @@
 #include "header/readFile.h"
 #include "header/JsonInterface.h"
 // #include "lib/Professor.cpp"
-#include "header/Student.h"
 #include <string>
 #include <vector>
 
@@ -31,10 +30,15 @@ int main()
             vector<Student> dataStu = readFileStu();
             jsonInterface.addStudent(dataStu);
         }
-
         else if (a == 2)
-            continue;
-            //deleteStudent();
+        {
+            vector<Student> deleteVector = readFileStu();
+            string theSID;
+            cout << "Enter the SID of the student to remove: \n";
+            cin.ignore();
+            getline(cin, theSID);
+            jsonInterface.removeStudent(theSID, deleteVector);
+        }
         else if (a == 3)
             editStudent();
         else if (a == 4)
