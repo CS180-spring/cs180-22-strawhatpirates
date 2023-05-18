@@ -1,5 +1,6 @@
 #include "../header/Student.h"
 #include "../header/Professor.h"
+#include "../header/JsonInterface.h"
 
 #include "gtest/gtest.h"
 #include <iostream>
@@ -127,6 +128,9 @@ TEST(professorTest, changeRank) {
 
     EXPECT_EQ(professor->getRank(), expected);
 }
+
+
+
 
 // MAIN ---------------------------------------------
 int main(int argc, char **argv) {

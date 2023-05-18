@@ -1,3 +1,6 @@
+#ifndef READFILE_H
+#define READFILE_H
+
 #include <iostream>
 #include "Student.h"
 #include "Professor.h"
@@ -49,7 +52,7 @@ vector<Student> readFileStu()
         string fileName;
         ofstream fileC;
         vector<Student> info;
-        ifstream fin("student2.json");
+        ifstream fin("student1.json");
         json data = json::parse(fin);
 
         int stuSize = data["students"].size();
@@ -91,3 +94,5 @@ vector<Professor> readFileProf()
         // return stu;
         return info;
 }
+
+#endif
