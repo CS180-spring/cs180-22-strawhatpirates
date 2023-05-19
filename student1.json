@@ -9,14 +9,6 @@
 		"Year" : "3"
 	},
 	{
-		"First Name" : "Cole",
-		"Last Name" : "Collington",
-		"GPA" : "2.0",
-		"Major" : "Business",
-		"SID" : "21",
-		"Year" : "4"
-	},
-	{
 		"First Name": "Saul",
 		"Last Name": "Mendoza",
 		"GPA": "6.0",
@@ -31,6 +23,14 @@
 		"Major": "CS",
 		"SID": "12345",
 		"Year": "5"
+	},
+	{
+		"First Name" : "Cole",
+		"Last Name" : "Collington",
+		"GPA" : "2.0",
+		"Major" : "Business",
+		"SID" : "21",
+		"Year" : "4"
 	},
 	{
 		"First Name": "Tyler",

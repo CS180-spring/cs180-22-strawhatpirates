@@ -4,6 +4,8 @@
 #include <limits>
 #include <string>
 #include <vector>
+#include <cstring>
+#include <bits/stdc++.h>
 #include "../header/JsonInterface.h"
 
 JsonInterface::JsonInterface() {
@@ -108,20 +110,25 @@ void JsonInterface::searchStudent(vector<Student> &list) {
         cout << "First Name: " << endl;
         getline(cin, first);
 
+        string upperFirst;
+        upperFirst = first;
+        transform(upperFirst.begin(), upperFirst.end(), upperFirst.begin(), ::toupper);
+
         vector<Student> firstNames;
 
         for (int i = 0; i < list.size(); ++i) {
-            if (list[i].getFirstName() == first) {
+            string firstName = list[i].getFirstName();
+            transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
+            if (firstName == upperFirst) {
                 firstNames.push_back(list[i]);
             } 
         }
 
 
-        cout << "\nList of students with first name:\n" << first << endl;
+        cout << "\nList of students with first name:" << first << endl << endl;
         if (firstNames.size() != 0) {
             for (int i = 0; i < firstNames.size(); ++i) {
-                firstNames.at(i).getStudentInfo();
-                cout << endl;
+                cout << firstNames[i].getStudentInfo() << endl << endl;
             }
         } else {
             cout << "Student not found!" << endl;
