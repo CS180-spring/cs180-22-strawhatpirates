@@ -16,6 +16,8 @@ class JsonInterface
 		void addStudent(vector<Student> &dataStu);
 		void removeProfessor();
 		void removeStudent(string SID, vector<Student> stussy);
+		void updateProfessor();
+		void updateStudent(string SID, vector<Student> stussy);
 		void editProfessor();
 		void editStudent();
 		void searchProfessor();
