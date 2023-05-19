@@ -1,8 +1,11 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#include "iostream"
 #include "Person.h"
+#include <string>
+#include <regex>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -25,7 +28,13 @@ public:
     void changeMajor(string major);
     void changeInfo(string name, string GPA, string major, string SID, string yearNumber);
 
-    string getStudentInfo();
+    bool GPAIsValid(string GPA);
+    bool SIDIsValid(string SID);
+    bool yearNumberIsValid(string yearNumber);
+    bool majorIsValid(string major);
+    bool infoIsValid(string firstName, string lastName, string GPA, string major, string SID, string yearNumber);
+
+    string getInfo();
 
 private:
     // string name;
@@ -33,6 +42,9 @@ private:
     string SID;
     string yearNumber;
     string major;
+    enum major {Freshman, Sophomore, Junior, Senior};
+    vector<string> majorList{"CS", "CE", "ME", "EE", "CSBA",
+                            "BIO", "CHEM", "PHYS", "MATH"};
 };
 
 #endif

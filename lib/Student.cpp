@@ -1,10 +1,7 @@
 #include "../header/Student.h"
-#include "iostream"
-#include <string>
 
 using namespace std;
 
-// Triangle::Triangle() : Triangle(3, 4, 6) {}
 Student::Student() :
     Student("", "", "", "", "", "")
 {
@@ -15,8 +12,6 @@ Student::Student() :
     // yearNumber = "";
     // major = "";
 }
-
-// Triangle::Triangle(int a, int b, int c) : a(a), b(b), c(c) {}
 
 Student::Student(string firstName, string lastName, string GPA, string major, string SID, string yearNumber)  : 
     Person(firstName, lastName),
@@ -68,20 +63,66 @@ void Student::changeMajor(string major) {
 }
 
 void Student::changeInfo(string name, string GPA, string major, string SID, string yearNumber) {
-    // this->firstName = firstName;
-    // this->lastName = lastName;
     changeName(firstName, lastName);
     changeGPA(GPA);
-    changeYearNumber(yearNumber);
     changeMajor(major);
+    changeSID(SID);
+    changeYearNumber(yearNumber);
 }
 
-string Student::getStudentInfo() {
+bool Student::GPAIsValid(string GPA) {
+    bool validFormat = regex_match (GPA, regex("(\\d\\.\\d\\d)+$"));
+    if(!validFormat) {
+        return false;
+    }
+
+    double d_GPA = stod(GPA);
+    bool GPAInRange = d_GPA >= 0.00 && d_GPA <= 4.00;
+
+    return GPAInRange && validFormat;
+}
+
+bool Student::SIDIsValid(string SID) {
+    return regex_match (SID, regex("\\d\\d\\d\\d\\d\\d\\d\\d\\d"));
+}
+
+bool Student::yearNumberIsValid(string yearNumber) {
+    bool validFormat = regex_match (yearNumber, regex("\\d"));
+    if(!validFormat) {
+        return false;
+    }
+    
+    return stoi(yearNumber) >= 1;
+}
+
+bool Student::majorIsValid(string major) {
+    bool validFormat = regex_match (major, regex("^[A-Z]+$"));
+    if(!validFormat) {
+        return false;
+    }
+
+    for(int i = 0; i < majorList.size(); i++) {
+        if(major == majorList[i]) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool Student::infoIsValid(string firstName, string lastName, string GPA, string major, string SID, string yearNumber) {
+    return nameIsValid(firstName, lastName)
+        && GPAIsValid(GPA) 
+        && SIDIsValid(major) 
+        && yearNumberIsValid(SID)
+        && majorIsValid(yearNumber);
+}
+
+string Student::getInfo() {
     string out = "Name: " + this->firstName + " " + this->lastName + "\n"
         + "GPA: " + GPA + "\n"
         + "Major: " + major + "\n"
         + "SID: " + SID + "\n"
         + "Year: " + yearNumber;
     return out;
-    // return "despair";
 }

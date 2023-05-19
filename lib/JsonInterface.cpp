@@ -7,7 +7,7 @@
 #include "../header/JsonInterface.h"
 
 JsonInterface::JsonInterface() {
-    mode = true;
+    this->mode = true;
 }
 
 void JsonInterface::addStudent(vector<Student> &dataStu) {
@@ -136,4 +136,12 @@ void JsonInterface::writeFileStu(vector<Student> theStudents)
     }
     file << "\t]\n}";
     file.close();
+}
+
+void JsonInterface::changeMode() {
+    mode = !mode;
+}
+
+bool JsonInterface::getMode() {
+    return mode;
 }

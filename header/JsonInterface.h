@@ -23,6 +23,7 @@ class JsonInterface
 		void changeMode();
 		void writeFileStu(vector<Student> theStudents);
 		void writeFileProf(vector<Professor> theProfessors);
+		bool getMode();
 	private:
 		vector<Professor> profVector;
 		vector<Student> stuVector;
