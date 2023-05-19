@@ -3,15 +3,9 @@
 #include <algorithm>
 #include <limits>
 #include "lib/json.hpp"
-#include "header/createFile.h"
 #include "header/menu.h"
-#include "header/deleteStudent.h"
-#include "header/editStudent.h"
-#include "header/sortStudent.h"
-#include "header/searchStudent.h"
 #include "header/readFile.h"
 #include "header/JsonInterface.h"
-// #include "lib/Professor.cpp"
 #include <string>
 #include <vector>
 
@@ -40,13 +34,13 @@ int main()
             jsonInterface.removeStudent(theSID, deleteVector);
         }
         else if (a == 3)
-            editStudent();
+            continue;
         else if (a == 4)
-            sortStudent();
+            continue;
         else if (a == 5)
-            searchStudent();
+            continue;
         else if (a == 6)
-            createFile();
+            continue;
         else if (a == 7) {
             cout << "----- Student info -----" << endl;
             vector<Student> dataStu = readFileStu();
