@@ -4,6 +4,7 @@
 #include <limits>
 #include "lib/json.hpp"
 #include "header/menu.h"
+// #include "header/searchStudent.h"
 #include "header/readFile.h"
 #include "header/JsonInterface.h"
 #include <string>
@@ -36,7 +37,12 @@ int main()
         else if (a == 3)
             continue;
         else if (a == 4)
+            //sortStudent();
             continue;
+        else if (a == 5) {
+            vector<Student> dataStu = readFileStu();
+            jsonInterface.searchStudent(dataStu);
+        }
         else if (a == 5)
             continue;
         else if (a == 6)
