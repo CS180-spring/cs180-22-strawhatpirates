@@ -1,3 +1,6 @@
+#ifndef READFILE_H
+#define READFILE_H
+
 #include <iostream>
 #include "Student.h"
 #include "Professor.h"
@@ -54,7 +57,7 @@ vector<Student> readFileStu()
 
         int stuSize = data["students"].size();
 
-        cout << "\nAmount of Objects: " << stuSize << endl << endl;
+        cout << "\nAmount of Students: " << stuSize << endl << endl;
 
         for (int i = 0; i < stuSize; ++i) {
                 Student stu (data["students"][i].value("First Name", "not found"), 
@@ -79,7 +82,11 @@ vector<Professor> readFileProf()
         ifstream fin("professor.json");
         json data = json::parse(fin);
 
-        for (int i = 0; i < 2; ++i) {
+        int profSize = data["professors"].size();
+
+        cout << "\nAmount of Professors: " << profSize << endl << endl;
+
+        for (int i = 0; i < profSize; ++i) {
                 Professor prof (data["professors"][i].value("First Name", "not found"), 
                                 data["professors"][i].value("Last Name", "not found"),
                                 data["professors"][i].value("Department", "not found"),
@@ -91,3 +98,5 @@ vector<Professor> readFileProf()
         // return stu;
         return info;
 }
+
+#endif

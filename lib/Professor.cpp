@@ -45,10 +45,45 @@ void Professor::changeInfo(string firstName, string lastName, string department,
     changeRank(rank);
 }
 
-string Professor::getProfessorInfo() {
+string Professor::getInfo() {
     string out = "Name: " + this->firstName + " " + this->lastName + "\n"
         + "Department: " + department + "\n"
         + "Rank: " + rank;
     return out;
-    // return "despair";
+}
+
+bool Professor::departmentIsValid(string department) {
+    bool validFormat = regex_match (department, std::regex("^[\\w]+[\\D]+$"));
+    if(!validFormat) {
+        return false;
+    }
+
+    for(int i = 0; i < departmentList.size(); i++) {
+        if(department == departmentList[i]) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool Professor::rankIsValid(string rank) {
+    bool validFormat = regex_match (rank, std::regex("^[\\w]+[\\D]+$"));
+    if(!validFormat) {
+        return false;
+    }
+
+    for(int i = 0; i < rankList.size(); i++) {
+        if(rank == rankList[i]) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool Professor::infoIsValid(string firstName, string lastName, string department, string rank) {
+    return nameIsValid(firstName, lastName) 
+            && departmentIsValid(department) 
+            && rankIsValid(rank);
 }
