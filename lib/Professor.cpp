@@ -54,14 +54,41 @@ string Professor::getInfo() {
 }
 
 bool Professor::departmentIsValid(string department) {
-    
-    return 
+    bool validFormat = regex_match (department, std::regex("^[\\w]+[\\D]+$"));
+    if(!validFormat) {
+        return false;
+    }
+
+    // for(int i = 0; i < major.length(); i++) {
+    //     major[i] = toupper(major[i]);
+    // }
+
+    for(int i = 0; i < departmentList.size(); i++) {
+        if(department == departmentList[i]) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 bool Professor::rankIsValid(string rank) {
-    return 
+    bool validFormat = regex_match (rank, std::regex("^[\\w]+[\\D]+$"));
+    if(!validFormat) {
+        return false;
+    }
+
+    for(int i = 0; i < rankList.size(); i++) {
+        if(rank == rankList[i]) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 bool Professor::infoIsValid(string firstName, string lastName, string department, string rank) {
-    return nameIsValid && departmentIsValid && rankIsValid;
+    return nameIsValid(firstName, lastName) 
+            && departmentIsValid(department) 
+            && rankIsValid(rank);
 }

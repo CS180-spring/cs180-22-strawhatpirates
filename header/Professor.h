@@ -2,8 +2,10 @@
 #define PROFESSOR_H
 
 #include "Person.h"
+#include <string>
+#include <regex>
 #include <iostream>
-#include <list>
+#include <vector>
 
 using namespace std;
 
@@ -30,8 +32,9 @@ private:
     string department;
     string rank;
 
-    list<string> departmentList{"Computer Science and Engineering"};
-    list<string> rankList{"Tenure"};
+    vector<string> departmentList{"Computer Science and Engineering", "Electrical and Computer Engineering", "Bioengineering", "Chemical/Environmenta; Engineering",
+                                "Mathematics", "Physics and Astronomy", "Biochemistry", "Chemistry", "Botany and Plant Sciences"};
+    vector<string> rankList{"Tenure-Track", "Emeritus", "Adjunct", "Cooperating"};
 };
 
 #endif

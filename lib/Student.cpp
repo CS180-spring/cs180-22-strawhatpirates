@@ -73,28 +73,57 @@ void Student::changeInfo(string name, string GPA, string major, string SID, stri
 }
 
 bool Student::GPAIsValid(string GPA) {
-    return std::regex_match (GPA, std::regex("(\\d\\.\\d\\d)+$"));
+    bool validFormat = regex_match (GPA, regex("(\\d\\.\\d\\d)+$"));
+    if(!validFormat) {
+        return false;
+    }
     // int length = GPA.find_last_of('.');
     // GPA.erase(0,length + 1);
     // int numOfDecimals = GPA.length();
 
-    // for(int i = 0; i < GPA.length(); i++) {
+    double d_GPA = stod(GPA);
+    bool GPAInRange = d_GPA >= 0.00 && d_GPA <= 4.00;
 
-    // }
+    return GPAInRange && validFormat;
 
     // return (numOfDecimals > 1);
 }
 
 bool Student::SIDIsValid(string SID) {
-    return std::regex_match (GPA, std::regex("\\d\\d\\d\\d\\d\\d\\d\\d\\d"));
+    return regex_match (SID, regex("\\d\\d\\d\\d\\d\\d\\d\\d\\d"));
 }
 
 bool Student::yearNumberIsValid(string yearNumber) {
-    return std::regex_match (GPA, std::regex("\\d"));
+    bool validFormat = regex_match (yearNumber, regex("\\d"));
+    if(!validFormat) {
+        return false;
+    }
+    
+    return stoi(yearNumber) >= 1;
 }
 
 bool Student::majorIsValid(string major) {
-    return std::regex_match (GPA, std::regex("^[0-9]+$"));
+    // string majorConverted = "";
+    // char ye = major[2];
+
+    bool validFormat = regex_match (major, regex("^[A-Z]+$"));
+    if(!validFormat) {
+        return false;
+    }
+
+    // for(int i = 0; i < major.length(); i++) {
+    //     major[i] = toupper(major[i]);
+    // }
+
+    for(int i = 0; i < majorList.size(); i++) {
+        if(major == majorList[i]) {
+            return true;
+        }
+    }
+
+    return false;
+    
+    // return std::regex_match (GPA, std::regex("^[0-9]+$"));
     
 }
 

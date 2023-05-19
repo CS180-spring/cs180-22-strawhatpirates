@@ -48,7 +48,7 @@ int main()
             vector<Student> dataStu = readFileStu();
             // vector<string> data = readFile();
             for (int i = 0; i < dataStu.size(); ++i) {
-                cout << dataStu.at(i).getStudentInfo() << "\n" << endl;
+                cout << dataStu.at(i).getInfo() << "\n" << endl;
             }
             // //add info in vector to student object
 
@@ -56,7 +56,7 @@ int main()
             vector<Professor> dataProf = readFileProf();
             // vector<string> data = readFile();
             for (int i = 0; i < dataProf.size(); ++i) {
-                cout << dataProf.at(i).getProfessorInfo() << "\n" << endl;
+                cout << dataProf.at(i).getInfo() << "\n" << endl;
             }
         }
         else if (a == 8)

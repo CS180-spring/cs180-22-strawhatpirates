@@ -5,7 +5,7 @@
 #include <string>
 #include <regex>
 #include <iostream>
-#include <list>
+#include <vector>
 
 using namespace std;
 
@@ -43,9 +43,8 @@ private:
     string yearNumber;
     string major;
     enum major {Freshman, Sophomore, Junior, Senior};
-    list<string> majorList{"Computer Science, Computer Engineering",
-                            "Mechanical Engineering", "Electrical Engineering",
-                            "Biology", "Chemistry", "Physics"};
+    vector<string> majorList{"CS", "CE", "ME", "EE", "CSBA",
+                            "BIO", "CHEM", "PHYS", "MATH"};
 };
 
 #endif
