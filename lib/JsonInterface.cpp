@@ -7,7 +7,7 @@
 #include "../header/JsonInterface.h"
 
 JsonInterface::JsonInterface() {
-    mode = true;
+    this->mode = true;
 }
 
 void JsonInterface::addStudent(vector<Student> &dataStu) {
@@ -51,7 +51,7 @@ void JsonInterface::addStudent(vector<Student> &dataStu) {
 
     // Write new student to file
     ofstream file;
-    file.open("student2.json");
+    file.open("student1.json");
     file << "{\n\t\"students\": [\n";
     for (int i = 0; i < dataStu.size(); i++) {
         file << "\t\t{\n";
@@ -86,4 +86,62 @@ void JsonInterface::addStudent(vector<Student> &dataStu) {
     //         cout << "Major: " << student.getMajor() << endl;
     //     }
     // }
+}
+
+void JsonInterface::removeStudent(string SID, vector<Student> stussy)
+{
+    bool found = false;
+    cout << "\nYou have chosen to delete a student" << endl;
+
+    for(int i = 0; i < stussy.size(); ++i)
+    {
+        if(stussy.at(i).getSID().compare(SID) == 0)
+        {
+            stussy.erase(stussy.begin() + i);
+            i += stussy.size();
+            found = true;
+        }
+    }
+
+    if(found == false)
+    {
+        cout << "The chosen SID was not found!!! \n";
+    }
+
+    writeFileStu(stussy);
+    return;
+}
+
+void JsonInterface::writeFileStu(vector<Student> theStudents)
+{
+    ofstream file;
+    file.open("student1.json");
+    file << "{\n\t\"students\": [\n";
+    for (int i = 0; i < theStudents.size(); i++) 
+    {
+        file << "\t\t{\n";
+        file << "\t\t\t\"First Name\": \"" << theStudents[i].getFirstName() << "\",\n";
+        file << "\t\t\t\"Last Name\": \"" << theStudents[i].getLastName() << "\",\n";
+        file << "\t\t\t\"GPA\": \"" << theStudents[i].getGPA() << "\",\n";
+        file << "\t\t\t\"Major\": \"" << theStudents[i].getMajor() << "\",\n";
+        file << "\t\t\t\"SID\": \"" << theStudents[i].getSID() << "\",\n";
+        file << "\t\t\t\"Year\": \"" << theStudents[i].getYearNumber() << "\"\n";
+
+        if(i == theStudents.size() - 1) {
+            file << "\t\t}\n";
+        }
+        else {
+            file << "\t\t},\n";
+        }
+    }
+    file << "\t]\n}";
+    file.close();
+}
+
+void JsonInterface::changeMode() {
+    mode = !mode;
+}
+
+bool JsonInterface::getMode() {
+    return mode;
 }

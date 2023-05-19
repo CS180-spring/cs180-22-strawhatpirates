@@ -50,7 +50,6 @@ string Professor::getInfo() {
         + "Department: " + department + "\n"
         + "Rank: " + rank;
     return out;
-    // return "despair";
 }
 
 bool Professor::departmentIsValid(string department) {
@@ -58,10 +57,6 @@ bool Professor::departmentIsValid(string department) {
     if(!validFormat) {
         return false;
     }
-
-    // for(int i = 0; i < major.length(); i++) {
-    //     major[i] = toupper(major[i]);
-    // }
 
     for(int i = 0; i < departmentList.size(); i++) {
         if(department == departmentList[i]) {

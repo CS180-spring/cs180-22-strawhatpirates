@@ -1,5 +1,6 @@
 #include "../header/Student.h"
 #include "../header/Professor.h"
+#include "../header/JsonInterface.h"
 
 #include "gtest/gtest.h"
 #include <iostream>
@@ -249,6 +250,23 @@ TEST(professorTest, rankIsValid) {
     EXPECT_TRUE(prof.rankIsValid(input1));
     EXPECT_FALSE(prof.rankIsValid(input2));
     EXPECT_FALSE(prof.rankIsValid(input3));
+}
+
+// JsonInterface TEST ---------------------------------------------
+TEST(jsonInterfaceTest, getMode) {
+    JsonInterface *jsi = new JsonInterface();
+
+    EXPECT_TRUE(jsi->getMode());
+}
+
+TEST(jsonInterfaceTest, changeMode) {
+    JsonInterface *jsi = new JsonInterface();
+
+    EXPECT_TRUE(jsi->getMode());
+    jsi->changeMode();
+    EXPECT_FALSE(jsi->getMode());
+    jsi->changeMode();
+    EXPECT_TRUE(jsi->getMode());
 }
 
 // MAIN ---------------------------------------------

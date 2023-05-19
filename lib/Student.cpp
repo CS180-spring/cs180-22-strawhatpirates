@@ -63,8 +63,6 @@ void Student::changeMajor(string major) {
 }
 
 void Student::changeInfo(string name, string GPA, string major, string SID, string yearNumber) {
-    // this->firstName = firstName;
-    // this->lastName = lastName;
     changeName(firstName, lastName);
     changeGPA(GPA);
     changeMajor(major);
@@ -77,16 +75,11 @@ bool Student::GPAIsValid(string GPA) {
     if(!validFormat) {
         return false;
     }
-    // int length = GPA.find_last_of('.');
-    // GPA.erase(0,length + 1);
-    // int numOfDecimals = GPA.length();
 
     double d_GPA = stod(GPA);
     bool GPAInRange = d_GPA >= 0.00 && d_GPA <= 4.00;
 
     return GPAInRange && validFormat;
-
-    // return (numOfDecimals > 1);
 }
 
 bool Student::SIDIsValid(string SID) {
@@ -103,17 +96,10 @@ bool Student::yearNumberIsValid(string yearNumber) {
 }
 
 bool Student::majorIsValid(string major) {
-    // string majorConverted = "";
-    // char ye = major[2];
-
     bool validFormat = regex_match (major, regex("^[A-Z]+$"));
     if(!validFormat) {
         return false;
     }
-
-    // for(int i = 0; i < major.length(); i++) {
-    //     major[i] = toupper(major[i]);
-    // }
 
     for(int i = 0; i < majorList.size(); i++) {
         if(major == majorList[i]) {
@@ -122,9 +108,6 @@ bool Student::majorIsValid(string major) {
     }
 
     return false;
-    
-    // return std::regex_match (GPA, std::regex("^[0-9]+$"));
-    
 }
 
 bool Student::infoIsValid(string firstName, string lastName, string GPA, string major, string SID, string yearNumber) {
@@ -142,5 +125,4 @@ string Student::getInfo() {
         + "SID: " + SID + "\n"
         + "Year: " + yearNumber;
     return out;
-    // return "despair";
 }
