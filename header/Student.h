@@ -6,6 +6,7 @@
 #include <regex>
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
@@ -35,6 +36,7 @@ public:
     bool infoIsValid(string firstName, string lastName, string GPA, string major, string SID, string yearNumber);
 
     string getInfo();
+    void getInfoNeat();
 
 private:
     // string name;

@@ -119,10 +119,25 @@ bool Student::infoIsValid(string firstName, string lastName, string GPA, string 
 }
 
 string Student::getInfo() {
+    // string out = setw(15) << left << firstName << "\n"
+    //             << setw(15) << left << lastName << "\n"
+    //             << setw(10) << left << GPA << "\n"
+    //             << setw(15) << left << major << "\n"
+    //             << setw(15) << left << SID << "\n"
+    //             << setw(10) << left << yearNumber << endl;
     string out = "Name: " + this->firstName + " " + this->lastName + "\n"
         + "GPA: " + GPA + "\n"
         + "Major: " + major + "\n"
         + "SID: " + SID + "\n"
         + "Year: " + yearNumber;
     return out;
+}
+
+void Student::getInfoNeat() {
+        cout << setw(15) << left << firstName;
+        cout << setw(15) << left << lastName;
+        cout << setw(10) << left << GPA;
+        cout << setw(15) << left << major;
+        cout << setw(15) << left << SID;
+        cout << setw(10) << left << yearNumber << endl;
 }

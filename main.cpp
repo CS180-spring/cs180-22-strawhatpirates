@@ -52,7 +52,8 @@ int main()
             vector<Student> dataStu = readFileStu();
             // vector<string> data = readFile();
             for (int i = 0; i < dataStu.size(); ++i) {
-                cout << dataStu.at(i).getInfo() << "\n" << endl;
+                dataStu.at(i).getInfoNeat();
+                // cout << dataStu.at(i).getInfo() << "\n" << endl;
             }
             // //add info in vector to student object
 

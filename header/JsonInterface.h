@@ -3,8 +3,16 @@
 
 #include <iostream> 
 #include <vector>
+#include <fstream>
+#include <algorithm>
+#include <limits>
+#include <string>
+#include <cstring>
+#include <bits/stdc++.h>
+
 #include "Professor.h"
 #include "Student.h"
+#include "../header/JsonInterface.h"
 
 using namespace std;
 
