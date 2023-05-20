@@ -6,6 +6,7 @@
 #include <regex>
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
@@ -23,6 +24,7 @@ public:
     void changeRank(string rank);
 
     string getInfo();
+    void getInfoNeat();
 
     bool departmentIsValid(string department);
     bool rankIsValid(string rank);
@@ -32,7 +34,7 @@ private:
     string department;
     string rank;
 
-    vector<string> departmentList{"Computer Science and Engineering", "Electrical and Computer Engineering", "Bioengineering", "Chemical/Environmenta; Engineering",
+    vector<string> departmentList{"Computer Science and Engineering", "Electrical and Computer Engineering", "Bioengineering", "Chemical/Environmental Engineering",
                                 "Mathematics", "Physics and Astronomy", "Biochemistry", "Chemistry", "Botany and Plant Sciences"};
     vector<string> rankList{"Tenure-Track", "Emeritus", "Adjunct", "Cooperating"};
 };

@@ -1,5 +1,4 @@
 #include "../header/Professor.h"
-#include "iostream"
 
 using namespace std;
 
@@ -86,4 +85,21 @@ bool Professor::infoIsValid(string firstName, string lastName, string department
     return nameIsValid(firstName, lastName) 
             && departmentIsValid(department) 
             && rankIsValid(rank);
+}
+
+void Professor::getInfoNeat() {
+    string printFirstName = firstName;
+    string printLastName = lastName;
+    if(firstName.length() > 14) {
+        printFirstName = (firstName.find(" ") != string::npos) ? firstName.substr(0, firstName.find(" ")) : firstName.substr(0, 14);
+    }
+
+    if(lastName.length() > 14) {
+        printLastName = (lastName.find(" ") != string::npos) ? lastName.substr(0, lastName.find(" ")) : lastName.substr(0, 14);
+    }
+
+    cout << setw(15) << left << printFirstName;
+    cout << setw(15) << left << printLastName;
+    cout << setw(40) << left << department;
+    cout << setw(15) << left << rank << endl;
 }

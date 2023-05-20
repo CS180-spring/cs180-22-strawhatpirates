@@ -134,10 +134,20 @@ string Student::getInfo() {
 }
 
 void Student::getInfoNeat() {
-        cout << setw(15) << left << firstName;
-        cout << setw(15) << left << lastName;
-        cout << setw(10) << left << GPA;
-        cout << setw(15) << left << major;
-        cout << setw(15) << left << SID;
-        cout << setw(10) << left << yearNumber << endl;
+    string printFirstName = firstName;
+    string printLastName = lastName;
+    if(firstName.length() > 14) {
+        printFirstName = (firstName.find(" ") != string::npos) ? firstName.substr(0, firstName.find(" ")) : firstName.substr(0, 14);
+    }
+
+    if(lastName.length() > 14) {
+        printLastName = (lastName.find(" ") != string::npos) ? lastName.substr(0, lastName.find(" ")) : lastName.substr(0, 14);
+    }
+
+    cout << setw(15) << left << printFirstName;
+    cout << setw(15) << left << printLastName;
+    cout << setw(10) << left << GPA;
+    cout << setw(15) << left << major;
+    cout << setw(15) << left << SID;
+    cout << setw(10) << left << yearNumber << endl;
 }
