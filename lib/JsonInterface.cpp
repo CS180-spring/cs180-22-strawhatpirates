@@ -162,7 +162,7 @@ void JsonInterface::removeStudent()
 	//	
     //    }
 
-void JsonInterface::writeFileStu(vector<Student> theStudents)
+void JsonInterface::writeFileStu(vector<Student> dataStu)
 {
     ofstream file;
     file.open("student1.json");
