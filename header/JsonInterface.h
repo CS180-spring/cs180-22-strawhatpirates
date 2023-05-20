@@ -20,6 +20,8 @@ class JsonInterface
 		void addStudent();
 		void removeProfessor();
 		void removeStudent();
+		void updateProfessor();
+		void updateStudent();
 		void editProfessor();
 		void editStudent();
 		void searchProfessor();

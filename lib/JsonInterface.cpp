@@ -126,7 +126,43 @@ void JsonInterface::removeStudent()
     return;
 }
 
-void JsonInterface::writeFileStu(vector<Student> dataStu)
+
+//void JsonInterface::updateStudent(string SID, vector<Student> stussy) {
+
+//	int i, choice;
+
+
+    //while(done) {
+    //switch (data)
+    //                case 1: cout << "Name:";
+	//						cin >> p[i].name;
+	//						cout << "Name Updated...\n";
+    //						break;
+   	//				case 2: cout << "GPA:";
+   	//						cin >> p[i].gpa;
+   	//						cout << "GPA Updated...\n";
+   	//						break; 					
+	//				case 3: cout << "Major:";
+	//						cin >> p[i].major;
+	//						cout << "Major Updated...\n";
+	//						break;
+	//				case 4: cout << "SID:";
+	//						cin >> p[i].sid;
+	//						cout << "SID Updated...\n";
+	//						break;
+	//				case 5: cout << "Year:";
+	//						cin >> p[i].year;
+	//						cout << "Year Updated...\n";
+	//						break;
+	//				case 6: 
+	//				
+	//				default: cout << "Invalid Input:";
+	//				break;
+	//				}
+	//	
+    //    }
+
+void JsonInterface::writeFileStu(vector<Student> theStudents)
 {
     ofstream file;
     file.open("student1.json");
