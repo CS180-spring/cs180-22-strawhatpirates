@@ -54,7 +54,7 @@ class JsonInterface
 	private:
 		vector<Professor> dataProf;
 		vector<Student> dataStu;
-		bool mode;
+		bool mode = true;
 };
 
 #endif // JSONINTERFACE_H

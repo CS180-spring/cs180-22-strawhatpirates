@@ -3,9 +3,9 @@
 
 using namespace std;
 
-bool mode = true;
+// bool mode = true;
 
-int menu()
+int menu(bool mode)
 {
     int menuChoice;
 

@@ -14,7 +14,7 @@ int main()
     JsonInterface jsonInterface;
 
     do {
-        int a = menu();
+        int a = menu(jsonInterface.getMode());
 
         if (a == 1)
             jsonInterface.add();
