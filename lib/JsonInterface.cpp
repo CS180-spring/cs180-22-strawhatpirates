@@ -101,6 +101,79 @@ void JsonInterface::sortStudent()
     writeFileStu(dataStu);
 }
 
+void JsonInterface::sortProfessor()
+{
+    vector<Student> dataProf = readFileProf();
+    cout << "\nYou have chosen to sort professors" << endl;
+
+    int choice;
+
+    cout << "1. Sort by first name" << endl;
+    cout << "2. Sort by last name" << endl;
+    cout << "3. Sort by department" << endl;
+    cout << "4. Sort by rank" << endl;
+    cout << "Enter your selection: ";
+    cin >> choice;
+
+    Professor temp;
+    int i;
+    int j;
+
+    if (choice == 1) {
+        cout << "You have chosen to sort by first name." << endl;
+        for (i = 0; i < dataProf.size(); i++) {
+            for (j = i + 1; j < dataProf.size(); j++) {
+                if (dataProf[j].getFirstName() < dataProf[i].getFirstName()) {
+                    temp = dataProf[i];
+                    dataProf[i] = dataProf[j];
+                    dataProf[j] = temp;
+                }
+            }
+        }
+    }
+    
+    if (choice == 2) {
+        cout << "You have chosen to sort by last name." << endl;
+        for (i = 0; i < dataProf.size(); i++) {
+            for (j = i + 1; j < dataProf.size(); j++) {
+                if (dataProf[j].getLastName() < dataProf[i].getLastName()) {
+                    temp = dataProf[i];
+                    dataProf[i] = dataProf[j];
+                    dataProf[j] = temp;
+                }
+            }
+        }
+    }
+
+    if (choice == 3) {
+        cout << "You have chosen to sort by department." << endl;
+        for (i = 0; i < dataProf.size(); i++) {
+            for (j = i + 1; j < dataProf.size(); j++) {
+                if (dataProf[j].getDepartment() < dataProf[i].getDepartment()) {
+                    temp = dataProf[i];
+                    dataProf[i] = dataProf[j];
+                    dataProf[j] = temp;
+                }
+            }
+        }
+    }
+
+    if (choice == 4) {
+        cout << "You have chosen to sort by rank." << endl;
+        for (i = 0; i < dataProf.size(); i++) {
+            for (j = i + 1; j < dataProf.size(); j++) {
+                if (dataProf[j].getRank() < dataProf[i].getRank()) {
+                    temp = dataProf[i];
+                    dataProf[i] = dataProf[j];
+                    dataProf[j] = temp;
+                }
+            }
+        }
+    }
+    
+    // writeFileProf(dataProf);
+}
+
 void JsonInterface::addStudent() {
     vector<Student> dataStu = readFileStu();
     string firstName, lastName , GPA, SID, yearNumber, major;
