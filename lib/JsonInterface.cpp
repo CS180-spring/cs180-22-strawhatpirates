@@ -484,9 +484,27 @@ vector<Professor> JsonInterface::readFileProf()
 
 void JsonInterface::printStudents() {
 
+    //table view of students
+    cout << "\n----- Student info -----" << endl;
     vector<Student> dataStu = readFileStu();
+    cout << setw(5) << left << "No.";
+    cout << setw(15) << left << "First Name";
+    cout << setw(15) << left << "Last Name";
+    cout << setw(10) << left << "GPA";
+    cout << setw(15) << left << "Major";
+    cout << setw(15) << left << "SID";
+    cout << setw(10) << left << "Year" << endl;
+    cout << "-------------------------------------------------------------------------------------" << endl;
+
     for (int i = 0; i < dataStu.size(); ++i) {
-        cout << dataStu[i].getInfo() << endl << endl;
+        cout << setw(5) << left << i + 1;
+        cout << setw(15) << left << dataStu.at(i).getFirstName();
+        cout << setw(15) << left << dataStu.at(i).getLastName();
+        cout << setw(10) << left << dataStu.at(i).getGPA();
+        cout << setw(15) << left << dataStu.at(i).getMajor();
+        cout << setw(15) << left << dataStu.at(i).getSID();
+        cout << setw(10) << left << dataStu.at(i).getYearNumber() << endl;
+        cout << "-------------------------------------------------------------------------------------" << endl;
     }
 }
 
