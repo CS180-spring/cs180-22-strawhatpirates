@@ -39,6 +39,30 @@
 			"Major": "CS",
 			"SID": "128573",
 			"Year": "4"
+		},
+		{
+			"First Name": "bob",
+			"Last Name": "collington",
+			"GPA": "123",
+			"Major": "cs",
+			"SID": "12345",
+			"Year": "2"
+		},
+		{
+			"First Name": "asd",
+			"Last Name": "asd",
+			"GPA": "5.12",
+			"Major": "1",
+			"SID": "1",
+			"Year": "1"
+		},
+		{
+			"First Name": "Bob",
+			"Last Name": "John",
+			"GPA": "5.19",
+			"Major": "kasd",
+			"SID": "123456789",
+			"Year": "1"
 		}
 	]
 }

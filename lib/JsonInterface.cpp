@@ -149,8 +149,7 @@ void JsonInterface::searchStudent() {
     if (choice == 1) {
         cin.ignore();
         string first;
-        cout << "Search by name: " << endl;
-        cout << "First Name: " << endl;
+        cout << "Search by First Name" << endl;
         getline(cin, first);
 
         string upperFirst;
@@ -176,6 +175,167 @@ void JsonInterface::searchStudent() {
             cout << "Student not found!" << endl;
         }
         
+    }
+
+    if (choice == 2) {
+        cin.ignore();
+        string last;
+        cout << "Search by Last Name:" << endl;
+        getline(cin, last);
+
+        string upperLast;
+        upperLast = last;
+        transform(upperLast.begin(), upperLast.end(), upperLast.begin(), ::toupper);
+
+        vector<Student> lastNames;
+
+        for (int i = 0; i < dataStu.size(); ++i) {
+            string lastName = dataStu[i].getLastName();
+            transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
+            if (lastName == upperLast) {
+                lastNames.push_back(dataStu[i]);
+            } 
+        }
+
+        cout << "\nList of students with last name:" << last << endl << endl;
+        if (lastNames.size() != 0) {
+            for (int i = 0; i < lastNames.size(); ++i) {
+                cout << lastNames[i].getInfo() << endl << endl;
+            }
+        } else {
+            cout << "Student not found!" << endl;
+        }
+    }
+
+    if (choice == 3) {
+        cin.ignore();
+
+        //search by range or specific GPA
+        int choice1;
+        cout << "1. Search GPA by range." << endl;
+        cout << "2. Search specific GPA." << endl;
+        cin >> choice1;
+
+        if (choice1 == 1) {
+            cin.ignore();
+            cout << "Searching GPA by range" << endl;
+
+            double bot, top;
+            cout << "Enter bottom range: " << endl;
+            cin >> bot;
+            cin.clear();
+            cout << "Enter top range: " << endl;
+            cin >> top;
+
+            vector<Student> GPAs;
+
+            for (int i = 0; i < dataStu.size(); ++i) {
+                int gpa = stoi(dataStu[i].getGPA());
+                if (bot <= gpa && gpa <= top) {
+                    GPAs.push_back(dataStu[i]);
+                }
+            }
+
+            cout << "\nList of students with GPA between " << bot << "-" << top << ":" << endl;
+            if (GPAs.size() != 0) {
+                for (int i = 0; i < GPAs.size(); ++i) {
+                    cout << GPAs[i].getInfo() << endl << endl;
+                }
+            } else {
+                cout << "Student not found!" << endl;
+            }
+        }
+
+        if (choice1 == 2) {
+            cin.ignore();
+            cout << "Searching by specific GPA" << endl;
+
+            string GPA;
+            cout << "Search by GPA:" << endl;
+            getline(cin, GPA);
+
+            //check GPA format
+            //no decimal
+            int format = -1;
+            for (int i = 0; i < GPA.length(); ++i) {
+                if (GPA[i] != '.') {
+                    format = 0;
+                }
+            }
+            if (GPA.length() == 3) {
+                format = 1;
+            }
+            if (GPA.length() == 4) {
+                format = 2;
+            }
+            
+            vector<Student> GPAs;
+
+            //no decimal
+            if (format == 0) {
+                for (int i = 0; i < dataStu.size(); ++i) {
+                    string gpa = dataStu[i].getGPA();
+                    if (gpa[0] == GPA[0]) {
+                        GPAs.push_back(dataStu[i]);
+                    }
+                }
+            }
+
+            //1 decimal
+            if (format == 1) {
+                for (int i = 0; i < dataStu.size(); ++i) {
+                    string gpa = dataStu[i].getGPA();
+                    if (gpa.substr(0, 3) == GPA.substr(0, 3)) {
+                        GPAs.push_back(dataStu[i]);
+                    }
+                }
+            }
+
+            if (format == 2) {
+                for (int i = 0; i < dataStu.size(); ++i) {
+                    string gpa = dataStu[i].getGPA();
+                    if (gpa == GPA) {
+                        GPAs.push_back(dataStu[i]);
+                    }
+                }
+            }
+
+
+            cout << "\nList of students with GPA:" << GPA << endl << endl;
+            if (GPAs.size() != 0) {
+                for (int i = 0; i < GPAs.size(); ++i) {
+                    cout << GPAs[i].getInfo() << endl << endl;
+                }
+            } else {
+                cout << "Student not found!" << endl;
+            }
+        }
+    }
+
+    if (choice == 4) {
+        cin.ignore();
+        cout << "Search by SID" << endl;
+        
+        string SID;
+        getline(cin, SID);
+
+        vector<Student> SIDs;
+
+        for (int i = 0; i < dataStu.size(); ++i) {
+            string sid = dataStu[i].getSID();
+            if (sid == SID) {
+                SIDs.push_back(dataStu[i]);
+            } 
+        }
+
+        cout << "\nList of students with SID:" << SID << endl << endl;
+        if (SIDs.size() != 0) {
+            for (int i = 0; i < SIDs.size(); ++i) {
+                cout << SIDs[i].getInfo() << endl << endl;
+            }
+        } else {
+            cout << "Student not found!" << endl;
+        }
     }
 }
 
