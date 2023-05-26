@@ -15,6 +15,92 @@ JsonInterface::JsonInterface() {
     this->mode = true;
 }
 
+void JsonInterface::sortStudent()
+{
+    vector<Student> dataStu = readFileStu();
+    cout << "\nYou have chosen to sort students" << endl;
+
+    int choice;
+
+    cout << "1. Sort by first name" << endl;
+    cout << "2. Sort by last name" << endl;
+    cout << "3. Sort by GPA" << endl;
+    cout << "4. Sort by SID" << endl;
+    cout << "5. Sort by Major" << endl;
+    cout << "Enter your selection: ";
+    cin >> choice;
+
+    Student temp;
+    int i;
+    int j;
+
+    if (choice == 1) {
+        cout << "You have chosen to sort by first name." << endl;
+        for (i = 0; i < dataStu.size(); i++) {
+            for (j = i + 1; j < dataStu.size(); j++) {
+                if (dataStu[j].getFirstName() < dataStu[i].getFirstName()) {
+                    temp = dataStu[i];
+                    dataStu[i] = dataStu[j];
+                    dataStu[j] = temp;
+                }
+            }
+        }
+    }
+    
+    if (choice == 2) {
+        cout << "You have chosen to sort by last name." << endl;
+        for (i = 0; i < dataStu.size(); i++) {
+            for (j = i + 1; j < dataStu.size(); j++) {
+                if (dataStu[j].getLastName() < dataStu[i].getLastName()) {
+                    temp = dataStu[i];
+                    dataStu[i] = dataStu[j];
+                    dataStu[j] = temp;
+                }
+            }
+        }
+    }
+
+    if (choice == 3) {
+        cout << "You have chosen to sort by GPA." << endl;
+        for (i = 0; i < dataStu.size(); i++) {
+            for (j = i + 1; j < dataStu.size(); j++) {
+                if (dataStu[j].getGPA() < dataStu[i].getGPA()) {
+                    temp = dataStu[i];
+                    dataStu[i] = dataStu[j];
+                    dataStu[j] = temp;
+                }
+            }
+        }
+    }
+
+    if (choice == 4) {
+        cout << "You have chosen to sort by SID." << endl;
+        for (i = 0; i < dataStu.size(); i++) {
+            for (j = i + 1; j < dataStu.size(); j++) {
+                if (dataStu[j].getSID() < dataStu[i].getSID()) {
+                    temp = dataStu[i];
+                    dataStu[i] = dataStu[j];
+                    dataStu[j] = temp;
+                }
+            }
+        }
+    }
+    
+    if (choice == 5) {
+        cout << "You have chosen to sort by major." << endl;
+        for (i = 0; i < dataStu.size(); i++) {
+            for (j = i + 1; j < dataStu.size(); j++) {
+                if (dataStu[j].getMajor() < dataStu[i].getMajor()) {
+                    temp = dataStu[i];
+                    dataStu[i] = dataStu[j];
+                    dataStu[j] = temp;
+                }
+            }
+        }
+    }
+    writeFileStu(dataStu);
+}
+
 void JsonInterface::addStudent() {
     vector<Student> dataStu = readFileStu();
     string firstName, lastName , GPA, SID, yearNumber, major;
@@ -63,7 +149,7 @@ void JsonInterface::searchStudent() {
     if (choice == 1) {
         cin.ignore();
         string first;
-        cout << "Search by First Name" << endl;
+        cout << "Search by First Name: ";
         getline(cin, first);
 
         string upperFirst;
@@ -94,7 +180,7 @@ void JsonInterface::searchStudent() {
     if (choice == 2) {
         cin.ignore();
         string last;
-        cout << "Search by Last Name:" << endl;
+        cout << "Search by Last Name: ";
         getline(cin, last);
 
         string upperLast;
@@ -129,16 +215,17 @@ void JsonInterface::searchStudent() {
         cout << "1. Search GPA by range." << endl;
         cout << "2. Search specific GPA." << endl;
         cin >> choice1;
+        cout << endl;
 
         if (choice1 == 1) {
             cin.ignore();
-            cout << "Searching GPA by range" << endl;
+            cout << "Searching GPA by range" << endl << endl;
 
             double bot, top;
-            cout << "Enter bottom range: " << endl;
+            cout << "Enter bottom range: ";
             cin >> bot;
             cin.clear();
-            cout << "Enter top range: " << endl;
+            cout << "Enter top range: ";
             cin >> top;
 
             vector<Student> GPAs;
@@ -165,7 +252,7 @@ void JsonInterface::searchStudent() {
             cout << "Searching by specific GPA" << endl;
 
             string GPA;
-            cout << "Search by GPA:" << endl;
+            cout << "Search by GPA: ";
             getline(cin, GPA);
 
             //check GPA format
@@ -228,7 +315,7 @@ void JsonInterface::searchStudent() {
 
     if (choice == 4) {
         cin.ignore();
-        cout << "Search by SID" << endl;
+        cout << "Search by SID: ";
         
         string SID;
         getline(cin, SID);
