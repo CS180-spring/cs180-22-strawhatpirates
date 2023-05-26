@@ -149,7 +149,8 @@ void JsonInterface::searchStudent() {
     if (choice == 1) {
         cin.ignore();
         string first;
-        cout << "Search by First Name" << endl;
+
+        cout << "Search by First Name: ";
         getline(cin, first);
 
         string upperFirst;
@@ -180,7 +181,7 @@ void JsonInterface::searchStudent() {
     if (choice == 2) {
         cin.ignore();
         string last;
-        cout << "Search by Last Name:" << endl;
+        cout << "Search by Last Name: ";
         getline(cin, last);
 
         string upperLast;
@@ -215,16 +216,17 @@ void JsonInterface::searchStudent() {
         cout << "1. Search GPA by range." << endl;
         cout << "2. Search specific GPA." << endl;
         cin >> choice1;
+        cout << endl;
 
         if (choice1 == 1) {
             cin.ignore();
-            cout << "Searching GPA by range" << endl;
+            cout << "Searching GPA by range" << endl << endl;
 
             double bot, top;
-            cout << "Enter bottom range: " << endl;
+            cout << "Enter bottom range: ";
             cin >> bot;
             cin.clear();
-            cout << "Enter top range: " << endl;
+            cout << "Enter top range: ";
             cin >> top;
 
             vector<Student> GPAs;
@@ -251,7 +253,7 @@ void JsonInterface::searchStudent() {
             cout << "Searching by specific GPA" << endl;
 
             string GPA;
-            cout << "Search by GPA:" << endl;
+            cout << "Search by GPA: ";
             getline(cin, GPA);
 
             //check GPA format
@@ -314,7 +316,7 @@ void JsonInterface::searchStudent() {
 
     if (choice == 4) {
         cin.ignore();
-        cout << "Search by SID" << endl;
+        cout << "Search by SID: ";
         
         string SID;
         getline(cin, SID);
