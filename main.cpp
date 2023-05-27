@@ -32,10 +32,7 @@ int main()
         else if (a == 6)
             continue;
         else if (a == 7) {
-            cout << "----- Student info -----" << endl;
             jsonInterface.printStudents(); 
-
-            cout << "----- Professor info -----" << endl;
             jsonInterface.printProfessors();
         }
         else if (a == 8)
