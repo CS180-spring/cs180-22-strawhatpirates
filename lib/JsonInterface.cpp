@@ -99,7 +99,7 @@ void JsonInterface::sortStudent()
                 }
             }
         }
-    }
+    }                       
     writeFileStu(dataStu);
 }
 
@@ -108,6 +108,7 @@ void JsonInterface::Student::updateStudent()
 
     string firstName, lastName , GPA, SID, yearNumber, major;
     int choice;
+    int i, j;
     vector<Student> dataStu = readFileStu();
     printStudents();
 
@@ -132,29 +133,35 @@ void JsonInterface::Student::updateStudent()
 
     if (choice == 1) {
         cout << "You have chosen to update first name." << endl;
+        getline(cin, firstName);
         changeName(firstName);
     }
     
     if (choice == 2) {
         cout << "You have chosen to update last name." << endl;
+        getline(cin, firstName);
         changeName(lastName);  
     }
 
     if (choice == 3) {
         cout << "You have chosen to update GPA." << endl;
+        getline(cin, firstName);
         changeGPA(GPA);
     }
 
     if (choice == 4) {
         cout << "You have chosen to update SID." << endl;
+        getline(cin, firstName);
         changeSID(SID);
     }
     
     if (choice == 5) {
         cout << "You have chosen to update Major." << endl;
+        getline(cin, firstName);
         changeMajor(major);     
         
     }
+    
     writeFileStu(dataStu);
 }
 
