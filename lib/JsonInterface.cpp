@@ -324,7 +324,7 @@ void JsonInterface::searchStudent() {
             vector<Student> GPAs;
 
             for (int i = 0; i < dataStu.size(); ++i) {
-                int gpa = stoi(dataStu[i].getGPA());
+                double gpa = stod(dataStu[i].getGPA());
                 if (bot <= gpa && gpa <= top) {
                     GPAs.push_back(dataStu[i]);
                 }
@@ -420,9 +420,7 @@ void JsonInterface::searchStudent() {
 
         cout << "\nList of students with SID:" << SID << endl << endl;
         if (SIDs.size() != 0) {
-            for (int i = 0; i < SIDs.size(); ++i) {
-                cout << SIDs[i].getInfo() << endl << endl;
-            }
+            printStudents(SIDs);
         } else {
             cout << "Student not found!" << endl;
         }
