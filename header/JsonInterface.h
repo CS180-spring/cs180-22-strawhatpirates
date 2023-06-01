@@ -24,6 +24,8 @@ class JsonInterface
 		void writeFileProf(vector<Professor> dataProf);
 		vector<Student> readFileStu();
 		vector<Professor> readFileProf();
+
+		void uppercaseStrings(string& firstName, string& lastName, string& major);
 		
 		void add();
 		void addProfessor();
