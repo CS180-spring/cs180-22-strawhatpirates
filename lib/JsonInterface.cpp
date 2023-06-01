@@ -428,7 +428,47 @@ void JsonInterface::searchStudent() {
 }
 
 void JsonInterface::searchProfessor() {
+    vector<Professor> dataProf = readFileProf();
+    cout << "\nYou have chosen to search for a professor" << endl;
 
+    int choice;
+
+    cout << "1. Search by first name" << endl;
+    cout << "2. Search by last name" << endl;
+    cout << "3. Search by department" << endl;
+    cout << "4. Search by rank" << endl;
+
+    cin >> choice;
+
+    if (choice == 1) {
+        cin.ignore();
+        string first;
+
+        cout << "Search by First Name: ";
+        getline(cin, first);
+
+        string upperFirst;
+        upperFirst = first;
+        transform(upperFirst.begin(), upperFirst.end(), upperFirst.begin(), ::toupper);
+
+        vector<Professor> firstNames;
+
+        for (int i = 0; i < dataProf.size(); ++i) {
+            string firstName = dataProf[i].getFirstName();
+            transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
+            if (firstName == upperFirst) {
+                firstNames.push_back(dataProf[i]);
+            } 
+        }
+
+        cout << "\nList of students with first name: " << first << endl << endl;
+        if (firstNames.size() != 0) {
+            printProfessors(firstNames);
+        } else {
+            cout << "Student not found!" << endl;
+        }
+        
+    }
 }
 
 void JsonInterface::remove() {
