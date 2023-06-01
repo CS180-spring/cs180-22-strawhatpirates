@@ -12,21 +12,17 @@ class JsonInterface
 {
 	public:
 		JsonInterface(); //mode = true
-		vector<Student> readFileStu();
-		vector<Professor> readFileProf();
-		void printStudents();
-		void printProfessors();
+		void uppercaseStrings(string& firstName, string& lastName, string& major);
 		void addProfessor();
-		void addStudent();
+		void addStudent(vector<Student> &dataStu);
 		void removeProfessor();
-		void removeStudent();
+		void removeStudent(string SID, vector<Student> stussy);
 		void updateProfessor();
-		void updateStudent();
+		void updateStudent(string SID, vector<Student> stussy);
 		void editProfessor();
 		void editStudent();
 		void searchProfessor();
 		void searchStudent();
-		void sortStudent();
 		void changeMode();
 		void writeFileStu(vector<Student> theStudents);
 		void writeFileProf(vector<Professor> theProfessors);
