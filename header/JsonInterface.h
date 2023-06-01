@@ -18,47 +18,49 @@ using namespace std;
 
 class JsonInterface
 {
-	public:
-		JsonInterface(); //mode = true
-		void writeFileStu(vector<Student> dataStu);
-		void writeFileProf(vector<Professor> dataProf);
-		vector<Student> readFileStu();
-		vector<Professor> readFileProf();
-		
-		void add();
-		void addProfessor();
-		void addStudent();
+    public:
+        JsonInterface(); //mode = true
+        void writeFileStu(vector<Student> dataStu);
+        void writeFileProf(vector<Professor> dataProf);
+        vector<Student> readFileStu();
+        vector<Professor> readFileProf();
 
-		void sort();
-		void sortStudent();
-		void sortProfessor();
+        void uppercaseStrings(string& firstName, string& lastName, string& major);
 
-		void search();
-		void searchProfessor();
-		void searchStudent();
+        void add();
+        void addProfessor();
+        void addStudent();
 
-		void remove();
-		void removeProfessor();
-		void removeStudent();
+        void sort();
+        void sortStudent();
+        void sortProfessor();
 
-		void update();
-		void updateProfessor();
-		void updateStudent();
+        void search();
+        void searchProfessor();
+        void searchStudent();
 
-		void edit();
-		void editProfessor();
-		void editStudent();
+        void remove();
+        void removeProfessor();
+        void removeStudent();
 
-		void print();
-		void printStudents();
-		void printProfessors();
+        void update();
+        void updateProfessor();
+        void updateStudent();
 
-		void changeMode();
-		bool getMode();
-	private:
-		vector<Professor> dataProf;
-		vector<Student> dataStu;
-		bool mode = true;
+        void edit();
+        void editProfessor();
+        void editStudent();
+
+        void print();
+        void printStudents();
+        void printProfessors();
+
+        void changeMode();
+        bool getMode();
+    private:
+        vector<Professor> dataProf;
+        vector<Student> dataStu;
+        bool mode = true;
 };
 
 #endif // JSONINTERFACE_H
