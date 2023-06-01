@@ -18,49 +18,49 @@ using namespace std;
 
 class JsonInterface
 {
-	public:
-		JsonInterface(); //mode = true
-		void writeFileStu(vector<Student> dataStu);
-		void writeFileProf(vector<Professor> dataProf);
-		vector<Student> readFileStu();
-		vector<Professor> readFileProf();
+    public:
+        JsonInterface(); //mode = true
+        void writeFileStu(vector<Student> dataStu);
+        void writeFileProf(vector<Professor> dataProf);
+        vector<Student> readFileStu();
+        vector<Professor> readFileProf();
 
-		void uppercaseStrings(string& firstName, string& lastName, string& major);
-		
-		void add();
-		void addProfessor();
-		void addStudent();
+        void uppercaseStrings(string& firstName, string& lastName, string& major);
 
-		void sort();
-		void sortStudent();
-		void sortProfessor();
+        void add();
+        void addProfessor();
+        void addStudent();
 
-		void search();
-		void searchProfessor();
-		void searchStudent();
+        void sort();
+        void sortStudent();
+        void sortProfessor();
 
-		void remove();
-		void removeProfessor();
-		void removeStudent();
+        void search();
+        void searchProfessor();
+        void searchStudent();
 
-		void update();
-		void updateProfessor();
-		void updateStudent();
+        void remove();
+        void removeProfessor();
+        void removeStudent();
 
-		void edit();
-		void editProfessor();
-		void editStudent();
+        void update();
+        void updateProfessor();
+        void updateStudent();
 
-		void print();
-		void printStudents();
-		void printProfessors();
+        void edit();
+        void editProfessor();
+        void editStudent();
 
-		void changeMode();
-		bool getMode();
-	private:
-		vector<Professor> dataProf;
-		vector<Student> dataStu;
-		bool mode = true;
+        void print();
+        void printStudents();
+        void printProfessors();
+
+        void changeMode();
+        bool getMode();
+    private:
+        vector<Professor> dataProf;
+        vector<Student> dataStu;
+        bool mode = true;
 };
 
 #endif // JSONINTERFACE_H
