@@ -1,15 +1,604 @@
 {
     "professors": [
-    {
-        "First Name" : "Rick",
-	    "Last Name" : "Chungus",
-	    "Department": "Mathematics",
-	    "Rank" : "Researcher"
-    },
-    {
-        "First Name" : "Morty",
-        "Last Name" : "Chungus",
-        "Department": "Mathematics",
-        "Rank" : "Researcher"
-    }
-]}
+        {
+            "First Name": "Peter",
+            "Last Name": "Garza",
+            "Department": "EDU",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Hannah",
+            "Last Name": "Flores",
+            "Department": "PSY",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Megan",
+            "Last Name": "Kent",
+            "Department": "MUS",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Ryan",
+            "Last Name": "Ballard",
+            "Department": "BSNS",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Thomas",
+            "Last Name": "Wright",
+            "Department": "BIOL",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Jack",
+            "Last Name": "Berry",
+            "Department": "BIOL",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Andre",
+            "Last Name": "Vega",
+            "Department": "BIOL",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Zachary",
+            "Last Name": "Keith",
+            "Department": "CHEM",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Vanessa",
+            "Last Name": "Franco",
+            "Department": "CHEM",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Sharon",
+            "Last Name": "Summers",
+            "Department": "BIOL",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Melissa",
+            "Last Name": "Carter",
+            "Department": "ART",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Steven",
+            "Last Name": "Boyle",
+            "Department": "MUS",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Tina",
+            "Last Name": "Smith",
+            "Department": "EDU",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Eric",
+            "Last Name": "Fox",
+            "Department": "CS",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Richard",
+            "Last Name": "Williams",
+            "Department": "ART",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Linda",
+            "Last Name": "Thornton",
+            "Department": "ENGL",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Victoria",
+            "Last Name": "Thompson",
+            "Department": "PHYSCEN",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Nicholas",
+            "Last Name": "Tate",
+            "Department": "CS",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Kathy",
+            "Last Name": "Graham",
+            "Department": "EDU",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Joseph",
+            "Last Name": "Vazquez",
+            "Department": "MUS",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Dominic",
+            "Last Name": "Cox",
+            "Department": "MUS",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Rhonda",
+            "Last Name": "Trujillo",
+            "Department": "CS",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Rebecca",
+            "Last Name": "Woods",
+            "Department": "CS",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Parker",
+            "Last Name": "Franklin",
+            "Department": "CHEM",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Michelle",
+            "Last Name": "Watson",
+            "Department": "CHEM",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Austin",
+            "Last Name": "Harris",
+            "Department": "BIOL",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Kimberly",
+            "Last Name": "Bruce",
+            "Department": "PSY",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Troy",
+            "Last Name": "Sellers",
+            "Department": "BSNS",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Carlos",
+            "Last Name": "Salinas",
+            "Department": "MATH",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Andrew",
+            "Last Name": "Ponce",
+            "Department": "MUS",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Richard",
+            "Last Name": "Phillips",
+            "Department": "BSNS",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Rachel",
+            "Last Name": "Harris",
+            "Department": "CS",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Cynthia",
+            "Last Name": "Robles",
+            "Department": "PHYSCEN",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Tyler",
+            "Last Name": "Smith",
+            "Department": "ENGL",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Sandra",
+            "Last Name": "Glover",
+            "Department": "PHIL",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Hannah",
+            "Last Name": "Burton",
+            "Department": "PHIL",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Lori",
+            "Last Name": "Hicks",
+            "Department": "PHIL",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Elizabeth",
+            "Last Name": "Sandoval",
+            "Department": "BSNS",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Whitney",
+            "Last Name": "Mcgrath",
+            "Department": "PSY",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Paul",
+            "Last Name": "Medina",
+            "Department": "MUS",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Tina",
+            "Last Name": "Watson",
+            "Department": "MUS",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Cassie",
+            "Last Name": "Hernandez",
+            "Department": "BIOL",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Brandon",
+            "Last Name": "Blackburn",
+            "Department": "ENGL",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Wanda",
+            "Last Name": "Fletcher",
+            "Department": "PHYSCEN",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Kristina",
+            "Last Name": "Brown",
+            "Department": "ART",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Abigail",
+            "Last Name": "Hopkins",
+            "Department": "PHIL",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Jessica",
+            "Last Name": "Anderson",
+            "Department": "EDU",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Patricia",
+            "Last Name": "Andrews",
+            "Department": "PSY",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Dennis",
+            "Last Name": "Wallace",
+            "Department": "ENGL",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Lisa",
+            "Last Name": "Price",
+            "Department": "PHYSCEN",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Leslie",
+            "Last Name": "Key",
+            "Department": "CHEM",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Daniel",
+            "Last Name": "Davis",
+            "Department": "PSY",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Jennifer",
+            "Last Name": "Vazquez",
+            "Department": "PHIL",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Michelle",
+            "Last Name": "Chavez",
+            "Department": "EDU",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Kathryn",
+            "Last Name": "Leblanc",
+            "Department": "ENGL",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Matthew",
+            "Last Name": "Curtis",
+            "Department": "PHIL",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Kathryn",
+            "Last Name": "Rowland",
+            "Department": "CS",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Danny",
+            "Last Name": "Holland",
+            "Department": "BIOL",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Jennifer",
+            "Last Name": "Brown",
+            "Department": "ART",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Mark",
+            "Last Name": "Greene",
+            "Department": "BIOL",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Justin",
+            "Last Name": "Good",
+            "Department": "ART",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Micheal",
+            "Last Name": "Terry",
+            "Department": "BIOL",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Timothy",
+            "Last Name": "Weaver",
+            "Department": "BSNS",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "James",
+            "Last Name": "Wilson",
+            "Department": "BIOL",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Joshua",
+            "Last Name": "Bullock",
+            "Department": "HIST",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Lawrence",
+            "Last Name": "King",
+            "Department": "MATH",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Sandra",
+            "Last Name": "Harmon",
+            "Department": "BIOL",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Jonathan",
+            "Last Name": "Velasquez",
+            "Department": "EDU",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Amy",
+            "Last Name": "Good",
+            "Department": "BSNS",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Michael",
+            "Last Name": "Maynard",
+            "Department": "HIST",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Mark",
+            "Last Name": "Farmer",
+            "Department": "MATH",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Robert",
+            "Last Name": "Thomas",
+            "Department": "POLS",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Samuel",
+            "Last Name": "Le",
+            "Department": "BSNS",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Robert",
+            "Last Name": "Castro",
+            "Department": "CS",
+            "Rank": "Professor"
+        },
+        {
+            "First Name": "Denise",
+            "Last Name": "Carter",
+            "Department": "BSNS",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Christine",
+            "Last Name": "Zavala",
+            "Department": "MATH",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Michael",
+            "Last Name": "Johnson",
+            "Department": "PHIL",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Joy",
+            "Last Name": "Richardson",
+            "Department": "PHYSCEN",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Anna",
+            "Last Name": "Williams",
+            "Department": "PHIL",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "David",
+            "Last Name": "Butler",
+            "Department": "ART",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Dustin",
+            "Last Name": "Young",
+            "Department": "PHYSCEN",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Sheena",
+            "Last Name": "King",
+            "Department": "EDU",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Peter",
+            "Last Name": "Scott",
+            "Department": "BSNS",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Wendy",
+            "Last Name": "Brown",
+            "Department": "PHIL",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Patricia",
+            "Last Name": "Hughes",
+            "Department": "BSNS",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Natasha",
+            "Last Name": "Kennedy",
+            "Department": "CS",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Matthew",
+            "Last Name": "Adkins",
+            "Department": "ART",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Yvonne",
+            "Last Name": "Richmond",
+            "Department": "ART",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Carrie",
+            "Last Name": "Jackson",
+            "Department": "POLS",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Matthew",
+            "Last Name": "Jimenez",
+            "Department": "POLS",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Joseph",
+            "Last Name": "Smith",
+            "Department": "ART",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Colin",
+            "Last Name": "Norton",
+            "Department": "MATH",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Deborah",
+            "Last Name": "Monroe",
+            "Department": "ART",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Angelica",
+            "Last Name": "Casey",
+            "Department": "EDU",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Brandon",
+            "Last Name": "Powers",
+            "Department": "CHEM",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Crystal",
+            "Last Name": "Caldwell",
+            "Department": "PHYSCEN",
+            "Rank": "Assistant"
+        },
+        {
+            "First Name": "Rodney",
+            "Last Name": "Morris",
+            "Department": "PHYSCEN",
+            "Rank": "Adjunct"
+        },
+        {
+            "First Name": "Nancy",
+            "Last Name": "Harrison",
+            "Department": "PHIL",
+            "Rank": "Tenured"
+        },
+        {
+            "First Name": "Brian",
+            "Last Name": "Reyes",
+            "Department": "MUS",
+            "Rank": "Dean"
+        },
+        {
+            "First Name": "Erik",
+            "Last Name": "Cook",
+            "Department": "ART",
+            "Rank": "Dean"
+        }
+    ]
+}

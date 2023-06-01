@@ -20,16 +20,22 @@ class JsonInterface
 {
 	public:
 		JsonInterface(); //mode = true
+		void writeFileStu(vector<Student> dataStu);
+		void writeFileProf(vector<Professor> dataProf);
 		vector<Student> readFileStu();
 		vector<Professor> readFileProf();
 		
-		void print();
-		void printStudents();
-		void printProfessors();
-
 		void add();
 		void addProfessor();
 		void addStudent();
+
+		void sort();
+		void sortStudent();
+		void sortProfessor();
+
+		void search();
+		void searchProfessor();
+		void searchStudent();
 
 		void remove();
 		void removeProfessor();
@@ -43,13 +49,11 @@ class JsonInterface
 		void editProfessor();
 		void editStudent();
 
-		void search();
-		void searchProfessor();
-		void searchStudent();
+		void print();
+		void printStudents();
+		void printProfessors();
 
 		void changeMode();
-		void writeFileStu(vector<Student> theStudents);
-		void writeFileProf(vector<Professor> theProfessors);
 		bool getMode();
 	private:
 		vector<Professor> dataProf;

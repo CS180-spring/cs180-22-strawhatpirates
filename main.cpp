@@ -27,9 +27,8 @@ int main()
             //jsonInterface.editStudent();
             continue;
         else if (a == 4)
-            //jsonInterface.sort();
-            //jsonInterface.sortStudent();
-            continue;
+            jsonInterface.sort();
+            // jsonInterface.sortStudent();
         else if (a == 5)
             jsonInterface.search();
             // jsonInterface.searchStudent();
