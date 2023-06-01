@@ -122,7 +122,7 @@ void JsonInterface::addStudent() {
     dataStu.push_back(newStudent);
 
     writeFileStu(dataStu);
-    printStudents();
+    printStudents(dataStu);
 }
 
 void JsonInterface::addProfessor() {
@@ -263,11 +263,9 @@ void JsonInterface::searchStudent() {
             } 
         }
 
-        cout << "\nList of students with first name:" << first << endl << endl;
+        cout << "\nList of students with first name: " << first << endl << endl;
         if (firstNames.size() != 0) {
-            for (int i = 0; i < firstNames.size(); ++i) {
-                cout << firstNames[i].getInfo() << endl << endl;
-            }
+            printStudents(firstNames);
         } else {
             cout << "Student not found!" << endl;
         }
@@ -453,7 +451,7 @@ void JsonInterface::removeStudent()
 
     cout << "\nYou have chosen to delete a student" << endl;
 
-    printStudents();
+    printStudents(dataStu);
     
     cout << "\nEnter the SID of the student to remove: ";
     cin.ignore();
@@ -519,14 +517,16 @@ void JsonInterface::removeProfessor() {
     //    }
 
 void JsonInterface::print() {
-    (mode ? printStudents() : printProfessors());
+    vector<Student> dataStu = readFileStu();
+    vector<Professor> dataProf = readFileProf();
+    (mode ? printStudents(dataStu) : printProfessors(dataProf));
 }
 
-void JsonInterface::printStudents() {
+void JsonInterface::printStudents(vector<Student> data) {
 
     //table view of students
     cout << "\n----- Student info -----" << endl;
-    vector<Student> dataStu = readFileStu();
+    vector<Student> dataStu = data;
     cout << setw(5) << left << "No.";
     cout << setw(15) << left << "First Name";
     cout << setw(15) << left << "Last Name";
@@ -547,11 +547,11 @@ void JsonInterface::printStudents() {
         cout << "-------------------------------------------------------------------------------------" << endl;
     }
 }
-void JsonInterface::printProfessors() {
+void JsonInterface::printProfessors(vector<Professor> data) {
 
     //table view of professors
     cout << "\n----- Professor info -----" << endl;
-    vector<Professor> dataProf = readFileProf();
+    vector<Professor> dataProf = data;
     cout << setw(5) << left << "No.";
     cout << setw(15) << left << "First Name";
     cout << setw(15) << left << "Last Name";

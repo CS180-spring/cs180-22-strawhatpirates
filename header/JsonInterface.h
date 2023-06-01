@@ -52,8 +52,8 @@ class JsonInterface
         void editStudent();
 
         void print();
-        void printStudents();
-        void printProfessors();
+        void printStudents(vector<Student> data);
+        void printProfessors(vector<Professor> data);
 
         void changeMode();
         bool getMode();
