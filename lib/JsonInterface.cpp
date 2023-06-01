@@ -461,11 +461,11 @@ void JsonInterface::searchProfessor() {
             } 
         }
 
-        cout << "\nList of students with first name: " << first << endl << endl;
+        cout << "\nList of professors with first name: " << first << endl << endl;
         if (firstNames.size() != 0) {
             printProfessors(firstNames);
         } else {
-            cout << "Student not found!" << endl;
+            cout << "Professor not found!" << endl;
         }
         
     }
