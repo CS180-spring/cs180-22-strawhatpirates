@@ -292,11 +292,9 @@ void JsonInterface::searchStudent() {
             } 
         }
 
-        cout << "\nList of students with last name:" << last << endl << endl;
+        cout << "\nList of students with last name: " << last << endl << endl;
         if (lastNames.size() != 0) {
-            for (int i = 0; i < lastNames.size(); ++i) {
-                cout << lastNames[i].getInfo() << endl << endl;
-            }
+            printStudents(lastNames);
         } else {
             cout << "Student not found!" << endl;
         }
