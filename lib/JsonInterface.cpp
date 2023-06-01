@@ -332,9 +332,7 @@ void JsonInterface::searchStudent() {
 
             cout << "\nList of students with GPA between " << bot << "-" << top << ":" << endl;
             if (GPAs.size() != 0) {
-                for (int i = 0; i < GPAs.size(); ++i) {
-                    cout << GPAs[i].getInfo() << endl << endl;
-                }
+                printStudents(GPAs);
             } else {
                 cout << "Student not found!" << endl;
             }
@@ -397,9 +395,7 @@ void JsonInterface::searchStudent() {
 
             cout << "\nList of students with GPA:" << GPA << endl << endl;
             if (GPAs.size() != 0) {
-                for (int i = 0; i < GPAs.size(); ++i) {
-                    cout << GPAs[i].getInfo() << endl << endl;
-                }
+                printStudents(GPAs);
             } else {
                 cout << "Student not found!" << endl;
             }
