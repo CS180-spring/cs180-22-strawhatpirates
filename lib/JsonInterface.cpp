@@ -85,6 +85,12 @@ vector<Professor> JsonInterface::readFileProf()
         return info;
 }
 
+void JsonInterface::uppercaseStrings(string &firstName, string &lastName, string &major) {
+    transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
+    transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
+    transform(major.begin(), major.end(), major.begin(), ::toupper);
+}
+
 void JsonInterface::add() {
     (mode ? addStudent() : addProfessor());
 }
