@@ -6,7 +6,9 @@
 #include <vector>
 #include <cstring>
 #include "../header/JsonInterface.h"
+#include "../lib/Person.cpp"
 #include "../lib/json.hpp"
+
 
 using namespace std;
 using json = nlohmann::json;
@@ -101,6 +103,61 @@ void JsonInterface::sortStudent()
     writeFileStu(dataStu);
 }
 
+void JsonInterface::Student::updateStudent()
+{
+
+    string firstName, lastName , GPA, SID, yearNumber, major;
+    int choice;
+    vector<Student> dataStu = readFileStu();
+    printStudents();
+
+    cout << "\nYou have chosen to update a student" << endl;
+
+    cout << "\nSelect the SID of the student, whose contents you want to edit" << endl;
+
+    cout << "1. Update first name" << endl;
+    cout << "2. Update last name" << endl;
+    cout << "3. Update GPA" << endl;
+    cout << "4. Update SID" << endl;
+    cout << "5. Update Major" << endl;
+    cout << "Enter your selection: ";
+    cin >> choice;
+
+    for (int i = 0; i < dataStu.size(); ++i) {
+            string sid = dataStu[i].getSID();
+            if (sid == SID) {
+                SIDs.push_back(dataStu[i]);
+            } 
+        }
+
+    if (choice == 1) {
+        cout << "You have chosen to update first name." << endl;
+        changeName(firstName);
+    }
+    
+    if (choice == 2) {
+        cout << "You have chosen to update last name." << endl;
+        changeName(lastName);  
+    }
+
+    if (choice == 3) {
+        cout << "You have chosen to update GPA." << endl;
+        changeGPA(GPA);
+    }
+
+    if (choice == 4) {
+        cout << "You have chosen to update SID." << endl;
+        changeSID(SID);
+    }
+    
+    if (choice == 5) {
+        cout << "You have chosen to update Major." << endl;
+        changeMajor(major);     
+        
+    }
+    writeFileStu(dataStu);
+}
+
 void JsonInterface::addStudent() {
     vector<Student> dataStu = readFileStu();
     string firstName, lastName , GPA, SID, yearNumber, major;
@@ -119,7 +176,8 @@ void JsonInterface::addStudent() {
     getline(cin, SID);
     cout << "Enter student year number: ";
     getline(cin, yearNumber);
-
+    
+    uppercaseStrings(firstName, lastName, major);
     
     // Create new student object with input values
     Student newStudent(firstName, lastName, GPA, major, SID, yearNumber);
@@ -341,6 +399,12 @@ void JsonInterface::searchStudent() {
     }
 }
 
+void JsonInterface::uppercaseStrings(string &firstName, string &lastName, string &major) {
+    transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
+    transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
+    transform(major.begin(), major.end(), major.begin(), ::toupper);
+}
+
 void JsonInterface::removeStudent()
 {
     bool found = false;
@@ -373,42 +437,6 @@ void JsonInterface::removeStudent()
     writeFileStu(dataStu);
     return;
 }
-
-
-//void JsonInterface::updateStudent(string SID, vector<Student> stussy) {
-
-//	int i, choice;
-
-
-    //while(done) {
-    //switch (data)
-    //                case 1: cout << "Name:";
-	//						cin >> p[i].name;
-	//						cout << "Name Updated...\n";
-    //						break;
-   	//				case 2: cout << "GPA:";
-   	//						cin >> p[i].gpa;
-   	//						cout << "GPA Updated...\n";
-   	//						break; 					
-	//				case 3: cout << "Major:";
-	//						cin >> p[i].major;
-	//						cout << "Major Updated...\n";
-	//						break;
-	//				case 4: cout << "SID:";
-	//						cin >> p[i].sid;
-	//						cout << "SID Updated...\n";
-	//						break;
-	//				case 5: cout << "Year:";
-	//						cin >> p[i].year;
-	//						cout << "Year Updated...\n";
-	//						break;
-	//				case 6: 
-	//				
-	//				default: cout << "Invalid Input:";
-	//				break;
-	//				}
-	//	
-    //    }
 
 void JsonInterface::writeFileStu(vector<Student> dataStu)
 {
