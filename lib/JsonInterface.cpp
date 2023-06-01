@@ -119,7 +119,8 @@ void JsonInterface::addStudent() {
     getline(cin, SID);
     cout << "Enter student year number: ";
     getline(cin, yearNumber);
-
+    
+    uppercaseStrings(firstName, lastName, major);
     
     // Create new student object with input values
     Student newStudent(firstName, lastName, GPA, major, SID, yearNumber);
@@ -339,6 +340,12 @@ void JsonInterface::searchStudent() {
             cout << "Student not found!" << endl;
         }
     }
+}
+
+void JsonInterface::uppercaseStrings(string &firstName, string &lastName, string &major) {
+    transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
+    transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
+    transform(major.begin(), major.end(), major.begin(), ::toupper);
 }
 
 void JsonInterface::removeStudent()
