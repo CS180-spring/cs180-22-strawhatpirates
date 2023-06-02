@@ -276,6 +276,7 @@ void JsonInterface::sortProfessor()
     cout << "2. Sort by last name" << endl;
     cout << "3. Sort by department" << endl;
     cout << "4. Sort by rank" << endl;
+    cout << "5. Sort by EID" << endl;
     cout << "Enter your selection: ";
     cin >> choice;
 
