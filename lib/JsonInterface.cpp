@@ -165,7 +165,14 @@ void JsonInterface::addProfessor() {
     getline(cin, EID);
     
     
+    // Create new professor object with input values
+    Professor newProfessor(firstName, lastName, department, rank, EID);
     
+    // Add new professor to stuVector
+    dataProf.push_back(newProfessor);
+    
+    writeFileProf(dataProf);
+    printProfessors(dataProf);
 }
 
 void JsonInterface::sort() {
