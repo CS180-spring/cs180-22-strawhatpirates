@@ -39,11 +39,11 @@ void Person::changeLastName(string lastName) {
 }
 
 bool Person::firstNameIsValid(string firstName) {
-    return std::regex_match (firstName, std::regex("^[A-Z]+\\w+[a-z]$"));
+    return std::regex_match (firstName, std::regex("^[A-Z]+[^\\W\\d]"));
 }
 
 bool Person::lastNameIsValid(string lastName) {
-    return std::regex_match (lastName, std::regex("^[A-Z]+\\w+[a-z]$"));
+    return std::regex_match (lastName, std::regex("^[A-Z]+[^\\W\\d]"));
 }
 
 bool Person::nameIsValid(string firstName, string lastName) {

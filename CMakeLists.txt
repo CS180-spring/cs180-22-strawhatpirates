@@ -17,11 +17,11 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 ADD_EXECUTABLE(test
-    lib/Person.cpp
-    lib/Professor.cpp
-    lib/Student.cpp
-    lib/test.cpp
-    lib/JsonInterface.cpp
+  lib/Person.cpp
+  lib/Professor.cpp
+  lib/Student.cpp
+  lib/test.cpp
+  lib/JsonInterface.cpp
 )
 
 ADD_EXECUTABLE(run

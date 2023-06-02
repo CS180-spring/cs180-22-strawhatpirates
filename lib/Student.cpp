@@ -46,6 +46,15 @@ string Student::getMajor() {
     return major;
 }
 
+string Student::getInfo() {
+    string out = "Name: " + this->firstName + " " + this->lastName + "\n"
+        + "GPA: " + GPA + "\n"
+        + "Major: " + major + "\n"
+        + "SID: " + SID + "\n"
+        + "Year: " + yearNumber;
+    return out;
+}
+
 void Student::changeGPA(string GPA) {
     this->GPA = GPA;
 }
@@ -113,16 +122,7 @@ bool Student::majorIsValid(string major) {
 bool Student::infoIsValid(string firstName, string lastName, string GPA, string major, string SID, string yearNumber) {
     return nameIsValid(firstName, lastName)
         && GPAIsValid(GPA) 
-        && SIDIsValid(major) 
-        && yearNumberIsValid(SID)
-        && majorIsValid(yearNumber);
-}
-
-string Student::getInfo() {
-    string out = "Name: " + this->firstName + " " + this->lastName + "\n"
-        + "GPA: " + GPA + "\n"
-        + "Major: " + major + "\n"
-        + "SID: " + SID + "\n"
-        + "Year: " + yearNumber;
-    return out;
+        && SIDIsValid(SID) 
+        && yearNumberIsValid(yearNumber)
+        && majorIsValid(major);
 }

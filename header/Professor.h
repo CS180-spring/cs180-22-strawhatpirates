@@ -6,6 +6,7 @@
 #include <regex>
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
@@ -13,27 +14,30 @@ class Professor : public Person {
 public: 
 
     Professor();
-    Professor(string firstName, string lastName, string department, string rank);
+    Professor(string firstName, string lastName, string department, string rank, string EID);
 
     string getDepartment();
     string getRank();
+    string getEID();
+    string getInfo();
 
-    void changeInfo(string firstName, string lastName, string department, string rank);
     void changeDepartment(string department);
     void changeRank(string rank);
-
-    string getInfo();
+    void changeEID(string EID);
+    void changeInfo(string firstName, string lastName, string department, string rank, string EID);
 
     bool departmentIsValid(string department);
     bool rankIsValid(string rank);
-    bool infoIsValid(string firstName, string lastName, string department, string rank);
+    bool EIDIsValid(string EID);
+    bool infoIsValid(string firstName, string lastName, string department, string rank, string EID);
 
 private:
     string department;
     string rank;
+    string EID;
 
-    vector<string> departmentList{"Computer Science and Engineering", "Electrical and Computer Engineering", "Bioengineering", "Chemical/Environmenta; Engineering",
-                                "Mathematics", "Physics and Astronomy", "Biochemistry", "Chemistry", "Botany and Plant Sciences"};
+    vector<string> departmentList{"BIOL","CHEM", "BSNS", "PHYS", "CEN", "CS", "EDU", 
+                                "ENGL", "HIST", "MATH", "PSY", "POLS", "PHIL", "ART", "MUS"};
     vector<string> rankList{"Tenure-Track", "Emeritus", "Adjunct", "Cooperating"};
 };
 
