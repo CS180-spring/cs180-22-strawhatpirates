@@ -18,7 +18,6 @@ int main()
 
         if (a == 1)
             jsonInterface.add();
-            // jsonInterface.addStudent();
         else if (a == 2)
             jsonInterface.remove();
             // jsonInterface.removeStudent();
