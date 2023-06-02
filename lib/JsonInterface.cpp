@@ -159,6 +159,13 @@ void JsonInterface::addProfessor() {
     getline(cin, lastName);
     cout << "Enter professor department: ";
     getline(cin, department);
+    cout << "Enter professor rank: ";
+    getline(cin, rank);
+    cout << "Enter professor EID: ";
+    getline(cin, EID);
+    
+    
+    
 }
 
 void JsonInterface::sort() {
