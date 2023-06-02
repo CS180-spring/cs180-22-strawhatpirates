@@ -243,7 +243,7 @@ void JsonInterface::sortStudent()
 
 void JsonInterface::sortProfessor()
 {
-    vector<Student> dataProf = readFileProf();
+    vector<Professor> dataProf = readFileProf();
     cout << "\nYou have chosen to sort professors" << endl;
 
     int choice;
