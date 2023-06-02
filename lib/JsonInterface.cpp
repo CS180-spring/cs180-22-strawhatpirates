@@ -124,21 +124,76 @@ void JsonInterface::addStudent() {
     // vector<Student> dataStu = readFileStu();
     string firstName, lastName , GPA, SID, yearNumber, major;
 
+    Student stu;
     cin.ignore();
     // Get input from user for student info
-    cout << "Enter student first name: ";
-    getline(cin, firstName);
-    cout << "Enter student last name: ";
-    getline(cin, lastName);
-    cout << "Enter student GPA: ";
-    getline(cin, GPA);
-    cout << "Enter student major: ";
-    getline(cin, major);
-    cout << "Enter student ID: ";
-    getline(cin, SID);
-    cout << "Enter student year number: ";
-    getline(cin, yearNumber);
-
+    int step = 1;
+    while(step < 7) {
+        switch (step) {
+            case 1:
+                cout << "Enter student first name: ";
+                getline(cin, firstName);
+                if(!stu.firstNameIsValid(firstName)) {
+                    cout << "First name invalid! Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 2:
+                cout << "Enter student last name: ";
+                getline(cin, lastName);
+                if(!stu.lastNameIsValid(lastName)) {
+                    cout << "Last name invalid! Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 3:
+                cout << "Enter student GPA: ";
+                getline(cin, GPA);
+                if(!stu.GPAIsValid(GPA)) {
+                    cout << "GPA invalid! Should be a decimal to a hundredths place that is between 0.00 and 4.00 (Ex: 1.46, 3.42). Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 4:
+                cout << "Enter student major: ";
+                getline(cin, major);
+                if(!stu.majorIsValid(major)) {
+                    cout << "Major invalid! Please try again with one of these listed majors: \n" <<
+                    "BIOL, CHEM, BSNS, PHYS, CEN, CS, EDU, ENGL, \n" <<
+                    "HIST, MATH, PSY, POLS, PHIL, ART, MUS, DS" << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 5:
+                cout << "Enter student ID: ";
+                getline(cin, SID);
+                if(!stu.SIDIsValid(SID)) {
+                    cout << "SID invalid! Should be a 9 digit number (Ex: 123456789). Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 6:
+                cout << "Enter student year number: ";
+                getline(cin, yearNumber);
+                if(!stu.yearNumberIsValid(yearNumber)) {
+                    cout << "Year number invalid! Should be an integer. Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+        }
+    }
     
     // Create new student object with input values
     Student newStudent(firstName, lastName, GPA, major, SID, yearNumber);
