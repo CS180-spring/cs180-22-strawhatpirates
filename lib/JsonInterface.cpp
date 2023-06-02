@@ -148,7 +148,8 @@ void JsonInterface::addStudent() {
 }
 
 void JsonInterface::addProfessor() {
-    
+    vector<Professor> dataProf = readFileProf();
+    string firstName, lastName , department, rank, EID;
 }
 
 void JsonInterface::sort() {
