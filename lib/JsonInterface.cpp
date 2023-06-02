@@ -241,6 +241,7 @@ void JsonInterface::searchStudent() {
     cout << "5. Search by Major" << endl;
 
     cin >> choice;
+    cout << endl;
 
     if (choice == 1) {
         cin.ignore();
@@ -418,13 +419,44 @@ void JsonInterface::searchStudent() {
             } 
         }
 
-        cout << "\nList of students with SID:" << SID << endl << endl;
+        cout << "\nList of students with SID: " << SID << endl << endl;
         if (SIDs.size() != 0) {
             printStudents(SIDs);
         } else {
             cout << "Student not found!" << endl;
         }
     }
+
+    if (choice == 5) {
+        cin.ignore();
+        cout << "Search by Major: " << endl;
+
+        vector<string> majorList{"CS", "CE", "ME", "EE", "CSBA", "BIO", "CHEM", "PHYS", "MATH"};
+        for (int i = 1; i < majorList.size() + 1; ++i) {
+            cout << i << ". " << majorList[i - 1] << endl;
+        }
+
+        string major;
+        getline(cin, major);
+
+        vector<Student> majors;
+
+        for (int i = 0; i < dataStu.size(); ++i) {
+            string m = dataStu[i].getMajor();
+            if (m == majorList[stoi(major) - 1]) {
+                majors.push_back(dataStu[i]);
+            }
+        }
+
+        cout << "\nList of students with major: " << majorList[stoi(major) - 1] << endl << endl;
+        if (majors.size() != 0) {
+            printStudents(majors);
+        } else {
+            cout << "Student not found!" << endl;
+        }
+    }
+
+
 }
 
 void JsonInterface::searchProfessor() {
