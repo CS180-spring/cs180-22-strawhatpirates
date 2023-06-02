@@ -97,7 +97,8 @@ vector<Professor> JsonInterface::readFileProf()
                 Professor prof (data["professors"][i].value("First Name", "not found"), 
                                 data["professors"][i].value("Last Name", "not found"),
                                 data["professors"][i].value("Department", "not found"),
-                                data["professors"][i].value("Rank", "not found"));
+                                data["professors"][i].value("Rank", "not found"),
+                                data["professors"][i].value("EID", "not found"));
 
                 info.push_back(prof);
         }
@@ -106,7 +107,7 @@ vector<Professor> JsonInterface::readFileProf()
         return info;
 }
 
-void JsonInterface::uppercaseStrings(string &firstName, string &lastName, string &major) {
+void JsonInterface::uppercaseStudents(string &firstName, string &lastName, string &major) {
     transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
     transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
     transform(major.begin(), major.end(), major.begin(), ::toupper);
@@ -762,6 +763,10 @@ void JsonInterface::updateStudent() {
     } else {
         cout << "Student with SID " << SID << " not found." << endl;
     }
+}
+
+void JsonInterface::updateProfessor() {
+    
 }
 
 void JsonInterface::print() {
