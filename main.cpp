@@ -25,8 +25,6 @@ int main()
         else if (a == 4)
             jsonInterface->sort();
         else if (a == 5)
-            jsonInterface->sort();
-        else if (a == 5)
             jsonInterface->search();
         else if (a == 6)
             jsonInterface->changeMode();

@@ -38,7 +38,7 @@ void JsonInterface::writeFileStu(vector<Student> dataStu)
 void JsonInterface::writeFileProf(vector<Professor> dataProf) {
     ofstream file;
     file.open("professor.json");
-    file << "{\n\t\"professor\": [\n";
+    file << "{\n\t\"professors\": [\n";
     for (int i = 0; i < dataProf.size(); i++) 
     {
         file << "\t\t{\n";
@@ -709,8 +709,6 @@ void JsonInterface::searchStudent() {
             cout << "Student not found!" << endl;
         }
     }
-
-
 }
 
 void JsonInterface::searchProfessor() {
@@ -724,6 +722,7 @@ void JsonInterface::searchProfessor() {
     cout << "4. Search by rank" << endl;
 
     cin >> choice;
+    cout << endl;
 
     if (choice == 1) {
         cin.ignore();
@@ -881,7 +880,34 @@ void JsonInterface::removeStudent()
 }
 
 void JsonInterface::removeProfessor() {
+    bool found = false;
+    string EID;
 
+    cout << "\nYou have chosen to delete a professor" << endl;
+
+    printProfessors(dataProf);
+    
+    cout << "\nEnter the EID of the professor to remove: ";
+    cin.ignore();
+    getline(cin, EID);
+
+    for(int i = 0; i < dataProf.size(); ++i)
+    {
+        if(dataProf.at(i).getEID().compare(EID) == 0)
+        {
+            dataProf.erase(dataProf.begin() + i);
+            i += dataProf.size();
+            found = true;
+        }
+    }
+
+    if(found == false)
+    {
+        cout << "The chosen SID was not found!!! \n";
+    }
+
+    writeFileProf(dataProf);
+    return;
 }
 
 void JsonInterface::update() {
@@ -974,20 +1000,18 @@ void JsonInterface::updateProfessor() {
     cin >> EID;
 
     // Search for the professor by SID
-    int index = -1
-
     int index = -1;
-    for (int i = 0; i < dataStu.size(); i++) {
-        if (dataStu[i].getSID() == SID) {
+
+    for (int i = 0; i < dataProf.size(); i++) {
+        if (dataProf[i].getEID() == EID) {
             index = i;
             break;
         }
     }
 
-    string firstName, lastName, department, rank, EID;
+    string firstName, lastName, department, rank;
 
     if (index != -1) {
-
         cout << "Select the field you want to update: " << endl;
         cout << "1. First name" << endl;
         cout << "2. Last name" << endl;
@@ -997,48 +1021,47 @@ void JsonInterface::updateProfessor() {
 
         int choice;
         cin >> choice;
-    }
 
-    switch (choice)
-        {
-        case 1:
-            cin.ignore();
-            cout << "Enter updated first name: ";
-            getline(cin, firstName);
-            dataProf[index].changeFirstName(firstName);
-            break;
+        switch (choice)
+            {
+            case 1:
+                cin.ignore();
+                cout << "Enter updated first name: ";
+                getline(cin, firstName);
+                dataProf[index].changeFirstName(firstName);
+                break;
 
-        case 2:
-            cin.ignore();
-            cout << "Enter updated last name: ";
-            getline(cin, lastName);
-            dataProf[index].changeLastName(lastName);
-            break;
+            case 2:
+                cin.ignore();
+                cout << "Enter updated last name: ";
+                getline(cin, lastName);
+                dataProf[index].changeLastName(lastName);
+                break;
 
-        case 3:
-            cin.ignore();
-            cout << "Enter updated Department: ";
-            getline(cin, department);
-            dataProf[index].changeDepartment(department);
-            break;
+            case 3:
+                cin.ignore();
+                cout << "Enter updated Department: ";
+                getline(cin, department);
+                dataProf[index].changeDepartment(department);
+                break;
 
-        case 4:
-            cin.ignore();
-            cout << "Enter updated Rank: ";
-            getline(cin, rank);
-            dataProf[index].changeRank(rank);
-            break;
+            case 4:
+                cin.ignore();
+                cout << "Enter updated Rank: ";
+                getline(cin, rank);
+                dataProf[index].changeRank(rank);
+                break;
 
-         case 5:
-            cin.ignore();
-            cout << "Enter updated EID: ";
-            getline(cin, EID);
-            dataStu[index].changeEID(EID);
-            break;
-        
-        default:
-            break;
-        }
+            case 5:
+                cin.ignore();
+                cout << "Enter updated EID: ";
+                getline(cin, EID);
+                dataProf[index].changeEID(EID);
+                break;
+            
+            default:
+                break;
+            }
         
         // Write the updated student data to the file
         writeFileProf(dataProf);
@@ -1047,11 +1070,6 @@ void JsonInterface::updateProfessor() {
     } else {
         cout << "Professor with EID " << EID << " not found." << endl;
     }
-}
-
-        
-
-
 }
 
 void JsonInterface::print() {
