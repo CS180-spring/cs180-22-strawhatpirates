@@ -997,6 +997,16 @@ void JsonInterface::updateProfessor() {
 
         int choice;
         cin >> choice;
+    }
+
+    switch (choice)
+        {
+        case 1:
+            cin.ignore();
+            cout << "Enter updated first name: ";
+            getline(cin, firstName);
+            dataProf[index].changeFirstName(firstName);
+            break;
 
 }
 
