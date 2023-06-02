@@ -102,91 +102,93 @@ void JsonInterface::sortStudent()
     writeFileStu(dataStu);
 }
 
-void JsonInterface::Student::updateStudent()
-{
+void JsonInterface::updateProfessor() {
+    
+}
 
-    string firstName, lastName , GPA, SID, yearNumber, major;
-    int choice;
-    int i, j;
+void JsonInterface::update() {
+    (mode ? updateStudent() : updateProfessor());
+}
+
+void JsonInterface::updateStudent() {
     vector<Student> dataStu = readFileStu();
-    printStudents();
+    string SID;
+    
+    cout << "Enter the SID of the student you want to update: ";
+    cin >> SID;
 
-    cout << "\nYou have chosen to update a student" << endl;
-
-    cout << "\nSelect the SID of the student, whose contents you want to edit" << endl;
-
-    cout << "1. Update first name" << endl;
-    cout << "2. Update last name" << endl;
-    cout << "3. Update GPA" << endl;
-    cout << "4. Update SID" << endl;
-    cout << "5. Update Major" << endl;
-    cout << "Enter your selection: ";
-    cin >> choice;
-
-    for (int i = 0; i < dataStu.size(); ++i) {
-            string sid = dataStu[i].getSID();
-            if (sid == SID) {
-                SIDs.push_back(dataStu[i]);
-            } 
+    // Search for the student by SID
+    int index = -1;
+    for (int i = 0; i < dataStu.size(); i++) {
+        if (dataStu[i].getSID() == SID) {
+            index = i;
+            break;
         }
+    }
 
-    cin.ignore();
-        cout << "Search by SID: ";
+    string firstName, lastName, GPA, major, yearNumber;
+
+    if (index != -1) {
+
+        cout << "Select the field you want to update: " << endl;
+        cout << "1. First name" << endl;
+        cout << "2. Last name" << endl;
+        cout << "3. GPA" << endl;
+        cout << "4. Major" << endl;
+        cout << "5. Year number" << endl;
+
+        int choice;
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            cin.ignore();
+            cout << "Enter updated first name: ";
+            getline(cin, firstName);
+            dataStu[index].changeFirstName(firstName);
+            break;
         
-        string SID;
-        getline(cin, SID);
+        case 2:
+            cin.ignore();
+            cout << "Enter updated last name: ";
+            getline(cin, lastName);
+            dataStu[index].changeLastName(lastName);
+            break;
 
-        vector<Student> SIDs;
+        case 3:
+            cin.ignore();
+            cout << "Enter updated GPA: ";
+            getline(cin, GPA);
+            dataStu[index].changeGPA(GPA);
+            break;
 
-        for (int i = 0; i < dataStu.size(); ++i) {
-            string sid = dataStu[i].getSID();
-            if (sid == SID) {
-                SIDs.push_back(dataStu[i]);
-            } 
-        }
+        case 4:
+            cin.ignore();
+            cout << "Enter updated major: ";
+            getline(cin, major);
+            dataStu[index].changeMajor(major);
+            break;
 
-        cout << "\nList of students with SID:" << SID << endl << endl;
-        if (SIDs.size() != 0) {
-            for (int i = 0; i < SIDs.size(); ++i) {
-                cout << SIDs[i].getInfo() << endl << endl;
-            }
-        } else {
-            cout << "Student not found!" << endl;
-        }
-    }
+        case 5:
+            cin.ignore();
+            cout << "Enter updated year number: ";
+            getline(cin, yearNumber);
+            dataStu[index].changeYearNumber(yearNumber);
+            break;
 
-    if (choice == 1) {
-        cout << "You have chosen to update first name." << endl;
-        getline(cin, firstName);
-        changeName(firstName);
-    }
-    
-    if (choice == 2) {
-        cout << "You have chosen to update last name." << endl;
-        getline(cin, firstName);
-        changeName(lastName);  
-    }
-
-    if (choice == 3) {
-        cout << "You have chosen to update GPA." << endl;
-        getline(cin, firstName);
-        changeGPA(GPA);
-    }
-
-    if (choice == 4) {
-        cout << "You have chosen to update SID." << endl;
-        getline(cin, firstName);
-        changeSID(SID);
-    }
-    
-    if (choice == 5) {
-        cout << "You have chosen to update Major." << endl;
-        getline(cin, firstName);
-        changeMajor(major);     
         
+        default:
+            break;
+        }
+        
+        // Write the updated student data to the file
+        writeFileStu(dataStu);
+
+        cout << "Student with SID " << SID << " has been updated." << endl;
+    } else {
+        cout << "Student with SID " << SID << " not found." << endl;
     }
-    
-    writeFileStu(dataStu);
 }
 
 void JsonInterface::addStudent() {
