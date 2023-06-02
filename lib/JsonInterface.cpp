@@ -239,6 +239,7 @@ void JsonInterface::searchStudent() {
     cout << "3. Search by GPA" << endl;
     cout << "4. Search by SID" << endl;
     cout << "5. Search by Major" << endl;
+    cout << "6. Search by Year" << endl;
 
     cin >> choice;
     cout << endl;
@@ -451,6 +452,30 @@ void JsonInterface::searchStudent() {
         cout << "\nList of students with major: " << majorList[stoi(major) - 1] << endl << endl;
         if (majors.size() != 0) {
             printStudents(majors);
+        } else {
+            cout << "Student not found!" << endl;
+        }
+    }
+
+    if (choice == 6) {
+        cin.ignore();
+        cout << "Search by Year: " << endl;
+
+        string year;
+        getline(cin, year);
+
+        vector<Student> years;
+
+        for (int i = 0; i < dataStu.size(); ++i) {
+            string y = dataStu[i].getYearNumber();
+            if (y == year) {
+                years.push_back(dataStu[i]);
+            }
+        }
+
+        cout << "\nList of students with year number: " << year << endl << endl;
+        if (years.size() != 0) {
+            printStudents(years);
         } else {
             cout << "Student not found!" << endl;
         }
