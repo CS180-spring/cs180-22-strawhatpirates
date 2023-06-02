@@ -6,7 +6,6 @@ using json = nlohmann::json;
 JsonInterface::JsonInterface() {
     dataStu = readFileStu();
     dataProf = readFileProf();
-    // printStudents(dataStu);
     this->mode = true;
 }
 
@@ -47,7 +46,7 @@ void JsonInterface::writeFileProf(vector<Professor> dataProf) {
         file << "\t\t\t\"Last Name\": \"" << dataProf[i].getLastName() << "\",\n";
         file << "\t\t\t\"Department\": \"" << dataProf[i].getDepartment() << "\",\n";
         file << "\t\t\t\"Rank\": \"" << dataProf[i].getRank() << "\",\n";
-        file << "\t\t\t\"EID\": \"" << dataProf[i].getEID() << "\",\n";
+        file << "\t\t\t\"EID\": \"" << dataProf[i].getEID() << "\"\n";
 
         if(i == dataProf.size() - 1) {
             file << "\t\t}\n";
@@ -121,7 +120,6 @@ void JsonInterface::add() {
 }
 
 void JsonInterface::addStudent() {
-    // vector<Student> dataStu = readFileStu();
     string firstName, lastName , GPA, SID, yearNumber, major;
 
     Student stu;
@@ -206,22 +204,69 @@ void JsonInterface::addStudent() {
 }
 
 void JsonInterface::addProfessor() {
-    vector<Professor> dataProf = readFileProf();
     string firstName, lastName , department, rank, EID;
+    Professor prof;
     
     cin.ignore();
     // Get input from user for professor info
-    cout << "Enter professor first name: ";
-    getline(cin, firstName);
-    cout << "Enter professor last name: ";
-    getline(cin, lastName);
-    cout << "Enter professor department: ";
-    getline(cin, department);
-    cout << "Enter professor rank: ";
-    getline(cin, rank);
-    cout << "Enter professor EID: ";
-    getline(cin, EID);
-    
+        int step = 1;
+    while(step < 6) {
+        switch (step) {
+            case 1:
+                cout << "Enter professor first name: ";
+                getline(cin, firstName);
+                if(!prof.firstNameIsValid(firstName)) {
+                    cout << "First name invalid! Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 2:
+                cout << "Enter professor last name: ";
+                getline(cin, lastName);
+                if(!prof.lastNameIsValid(lastName)) {
+                    cout << "Last name invalid! Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 3:
+                cout << "Enter professor department: ";
+                getline(cin, department);
+                if(!prof.departmentIsValid(department)) {
+                    cout << "Department invalid! Please try again with one of these listed departments: \n" <<
+                    "BIOL, CHEM, BSNS, PHYS, CEN, CS, EDU, ENGL, \n" <<
+                    "HIST, MATH, PSY, POLS, PHIL, ART, MUS, DS" << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 4:
+                cout << "Enter professor rank: ";
+                getline(cin, rank);
+                if(!prof.rankIsValid(rank)) {
+                    cout << "Rank invalid! Please try again with one of these listed ranks: \n" <<
+                    "Tenure-Track, Emeritus, Adjunct, Cooperating" << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 5:
+                cout << "Enter professor EID: ";
+                getline(cin, EID);
+                if(!prof.EIDIsValid(EID)) {
+                    cout << "EID invalid! Should be a 9 digit number (Ex: 123456789). Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+        }
+    }
     
     // Create new professor object with input values
     Professor newProfessor(firstName, lastName, department, rank, EID);
@@ -239,7 +284,6 @@ void JsonInterface::sort() {
 
 void JsonInterface::sortStudent()
 {
-    // vector<Student> dataStu = readFileStu();
     cout << "\nYou have chosen to sort students" << endl;
 
     int choice;
@@ -325,7 +369,6 @@ void JsonInterface::sortStudent()
 
 void JsonInterface::sortProfessor()
 {
-    // vector<Professor> dataProf = readFileProf();
     cout << "\nYou have chosen to sort professors" << endl;
 
     int choice;
@@ -415,8 +458,6 @@ void JsonInterface::search() {
 }
 
 void JsonInterface::searchStudent() {
-
-    // vector<Student> dataStu = readFileStu();
     cout << "\nYou have chosen to search for a student" << endl;
 
     int choice;
@@ -673,7 +714,6 @@ void JsonInterface::searchStudent() {
 }
 
 void JsonInterface::searchProfessor() {
-    // vector<Professor> dataProf = readFileProf();
     cout << "\nYou have chosen to search for a professor" << endl;
 
     int choice;
@@ -812,7 +852,6 @@ void JsonInterface::removeStudent()
 {
     bool found = false;
     string SID;
-    // vector<Student> dataStu = readFileStu();
 
     cout << "\nYou have chosen to delete a student" << endl;
 
@@ -850,7 +889,6 @@ void JsonInterface::update() {
 }
 
 void JsonInterface::updateStudent() {
-    // vector<Student> dataStu = readFileStu();
     string SID;
     
     cout << "Enter the SID of the student you want to update: ";
@@ -935,8 +973,6 @@ void JsonInterface::updateProfessor() {
 }
 
 void JsonInterface::print() {
-    // vector<Student> dataStu = readFileStu();
-    // vector<Professor> dataProf = readFileProf();
     (mode ? printStudents(dataStu) : printProfessors(dataProf));
 }
 
