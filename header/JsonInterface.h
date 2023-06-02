@@ -25,7 +25,8 @@ class JsonInterface
         vector<Student> readFileStu();
         vector<Professor> readFileProf();
 
-        void uppercaseStrings(string& firstName, string& lastName, string& major);
+        void uppercaseStudents(string& firstName, string& lastName, string& major);
+        void uppercaseProfessors(string& firstName, string& lastName, string& department);
 
         void add();
         void addProfessor();
@@ -52,8 +53,8 @@ class JsonInterface
         void editStudent();
 
         void print();
-        void printStudents();
-        void printProfessors();
+        void printStudents(vector<Student> data);
+        void printProfessors(vector<Professor> data);
 
         void changeMode();
         bool getMode();

@@ -45,8 +45,8 @@ private:
     string yearNumber;
     string major;
     enum major {Freshman, Sophomore, Junior, Senior};
-    vector<string> majorList{"CS", "CE", "ME", "EE", "CSBA",
-                            "BIO", "CHEM", "PHYS", "MATH"};
+    vector<string> majorList{"BIOL","CHEM", "BSNS", "PHYS", "CEN", "CS", "EDU",
+                             "ENGL", "HIST", "MATH", "PSY", "POLS", "PHIL", "ART", "MUS"};
 };
 
 #endif

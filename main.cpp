@@ -18,14 +18,11 @@ int main()
 
         if (a == 1)
             jsonInterface.add();
-            // jsonInterface.addStudent();
         else if (a == 2)
             jsonInterface.remove();
             // jsonInterface.removeStudent();
         else if (a == 3)
-            //jsonInterface.edit();
-            //jsonInterface.editStudent();
-            continue;
+            jsonInterface.update();
         else if (a == 4)
             jsonInterface.sort();
             // jsonInterface.sortStudent();

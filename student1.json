@@ -1,804 +1,804 @@
 {
     "students": [
         {
-            "First Name": "Rachel",
-            "Last Name": "Harris",
+            "First Name": "MICHELLE",
+            "Last Name": "MORALES",
             "GPA": "3.02",
-            "Major": "MUS",
-            "SID": "862617370",
-            "Year": "3"
-        },
-        {
-            "First Name": "Daniel",
-            "Last Name": "Thornton",
-            "GPA": "1.42",
-            "Major": "BIOL",
-            "SID": "862389887",
-            "Year": "1"
-        },
-        {
-            "First Name": "Seth",
-            "Last Name": "Gregory",
-            "GPA": "2.30",
-            "Major": "CHEM",
-            "SID": "862478535",
+            "Major": "BSNS",
+            "SID": "862402798",
             "Year": "2"
         },
         {
-            "First Name": "Jason",
-            "Last Name": "Martin",
-            "GPA": "2.43",
-            "Major": "MUS",
-            "SID": "862553854",
-            "Year": "5"
+            "First Name": "JESSE",
+            "Last Name": "CLARK",
+            "GPA": "3.02",
+            "Major": "ENGL",
+            "SID": "862602772",
+            "Year": "1"
         },
         {
-            "First Name": "Jennifer",
-            "Last Name": "Mcclain",
-            "GPA": "4.00",
+            "First Name": "JOSEPH",
+            "Last Name": "GARZA",
+            "GPA": "1.38",
+            "Major": "MUS",
+            "SID": "862650002",
+            "Year": "2"
+        },
+        {
+            "First Name": "ANTHONY",
+            "Last Name": "MCMILLAN",
+            "GPA": "2.42",
             "Major": "EDU",
-            "SID": "862119544",
+            "SID": "862333118",
             "Year": "4"
         },
         {
-            "First Name": "Jacob",
-            "Last Name": "Adams",
-            "GPA": "1.03",
-            "Major": "POLS",
-            "SID": "862521498",
-            "Year": "1"
+            "First Name": "CRYSTAL",
+            "Last Name": "ROBINSON",
+            "GPA": "3.99",
+            "Major": "HIST",
+            "SID": "862024654",
+            "Year": "2"
         },
         {
-            "First Name": "Lori",
-            "Last Name": "Mathews",
-            "GPA": "1.73",
-            "Major": "BSNS",
-            "SID": "862668790",
-            "Year": "1"
+            "First Name": "MICHAEL",
+            "Last Name": "COHEN",
+            "GPA": "1.68",
+            "Major": "MUS",
+            "SID": "862326115",
+            "Year": "4"
         },
         {
-            "First Name": "Erica",
-            "Last Name": "Hernandez",
-            "GPA": "1.31",
-            "Major": "CS",
-            "SID": "862355014",
-            "Year": "3"
+            "First Name": "JENNIFER",
+            "Last Name": "SNYDER",
+            "GPA": "3.36",
+            "Major": "CEN",
+            "SID": "862235170",
+            "Year": "2"
         },
         {
-            "First Name": "Wendy",
-            "Last Name": "Quinn",
-            "GPA": "1.23",
-            "Major": "BSNS",
-            "SID": "862217543",
-            "Year": "3"
-        },
-        {
-            "First Name": "Carolyn",
-            "Last Name": "Gregory",
+            "First Name": "DONALD",
+            "Last Name": "DOUGLAS",
             "GPA": "4.00",
-            "Major": "HIST",
-            "SID": "862094317",
-            "Year": "5"
+            "Major": "BIOL",
+            "SID": "862318646",
+            "Year": "3"
         },
         {
-            "First Name": "Preston",
-            "Last Name": "Hayes",
-            "GPA": "1.17",
-            "Major": "HIST",
-            "SID": "862722202",
+            "First Name": "REBECCA",
+            "Last Name": "RHODES",
+            "GPA": "3.55",
+            "Major": "POLS",
+            "SID": "862790927",
+            "Year": "3"
+        },
+        {
+            "First Name": "RHONDA",
+            "Last Name": "MCKNIGHT",
+            "GPA": "2.91",
+            "Major": "CS",
+            "SID": "862507888",
             "Year": "2"
         },
         {
-            "First Name": "Shannon",
-            "Last Name": "Reed",
-            "GPA": "3.56",
-            "Major": "ART",
-            "SID": "862630740",
-            "Year": "5"
+            "First Name": "LAURA",
+            "Last Name": "GLOVER",
+            "GPA": "4.00",
+            "Major": "MUS",
+            "SID": "862836042",
+            "Year": "4"
         },
         {
-            "First Name": "Abigail",
-            "Last Name": "Watson",
-            "GPA": "1.17",
-            "Major": "CS",
-            "SID": "862579532",
+            "First Name": "WANDA",
+            "Last Name": "WILLIAMS",
+            "GPA": "3.88",
+            "Major": "CEN",
+            "SID": "862540557",
             "Year": "1"
         },
         {
-            "First Name": "Whitney",
-            "Last Name": "Aguilar",
-            "GPA": "1.05",
+            "First Name": "MICHELLE",
+            "Last Name": "BAILEY",
+            "GPA": "3.10",
+            "Major": "BIOL",
+            "SID": "862826912",
+            "Year": "3"
+        },
+        {
+            "First Name": "GEORGE",
+            "Last Name": "GRANT",
+            "GPA": "1.44",
             "Major": "POLS",
-            "SID": "862063106",
+            "SID": "862179472",
+            "Year": "1"
+        },
+        {
+            "First Name": "WILLIAM",
+            "Last Name": "WILLIAMS",
+            "GPA": "4.00",
+            "Major": "PSY",
+            "SID": "862445771",
+            "Year": "3"
+        },
+        {
+            "First Name": "LAURA",
+            "Last Name": "HUYNH",
+            "GPA": "3.09",
+            "Major": "CEN",
+            "SID": "862074131",
             "Year": "2"
         },
         {
-            "First Name": "William",
-            "Last Name": "Smith",
+            "First Name": "KYLE",
+            "Last Name": "VEGA",
+            "GPA": "4.00",
+            "Major": "BIOL",
+            "SID": "862636755",
+            "Year": "2"
+        },
+        {
+            "First Name": "GABRIELA",
+            "Last Name": "SCHULTZ",
+            "GPA": "3.49",
+            "Major": "PSY",
+            "SID": "862644527",
+            "Year": "5"
+        },
+        {
+            "First Name": "ANGELA",
+            "Last Name": "CARNEY",
+            "GPA": "2.22",
+            "Major": "POLS",
+            "SID": "862481566",
+            "Year": "1"
+        },
+        {
+            "First Name": "ROBERT",
+            "Last Name": "GARCIA",
+            "GPA": "3.47",
+            "Major": "HIST",
+            "SID": "862011224",
+            "Year": "3"
+        },
+        {
+            "First Name": "TROY",
+            "Last Name": "SMITH",
+            "GPA": "2.93",
+            "Major": "MATH",
+            "SID": "862117352",
+            "Year": "5"
+        },
+        {
+            "First Name": "CHRISTINA",
+            "Last Name": "MURRAY",
+            "GPA": "4.00",
+            "Major": "PSY",
+            "SID": "862657794",
+            "Year": "2"
+        },
+        {
+            "First Name": "MICHELLE",
+            "Last Name": "WILLIAMS",
+            "GPA": "4.00",
+            "Major": "PSY",
+            "SID": "862827058",
+            "Year": "3"
+        },
+        {
+            "First Name": "ELIZABETH",
+            "Last Name": "BAKER",
+            "GPA": "2.51",
+            "Major": "BSNS",
+            "SID": "862379652",
+            "Year": "5"
+        },
+        {
+            "First Name": "LYNN",
+            "Last Name": "ORTIZ",
+            "GPA": "4.00",
+            "Major": "PHIL",
+            "SID": "862658548",
+            "Year": "5"
+        },
+        {
+            "First Name": "ERIN",
+            "Last Name": "REEVES",
+            "GPA": "3.94",
+            "Major": "MATH",
+            "SID": "862309386",
+            "Year": "1"
+        },
+        {
+            "First Name": "DANIELLE",
+            "Last Name": "THOMPSON",
+            "GPA": "2.52",
+            "Major": "CEN",
+            "SID": "862197182",
+            "Year": "1"
+        },
+        {
+            "First Name": "MARIO",
+            "Last Name": "PIERCE",
+            "GPA": "2.90",
+            "Major": "BSNS",
+            "SID": "862956091",
+            "Year": "3"
+        },
+        {
+            "First Name": "LAURA",
+            "Last Name": "JACOBS",
+            "GPA": "4.00",
+            "Major": "BSNS",
+            "SID": "862829246",
+            "Year": "4"
+        },
+        {
+            "First Name": "SHARON",
+            "Last Name": "DUFFY",
+            "GPA": "1.53",
+            "Major": "EDU",
+            "SID": "862298543",
+            "Year": "2"
+        },
+        {
+            "First Name": "JAMES",
+            "Last Name": "CLARK",
+            "GPA": "2.01",
+            "Major": "PHIL",
+            "SID": "862321374",
+            "Year": "1"
+        },
+        {
+            "First Name": "TINA",
+            "Last Name": "GRAHAM",
+            "GPA": "2.95",
+            "Major": "HIST",
+            "SID": "862868020",
+            "Year": "1"
+        },
+        {
+            "First Name": "ELIZABETH",
+            "Last Name": "LOPEZ",
+            "GPA": "3.16",
+            "Major": "BSNS",
+            "SID": "862605565",
+            "Year": "3"
+        },
+        {
+            "First Name": "CHRISTY",
+            "Last Name": "SIMS",
+            "GPA": "2.40",
+            "Major": "ART",
+            "SID": "862633945",
+            "Year": "1"
+        },
+        {
+            "First Name": "ANNE",
+            "Last Name": "ROSE",
+            "GPA": "1.32",
+            "Major": "PHIL",
+            "SID": "862772966",
+            "Year": "3"
+        },
+        {
+            "First Name": "JESSE",
+            "Last Name": "ROBINSON",
+            "GPA": "3.52",
+            "Major": "HIST",
+            "SID": "862098032",
+            "Year": "5"
+        },
+        {
+            "First Name": "CHARLES",
+            "Last Name": "STANTON",
+            "GPA": "1.59",
+            "Major": "CEN",
+            "SID": "862134563",
+            "Year": "4"
+        },
+        {
+            "First Name": "JACOB",
+            "Last Name": "RODRIGUEZ",
+            "GPA": "2.13",
+            "Major": "DS",
+            "SID": "862922785",
+            "Year": "3"
+        },
+        {
+            "First Name": "STACEY",
+            "Last Name": "LAMBERT",
+            "GPA": "4.00",
+            "Major": "EDU",
+            "SID": "862112995",
+            "Year": "4"
+        },
+        {
+            "First Name": "FRANCES",
+            "Last Name": "CRUZ",
+            "GPA": "4.00",
+            "Major": "BSNS",
+            "SID": "862470607",
+            "Year": "2"
+        },
+        {
+            "First Name": "KURT",
+            "Last Name": "PRUITT",
+            "GPA": "1.57",
+            "Major": "BSNS",
+            "SID": "862511402",
+            "Year": "3"
+        },
+        {
+            "First Name": "TONYA",
+            "Last Name": "BENSON",
+            "GPA": "1.74",
+            "Major": "CHEM",
+            "SID": "862597793",
+            "Year": "3"
+        },
+        {
+            "First Name": "DEBRA",
+            "Last Name": "MCCARTHY",
+            "GPA": "1.07",
+            "Major": "DS",
+            "SID": "862786181",
+            "Year": "1"
+        },
+        {
+            "First Name": "KATHERINE",
+            "Last Name": "PHILLIPS",
+            "GPA": "3.36",
+            "Major": "BIOL",
+            "SID": "862864206",
+            "Year": "4"
+        },
+        {
+            "First Name": "LAURIE",
+            "Last Name": "LOPEZ",
+            "GPA": "1.82",
+            "Major": "BIOL",
+            "SID": "862155034",
+            "Year": "3"
+        },
+        {
+            "First Name": "LAURA",
+            "Last Name": "RUIZ",
+            "GPA": "4.00",
+            "Major": "BIOL",
+            "SID": "862698865",
+            "Year": "3"
+        },
+        {
+            "First Name": "RONALD",
+            "Last Name": "MCNEIL",
+            "GPA": "1.15",
+            "Major": "POLS",
+            "SID": "862189658",
+            "Year": "5"
+        },
+        {
+            "First Name": "DAVID",
+            "Last Name": "EVANS",
+            "GPA": "3.36",
+            "Major": "BSNS",
+            "SID": "862539429",
+            "Year": "4"
+        },
+        {
+            "First Name": "MARGARET",
+            "Last Name": "RICHMOND",
             "GPA": "4.00",
             "Major": "PHYS",
-            "SID": "862353050",
-            "Year": "2"
+            "SID": "862211326",
+            "Year": "1"
         },
         {
-            "First Name": "Aaron",
-            "Last Name": "Gaines",
-            "GPA": "2.09",
-            "Major": "CEN",
-            "SID": "862481332",
-            "Year": "3"
+            "First Name": "MICHAEL",
+            "Last Name": "GREENE",
+            "GPA": "4.00",
+            "Major": "POLS",
+            "SID": "862487678",
+            "Year": "4"
         },
         {
-            "First Name": "Yvonne",
-            "Last Name": "Morgan",
-            "GPA": "2.24",
-            "Major": "HIST",
-            "SID": "862377480",
-            "Year": "5"
-        },
-        {
-            "First Name": "Edward",
-            "Last Name": "Espinoza",
-            "GPA": "1.60",
-            "Major": "PHIL",
-            "SID": "862279875",
-            "Year": "2"
-        },
-        {
-            "First Name": "Eric",
-            "Last Name": "Wells",
-            "GPA": "2.61",
+            "First Name": "DANIEL",
+            "Last Name": "CHAVEZ",
+            "GPA": "3.61",
             "Major": "MATH",
-            "SID": "862182704",
+            "SID": "862705161",
             "Year": "4"
         },
         {
-            "First Name": "Heather",
-            "Last Name": "Mullen",
-            "GPA": "1.73",
-            "Major": "CEN",
-            "SID": "862804035",
-            "Year": "5"
-        },
-        {
-            "First Name": "Eric",
-            "Last Name": "Dennis",
-            "GPA": "3.03",
-            "Major": "HIST",
-            "SID": "862325131",
-            "Year": "4"
-        },
-        {
-            "First Name": "Ryan",
-            "Last Name": "Jones",
-            "GPA": "2.40",
-            "Major": "BSNS",
-            "SID": "862078438",
-            "Year": "2"
-        },
-        {
-            "First Name": "Terri",
-            "Last Name": "Reyes",
-            "GPA": "4.00",
+            "First Name": "JAMES",
+            "Last Name": "SMITH",
+            "GPA": "2.47",
             "Major": "ENGL",
-            "SID": "862889690",
+            "SID": "862471467",
             "Year": "5"
         },
         {
-            "First Name": "Cheryl",
-            "Last Name": "Allen",
-            "GPA": "3.94",
-            "Major": "HIST",
-            "SID": "862010011",
-            "Year": "5"
-        },
-        {
-            "First Name": "Tina",
-            "Last Name": "Day",
-            "GPA": "2.34",
-            "Major": "HIST",
-            "SID": "862556412",
-            "Year": "1"
-        },
-        {
-            "First Name": "Cameron",
-            "Last Name": "Wallace",
-            "GPA": "3.22",
-            "Major": "POLS",
-            "SID": "862830144",
-            "Year": "5"
-        },
-        {
-            "First Name": "Anna",
-            "Last Name": "Guerra",
-            "GPA": "2.74",
-            "Major": "POLS",
-            "SID": "862178995",
-            "Year": "4"
-        },
-        {
-            "First Name": "Hannah",
-            "Last Name": "Singh",
-            "GPA": "1.67",
-            "Major": "CHEM",
-            "SID": "862208846",
-            "Year": "5"
-        },
-        {
-            "First Name": "Joshua",
-            "Last Name": "Zuniga",
-            "GPA": "3.25",
-            "Major": "HIST",
-            "SID": "862937539",
-            "Year": "2"
-        },
-        {
-            "First Name": "Cassidy",
-            "Last Name": "Patterson",
-            "GPA": "3.47",
-            "Major": "BIOL",
-            "SID": "862950311",
-            "Year": "4"
-        },
-        {
-            "First Name": "Daniel",
-            "Last Name": "Beasley",
-            "GPA": "4.00",
-            "Major": "CS",
-            "SID": "862808157",
-            "Year": "3"
-        },
-        {
-            "First Name": "Wendy",
-            "Last Name": "Smith",
-            "GPA": "4.00",
-            "Major": "BIOL",
-            "SID": "862834034",
-            "Year": "5"
-        },
-        {
-            "First Name": "Debra",
-            "Last Name": "King",
-            "GPA": "1.01",
-            "Major": "PSY",
-            "SID": "862735036",
-            "Year": "5"
-        },
-        {
-            "First Name": "Brandon",
-            "Last Name": "Robles",
-            "GPA": "1.02",
-            "Major": "CHEM",
-            "SID": "862792371",
-            "Year": "1"
-        },
-        {
-            "First Name": "Sonya",
-            "Last Name": "Melton",
-            "GPA": "2.61",
-            "Major": "ART",
-            "SID": "862391443",
-            "Year": "1"
-        },
-        {
-            "First Name": "Karen",
-            "Last Name": "Lee",
-            "GPA": "2.94",
-            "Major": "EDU",
-            "SID": "862756321",
-            "Year": "1"
-        },
-        {
-            "First Name": "Maria",
-            "Last Name": "Small",
-            "GPA": "2.59",
-            "Major": "ENGL",
-            "SID": "862446853",
-            "Year": "3"
-        },
-        {
-            "First Name": "Michael",
-            "Last Name": "King",
-            "GPA": "1.06",
-            "Major": "ART",
-            "SID": "862156467",
-            "Year": "4"
-        },
-        {
-            "First Name": "David",
-            "Last Name": "Crane",
-            "GPA": "4.00",
+            "First Name": "SAMANTHA",
+            "Last Name": "DAVIS",
+            "GPA": "2.63",
             "Major": "PHIL",
-            "SID": "862758252",
-            "Year": "1"
-        },
-        {
-            "First Name": "Justin",
-            "Last Name": "White",
-            "GPA": "1.79",
-            "Major": "BSNS",
-            "SID": "862386728",
+            "SID": "862250502",
             "Year": "2"
         },
         {
-            "First Name": "James",
-            "Last Name": "Drake",
-            "GPA": "4.00",
-            "Major": "EDU",
-            "SID": "862614528",
-            "Year": "3"
+            "First Name": "MICHELLE",
+            "Last Name": "CALDWELL",
+            "GPA": "3.72",
+            "Major": "MUS",
+            "SID": "862889262",
+            "Year": "4"
         },
         {
-            "First Name": "Jeremy",
-            "Last Name": "Cowan",
+            "First Name": "TERESA",
+            "Last Name": "MITCHELL",
+            "GPA": "3.24",
+            "Major": "BSNS",
+            "SID": "862902443",
+            "Year": "5"
+        },
+        {
+            "First Name": "CHRISTINE",
+            "Last Name": "FOLEY",
+            "GPA": "2.36",
+            "Major": "PHIL",
+            "SID": "862970905",
+            "Year": "2"
+        },
+        {
+            "First Name": "JOHN",
+            "Last Name": "SPARKS",
+            "GPA": "3.65",
+            "Major": "EDU",
+            "SID": "862680931",
+            "Year": "4"
+        },
+        {
+            "First Name": "JAMES",
+            "Last Name": "FRANK",
             "GPA": "3.20",
             "Major": "CEN",
-            "SID": "862645592",
+            "SID": "862234960",
+            "Year": "1"
+        },
+        {
+            "First Name": "LAUREN",
+            "Last Name": "NEWMAN",
+            "GPA": "2.88",
+            "Major": "CEN",
+            "SID": "862326546",
             "Year": "3"
         },
         {
-            "First Name": "Lee",
-            "Last Name": "Smith",
-            "GPA": "1.73",
-            "Major": "POLS",
-            "SID": "862084014",
-            "Year": "5"
-        },
-        {
-            "First Name": "David",
-            "Last Name": "Ortiz",
-            "GPA": "1.11",
-            "Major": "HIST",
-            "SID": "862955732",
-            "Year": "4"
-        },
-        {
-            "First Name": "Rachel",
-            "Last Name": "Williams",
-            "GPA": "1.37",
-            "Major": "MATH",
-            "SID": "862537251",
-            "Year": "4"
-        },
-        {
-            "First Name": "Tanya",
-            "Last Name": "Barnett",
-            "GPA": "4.00",
-            "Major": "ART",
-            "SID": "862393236",
-            "Year": "4"
-        },
-        {
-            "First Name": "John",
-            "Last Name": "Wilson",
-            "GPA": "4.00",
-            "Major": "POLS",
-            "SID": "862965809",
-            "Year": "2"
-        },
-        {
-            "First Name": "Denise",
-            "Last Name": "Mayer",
-            "GPA": "4.00",
-            "Major": "PSY",
-            "SID": "862048697",
-            "Year": "4"
-        },
-        {
-            "First Name": "Kevin",
-            "Last Name": "Miller",
-            "GPA": "4.00",
+            "First Name": "CHRISTINA",
+            "Last Name": "THOMAS",
+            "GPA": "3.02",
             "Major": "CEN",
-            "SID": "862005027",
+            "SID": "862382418",
             "Year": "4"
         },
         {
-            "First Name": "Abigail",
-            "Last Name": "Huber",
-            "GPA": "2.82",
-            "Major": "ENGL",
-            "SID": "862362481",
-            "Year": "5"
-        },
-        {
-            "First Name": "David",
-            "Last Name": "Richards",
-            "GPA": "2.80",
+            "First Name": "MATTHEW",
+            "Last Name": "FLETCHER",
+            "GPA": "1.76",
             "Major": "CEN",
-            "SID": "862726896",
-            "Year": "2"
+            "SID": "862087909",
+            "Year": "3"
         },
         {
-            "First Name": "Tracy",
-            "Last Name": "Patrick",
+            "First Name": "MARIA",
+            "Last Name": "VANG",
             "GPA": "4.00",
-            "Major": "HIST",
-            "SID": "862131247",
+            "Major": "DS",
+            "SID": "862910146",
             "Year": "2"
         },
         {
-            "First Name": "Anna",
-            "Last Name": "Flowers",
-            "GPA": "2.73",
-            "Major": "PSY",
-            "SID": "862521547",
-            "Year": "5"
-        },
-        {
-            "First Name": "Megan",
-            "Last Name": "Ramirez",
+            "First Name": "MARC",
+            "Last Name": "DAVIS",
             "GPA": "2.79",
-            "Major": "CEN",
-            "SID": "862773688",
-            "Year": "2"
-        },
-        {
-            "First Name": "Autumn",
-            "Last Name": "Hicks",
-            "GPA": "4.00",
-            "Major": "MUS",
-            "SID": "862559971",
-            "Year": "2"
-        },
-        {
-            "First Name": "Eugene",
-            "Last Name": "Smith",
-            "GPA": "2.73",
-            "Major": "CHEM",
-            "SID": "862710836",
-            "Year": "4"
-        },
-        {
-            "First Name": "Jay",
-            "Last Name": "Herrera",
-            "GPA": "3.79",
-            "Major": "BSNS",
-            "SID": "862846300",
-            "Year": "2"
-        },
-        {
-            "First Name": "Kaylee",
-            "Last Name": "Benton",
-            "GPA": "4.00",
-            "Major": "CHEM",
-            "SID": "862024702",
-            "Year": "2"
-        },
-        {
-            "First Name": "Kevin",
-            "Last Name": "Hall",
-            "GPA": "4.00",
-            "Major": "BSNS",
-            "SID": "862258705",
-            "Year": "2"
-        },
-        {
-            "First Name": "Eric",
-            "Last Name": "Lopez",
-            "GPA": "2.47",
-            "Major": "MUS",
-            "SID": "862324071",
+            "Major": "MATH",
+            "SID": "862989163",
             "Year": "1"
         },
         {
-            "First Name": "Todd",
-            "Last Name": "Harris",
-            "GPA": "2.92",
-            "Major": "MUS",
-            "SID": "862526770",
-            "Year": "4"
-        },
-        {
-            "First Name": "Melissa",
-            "Last Name": "Eaton",
-            "GPA": "1.48",
-            "Major": "POLS",
-            "SID": "862646519",
-            "Year": "2"
-        },
-        {
-            "First Name": "Hunter",
-            "Last Name": "Fields",
-            "GPA": "3.46",
-            "Major": "CS",
-            "SID": "862364865",
-            "Year": "1"
-        },
-        {
-            "First Name": "Adam",
-            "Last Name": "Cabrera",
-            "GPA": "2.89",
-            "Major": "HIST",
-            "SID": "862924716",
-            "Year": "1"
-        },
-        {
-            "First Name": "April",
-            "Last Name": "Novak",
-            "GPA": "2.70",
-            "Major": "EDU",
-            "SID": "862578401",
-            "Year": "2"
-        },
-        {
-            "First Name": "Jeffrey",
-            "Last Name": "Washington",
-            "GPA": "2.80",
-            "Major": "BIOL",
-            "SID": "862940070",
-            "Year": "3"
-        },
-        {
-            "First Name": "Michael",
-            "Last Name": "Baker",
-            "GPA": "3.31",
-            "Major": "HIST",
-            "SID": "862069689",
-            "Year": "2"
-        },
-        {
-            "First Name": "David",
-            "Last Name": "Khan",
-            "GPA": "3.65",
-            "Major": "MUS",
-            "SID": "862277368",
-            "Year": "4"
-        },
-        {
-            "First Name": "Ryan",
-            "Last Name": "Ramirez",
-            "GPA": "2.35",
+            "First Name": "BEVERLY",
+            "Last Name": "RANDALL",
+            "GPA": "1.04",
             "Major": "CHEM",
-            "SID": "862382929",
+            "SID": "862526101",
+            "Year": "2"
+        },
+        {
+            "First Name": "BARBARA",
+            "Last Name": "EVANS",
+            "GPA": "1.99",
+            "Major": "ART",
+            "SID": "862143169",
             "Year": "5"
         },
         {
-            "First Name": "Karen",
-            "Last Name": "Ramirez",
+            "First Name": "SYDNEY",
+            "Last Name": "SMITH",
             "GPA": "1.58",
-            "Major": "POLS",
-            "SID": "862627048",
-            "Year": "4"
-        },
-        {
-            "First Name": "Frank",
-            "Last Name": "Mcneil",
-            "GPA": "4.00",
-            "Major": "PHIL",
-            "SID": "862144061",
-            "Year": "4"
-        },
-        {
-            "First Name": "Joseph",
-            "Last Name": "Rodgers",
-            "GPA": "3.60",
-            "Major": "PHYS",
-            "SID": "862003585",
-            "Year": "1"
-        },
-        {
-            "First Name": "Jason",
-            "Last Name": "Hutchinson",
-            "GPA": "1.54",
-            "Major": "POLS",
-            "SID": "862323385",
-            "Year": "4"
-        },
-        {
-            "First Name": "Sandra",
-            "Last Name": "Richardson",
-            "GPA": "2.23",
-            "Major": "BIOL",
-            "SID": "862030264",
-            "Year": "5"
-        },
-        {
-            "First Name": "Megan",
-            "Last Name": "Taylor",
-            "GPA": "2.19",
-            "Major": "PSY",
-            "SID": "862868456",
-            "Year": "2"
-        },
-        {
-            "First Name": "James",
-            "Last Name": "Wilson",
-            "GPA": "3.74",
-            "Major": "MUS",
-            "SID": "862891324",
-            "Year": "4"
-        },
-        {
-            "First Name": "Dominique",
-            "Last Name": "Williams",
-            "GPA": "1.90",
-            "Major": "ART",
-            "SID": "862416880",
-            "Year": "2"
-        },
-        {
-            "First Name": "Fernando",
-            "Last Name": "Martinez",
-            "GPA": "2.32",
-            "Major": "PHIL",
-            "SID": "862756287",
-            "Year": "4"
-        },
-        {
-            "First Name": "Melissa",
-            "Last Name": "Clark",
-            "GPA": "2.20",
-            "Major": "ART",
-            "SID": "862927916",
-            "Year": "2"
-        },
-        {
-            "First Name": "Chase",
-            "Last Name": "Lyons",
-            "GPA": "2.39",
-            "Major": "CEN",
-            "SID": "862339100",
-            "Year": "4"
-        },
-        {
-            "First Name": "Caleb",
-            "Last Name": "Richardson",
-            "GPA": "1.05",
-            "Major": "HIST",
-            "SID": "862911096",
-            "Year": "1"
-        },
-        {
-            "First Name": "Christopher",
-            "Last Name": "Peterson",
-            "GPA": "4.00",
             "Major": "CHEM",
-            "SID": "862315974",
+            "SID": "862574010",
             "Year": "2"
         },
         {
-            "First Name": "Brittany",
-            "Last Name": "Jackson",
-            "GPA": "3.62",
-            "Major": "CEN",
-            "SID": "862372901",
-            "Year": "1"
-        },
-        {
-            "First Name": "Monica",
-            "Last Name": "Santana",
-            "GPA": "4.00",
-            "Major": "CHEM",
-            "SID": "862248305",
+            "First Name": "TERESA",
+            "Last Name": "BARRETT",
+            "GPA": "1.72",
+            "Major": "DS",
+            "SID": "862896010",
             "Year": "2"
         },
         {
-            "First Name": "Erika",
-            "Last Name": "Mcclure",
-            "GPA": "1.51",
-            "Major": "HIST",
-            "SID": "862788211",
+            "First Name": "BRANDI",
+            "Last Name": "CUEVAS",
+            "GPA": "2.03",
+            "Major": "DS",
+            "SID": "862699553",
             "Year": "3"
         },
         {
-            "First Name": "Raymond",
-            "Last Name": "Boyer",
-            "GPA": "4.00",
-            "Major": "POLS",
-            "SID": "862842940",
-            "Year": "5"
-        },
-        {
-            "First Name": "Jody",
-            "Last Name": "Stewart",
-            "GPA": "3.84",
-            "Major": "BSNS",
-            "SID": "862922127",
+            "First Name": "RHONDA",
+            "Last Name": "RODRIGUEZ",
+            "GPA": "1.97",
+            "Major": "CHEM",
+            "SID": "862959810",
             "Year": "2"
         },
         {
-            "First Name": "Aaron",
-            "Last Name": "Clark",
-            "GPA": "2.98",
-            "Major": "PHYS",
-            "SID": "862687232",
-            "Year": "2"
-        },
-        {
-            "First Name": "Kayla",
-            "Last Name": "Lawrence",
-            "GPA": "1.81",
+            "First Name": "ELIZABETH",
+            "Last Name": "MOON",
+            "GPA": "2.64",
             "Major": "PHIL",
-            "SID": "862284552",
-            "Year": "4"
-        },
-        {
-            "First Name": "Emily",
-            "Last Name": "Cooper",
-            "GPA": "3.99",
-            "Major": "ENGL",
-            "SID": "862613841",
+            "SID": "862164469",
             "Year": "5"
         },
         {
-            "First Name": "Pamela",
-            "Last Name": "Combs",
-            "GPA": "1.57",
-            "Major": "MUS",
-            "SID": "862923792",
-            "Year": "4"
-        },
-        {
-            "First Name": "Corey",
-            "Last Name": "Coleman",
-            "GPA": "4.00",
-            "Major": "BSNS",
-            "SID": "862286508",
-            "Year": "2"
-        },
-        {
-            "First Name": "Jon",
-            "Last Name": "Dawson",
-            "GPA": "4.00",
-            "Major": "ENGL",
-            "SID": "862164683",
-            "Year": "3"
-        },
-        {
-            "First Name": "Robert",
-            "Last Name": "Jefferson",
-            "GPA": "1.27",
-            "Major": "POLS",
-            "SID": "862909502",
-            "Year": "1"
-        },
-        {
-            "First Name": "Jacob",
-            "Last Name": "Hall",
-            "GPA": "3.26",
+            "First Name": "MATTHEW",
+            "Last Name": "MURRAY",
+            "GPA": "1.24",
             "Major": "CS",
-            "SID": "862713430",
+            "SID": "862898210",
             "Year": "4"
         },
         {
-            "First Name": "Stephen",
-            "Last Name": "Anderson",
-            "GPA": "3.66",
-            "Major": "PSY",
-            "SID": "862146364",
+            "First Name": "TAMMY",
+            "Last Name": "MEYER",
+            "GPA": "2.65",
+            "Major": "POLS",
+            "SID": "862696812",
+            "Year": "5"
+        },
+        {
+            "First Name": "MARK",
+            "Last Name": "BALLARD",
+            "GPA": "4.00",
+            "Major": "CHEM",
+            "SID": "862681827",
             "Year": "1"
         },
         {
-            "First Name": "George",
-            "Last Name": "Green",
-            "GPA": "1.28",
-            "Major": "ART",
-            "SID": "862593825",
+            "First Name": "LAURA",
+            "Last Name": "VARGAS",
+            "GPA": "2.73",
+            "Major": "HIST",
+            "SID": "862734895",
+            "Year": "5"
+        },
+        {
+            "First Name": "JUSTIN",
+            "Last Name": "TRAN",
+            "GPA": "4.00",
+            "Major": "PHYS",
+            "SID": "862315376",
             "Year": "4"
         },
         {
-            "First Name": "Jennifer",
-            "Last Name": "Ayala",
-            "GPA": "1.46",
+            "First Name": "LARRY",
+            "Last Name": "MERCER",
+            "GPA": "3.39",
             "Major": "BIOL",
-            "SID": "862954982",
+            "SID": "862467536",
+            "Year": "4"
+        },
+        {
+            "First Name": "ROBERT",
+            "Last Name": "MOORE",
+            "GPA": "4.00",
+            "Major": "DS",
+            "SID": "862579780",
             "Year": "3"
         },
         {
-            "First Name": "Dominique",
-            "Last Name": "Medina",
-            "GPA": "1.56",
-            "Major": "ENGL",
-            "SID": "862141814",
+            "First Name": "JULIE",
+            "Last Name": "FOLEY",
+            "GPA": "4.00",
+            "Major": "MATH",
+            "SID": "862093608",
+            "Year": "3"
+        },
+        {
+            "First Name": "JONATHAN",
+            "Last Name": "BOWMAN",
+            "GPA": "3.55",
+            "Major": "DS",
+            "SID": "862162165",
+            "Year": "3"
+        },
+        {
+            "First Name": "JACOB",
+            "Last Name": "JOHNSON",
+            "GPA": "3.04",
+            "Major": "PHYS",
+            "SID": "862379596",
             "Year": "4"
         },
         {
-            "First Name": "Christopher",
-            "Last Name": "Blackwell",
-            "GPA": "1.57",
-            "Major": "EDU",
-            "SID": "862719839",
+            "First Name": "AMANDA",
+            "Last Name": "REYES",
+            "GPA": "4.00",
+            "Major": "HIST",
+            "SID": "862525888",
+            "Year": "2"
+        },
+        {
+            "First Name": "JO",
+            "Last Name": "MILLER",
+            "GPA": "4.00",
+            "Major": "CS",
+            "SID": "862290498",
+            "Year": "2"
+        },
+        {
+            "First Name": "RANDY",
+            "Last Name": "BUTLER",
+            "GPA": "2.37",
+            "Major": "BSNS",
+            "SID": "862929230",
             "Year": "5"
+        },
+        {
+            "First Name": "BRUCE",
+            "Last Name": "RODRIGUEZ",
+            "GPA": "3.02",
+            "Major": "MATH",
+            "SID": "862151960",
+            "Year": "5"
+        },
+        {
+            "First Name": "MARIA",
+            "Last Name": "FLORES",
+            "GPA": "2.07",
+            "Major": "PHIL",
+            "SID": "862202853",
+            "Year": "3"
+        },
+        {
+            "First Name": "BRIAN",
+            "Last Name": "ROBERTS",
+            "GPA": "2.08",
+            "Major": "BSNS",
+            "SID": "862925595",
+            "Year": "5"
+        },
+        {
+            "First Name": "BRENT",
+            "Last Name": "DALTON",
+            "GPA": "3.34",
+            "Major": "PSY",
+            "SID": "862865118",
+            "Year": "3"
+        },
+        {
+            "First Name": "EILEEN",
+            "Last Name": "WINTERS",
+            "GPA": "2.87",
+            "Major": "DS",
+            "SID": "862426167",
+            "Year": "4"
+        },
+        {
+            "First Name": "BRITTANY",
+            "Last Name": "TRUJILLO",
+            "GPA": "4.00",
+            "Major": "MUS",
+            "SID": "862917766",
+            "Year": "5"
+        },
+        {
+            "First Name": "GARY",
+            "Last Name": "STONE",
+            "GPA": "2.27",
+            "Major": "HIST",
+            "SID": "862422171",
+            "Year": "2"
+        },
+        {
+            "First Name": "JACK",
+            "Last Name": "WONG",
+            "GPA": "2.63",
+            "Major": "POLS",
+            "SID": "862976743",
+            "Year": "3"
+        },
+        {
+            "First Name": "ADRIENNE",
+            "Last Name": "TRUJILLO",
+            "GPA": "3.27",
+            "Major": "MUS",
+            "SID": "862027827",
+            "Year": "5"
+        },
+        {
+            "First Name": "SUSAN",
+            "Last Name": "LYNCH",
+            "GPA": "4.00",
+            "Major": "MUS",
+            "SID": "862496782",
+            "Year": "5"
+        },
+        {
+            "First Name": "GABRIELA",
+            "Last Name": "JONES",
+            "GPA": "1.91",
+            "Major": "ENGL",
+            "SID": "862645746",
+            "Year": "3"
+        },
+        {
+            "First Name": "HEATHER",
+            "Last Name": "BARR",
+            "GPA": "3.51",
+            "Major": "POLS",
+            "SID": "862059091",
+            "Year": "1"
+        },
+        {
+            "First Name": "JONATHAN",
+            "Last Name": "PETERSON",
+            "GPA": "4.00",
+            "Major": "ENGL",
+            "SID": "862170751",
+            "Year": "5"
+        },
+        {
+            "First Name": "JESSICA",
+            "Last Name": "BURNS",
+            "GPA": "4.00",
+            "Major": "CEN",
+            "SID": "862901532",
+            "Year": "5"
+        },
+        {
+            "First Name": "WILLIAM",
+            "Last Name": "STEWART",
+            "GPA": "2.52",
+            "Major": "MATH",
+            "SID": "862055908",
+            "Year": "1"
+        },
+        {
+            "First Name": "BENJAMIN",
+            "Last Name": "SNYDER",
+            "GPA": "3.62",
+            "Major": "BIOL",
+            "SID": "862622800",
+            "Year": "5"
+        },
+        {
+            "First Name": "SARAH",
+            "Last Name": "THOMPSON",
+            "GPA": "2.81",
+            "Major": "MUS",
+            "SID": "862125906",
+            "Year": "4"
         }
     ]
 }

@@ -3,7 +3,7 @@
 using namespace std;
 
 Professor::Professor() : 
-    Professor("", "", "", "")
+    Professor("", "", "", "", "")
 {
     // firstName = "";
     // lastName = "";
@@ -11,10 +11,11 @@ Professor::Professor() :
     // rank = "";
 }
 
-Professor::Professor(string firstName, string lastName, string department, string rank) :
+Professor::Professor(string firstName, string lastName, string department, string rank, string EID) :
     Person(firstName, lastName),
     department(department),
-    rank(rank)
+    rank(rank),
+    EID(EID)
 {
     // this->firstName = firstName;
     // this->lastName = lastName;
@@ -30,6 +31,10 @@ string Professor::getRank() {
     return rank;
 }
 
+string Professor::getEID() {
+    return EID;
+}
+
 void Professor::changeDepartment(string department) {
     this->department = department;
 }
@@ -38,10 +43,15 @@ void Professor::changeRank(string rank) {
     this->rank = rank;
 }
 
-void Professor::changeInfo(string firstName, string lastName, string department, string rank) {
+void Professor::changeEID(string EID) {
+    this->EID = EID;
+}
+
+void Professor::changeInfo(string firstName, string lastName, string department, string rank, string EID) {
     changeName(firstName, lastName);
     changeDepartment(department);
     changeRank(rank);
+    changeEID(EID);
 }
 
 string Professor::getInfo() {
@@ -81,25 +91,13 @@ bool Professor::rankIsValid(string rank) {
     return false;
 }
 
-bool Professor::infoIsValid(string firstName, string lastName, string department, string rank) {
-    return nameIsValid(firstName, lastName) 
-            && departmentIsValid(department) 
-            && rankIsValid(rank);
+bool Professor::EIDIsValid(string EID) {
+    return regex_match (EID, regex("\\d\\d\\d\\d\\d\\d\\d\\d\\d"));
 }
 
-void Professor::getInfoNeat() {
-    string printFirstName = firstName;
-    string printLastName = lastName;
-    if(firstName.length() > 14) {
-        printFirstName = (firstName.find(" ") != string::npos) ? firstName.substr(0, firstName.find(" ")) : firstName.substr(0, 14);
-    }
-
-    if(lastName.length() > 14) {
-        printLastName = (lastName.find(" ") != string::npos) ? lastName.substr(0, lastName.find(" ")) : lastName.substr(0, 14);
-    }
-
-    cout << setw(15) << left << printFirstName;
-    cout << setw(15) << left << printLastName;
-    cout << setw(40) << left << department;
-    cout << setw(15) << left << rank << endl;
+bool Professor::infoIsValid(string firstName, string lastName, string department, string rank, string EID) {
+    return nameIsValid(firstName, lastName) 
+            && departmentIsValid(department) 
+            && rankIsValid(rank)
+            && EIDIsValid(EID);
 }
