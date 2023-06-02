@@ -19,14 +19,12 @@ public:
     string getDepartment();
     string getRank();
     string getEID();
+    string getInfo();
 
-    void changeInfo(string firstName, string lastName, string department, string rank, string EID);
     void changeDepartment(string department);
     void changeRank(string rank);
     void changeEID(string EID);
-
-    string getInfo();
-    void getInfoNeat();
+    void changeInfo(string firstName, string lastName, string department, string rank, string EID);
 
     bool departmentIsValid(string department);
     bool rankIsValid(string rank);

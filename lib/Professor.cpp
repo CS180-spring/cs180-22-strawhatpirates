@@ -35,6 +35,13 @@ string Professor::getEID() {
     return EID;
 }
 
+string Professor::getInfo() {
+    string out = "Name: " + this->firstName + " " + this->lastName + "\n"
+        + "Department: " + department + "\n"
+        + "Rank: " + rank;
+    return out;
+}
+
 void Professor::changeDepartment(string department) {
     this->department = department;
 }
@@ -52,13 +59,6 @@ void Professor::changeInfo(string firstName, string lastName, string department,
     changeDepartment(department);
     changeRank(rank);
     changeEID(EID);
-}
-
-string Professor::getInfo() {
-    string out = "Name: " + this->firstName + " " + this->lastName + "\n"
-        + "Department: " + department + "\n"
-        + "Rank: " + rank;
-    return out;
 }
 
 bool Professor::departmentIsValid(string department) {

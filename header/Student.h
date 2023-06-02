@@ -21,6 +21,7 @@ public:
     string getSID();
     string getYearNumber();
     string getMajor();
+    string getInfo();
 
     // void changeName(string firstName, string lastName);
     void changeGPA(string GPA);
@@ -34,9 +35,6 @@ public:
     bool yearNumberIsValid(string yearNumber);
     bool majorIsValid(string major);
     bool infoIsValid(string firstName, string lastName, string GPA, string major, string SID, string yearNumber);
-
-    string getInfo();
-    void getInfoNeat();
 
 private:
     // string name;

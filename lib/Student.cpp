@@ -46,6 +46,15 @@ string Student::getMajor() {
     return major;
 }
 
+string Student::getInfo() {
+    string out = "Name: " + this->firstName + " " + this->lastName + "\n"
+        + "GPA: " + GPA + "\n"
+        + "Major: " + major + "\n"
+        + "SID: " + SID + "\n"
+        + "Year: " + yearNumber;
+    return out;
+}
+
 void Student::changeGPA(string GPA) {
     this->GPA = GPA;
 }
@@ -116,38 +125,4 @@ bool Student::infoIsValid(string firstName, string lastName, string GPA, string 
         && SIDIsValid(SID) 
         && yearNumberIsValid(yearNumber)
         && majorIsValid(major);
-}
-
-string Student::getInfo() {
-    // string out = setw(15) << left << firstName << "\n"
-    //             << setw(15) << left << lastName << "\n"
-    //             << setw(10) << left << GPA << "\n"
-    //             << setw(15) << left << major << "\n"
-    //             << setw(15) << left << SID << "\n"
-    //             << setw(10) << left << yearNumber << endl;
-    string out = "Name: " + this->firstName + " " + this->lastName + "\n"
-        + "GPA: " + GPA + "\n"
-        + "Major: " + major + "\n"
-        + "SID: " + SID + "\n"
-        + "Year: " + yearNumber;
-    return out;
-}
-
-void Student::getInfoNeat() {
-    string printFirstName = firstName;
-    string printLastName = lastName;
-    if(firstName.length() > 14) {
-        printFirstName = (firstName.find(" ") != string::npos) ? firstName.substr(0, firstName.find(" ")) : firstName.substr(0, 14);
-    }
-
-    if(lastName.length() > 14) {
-        printLastName = (lastName.find(" ") != string::npos) ? lastName.substr(0, lastName.find(" ")) : lastName.substr(0, 14);
-    }
-
-    cout << setw(15) << left << printFirstName;
-    cout << setw(15) << left << printLastName;
-    cout << setw(10) << left << GPA;
-    cout << setw(15) << left << major;
-    cout << setw(15) << left << SID;
-    cout << setw(10) << left << yearNumber << endl;
 }

@@ -4,8 +4,9 @@ using namespace std;
 using json = nlohmann::json;
 
 JsonInterface::JsonInterface() {
-    vector<Student> dataStu = readFileStu();
-    vector<Professor> dataProf = readFileProf();
+    dataStu = readFileStu();
+    dataProf = readFileProf();
+    // printStudents(dataStu);
     this->mode = true;
 }
 
@@ -99,8 +100,8 @@ vector<Professor> JsonInterface::readFileProf()
                 Professor prof (data["professors"][i].value("First Name", "not found"), 
                                 data["professors"][i].value("Last Name", "not found"),
                                 data["professors"][i].value("Department", "not found"),
-                                data["professors"][i].value("EID", "not found"),
-                                data["professors"][i].value("Rank", "not found"));
+                                data["professors"][i].value("Rank", "not found"),
+                                data["professors"][i].value("EID", "not found"));
 
                 info.push_back(prof);
         }
@@ -861,9 +862,18 @@ void JsonInterface::printStudents(vector<Student> data) {
     cout << "-------------------------------------------------------------------------------------" << endl;
 
     for (int i = 0; i < dataStu.size(); ++i) {
+        string printFirstName = dataStu.at(i).getFirstName();
+        string printLastName = dataStu.at(i).getLastName();
+        if(printFirstName.length() > 14) {
+            printFirstName = (printFirstName.find(" ") != string::npos) ? printLastName.substr(0, printLastName.find(" ")) : printLastName.substr(0, 14);
+        }
+
+        if(printLastName.length() > 14) {
+            printLastName = (printLastName.find(" ") != string::npos) ? printLastName.substr(0, printLastName.find(" ")) : printLastName.substr(0, 14);
+        }
         cout << setw(5) << left << i + 1;
-        cout << setw(15) << left << dataStu.at(i).getFirstName();
-        cout << setw(15) << left << dataStu.at(i).getLastName();
+        cout << setw(15) << left << printFirstName;
+        cout << setw(15) << left << printLastName;
         cout << setw(10) << left << dataStu.at(i).getGPA();
         cout << setw(15) << left << dataStu.at(i).getMajor();
         cout << setw(15) << left << dataStu.at(i).getSID();
@@ -879,15 +889,25 @@ void JsonInterface::printProfessors(vector<Professor> data) {
     cout << setw(5) << left << "No.";
     cout << setw(15) << left << "First Name";
     cout << setw(15) << left << "Last Name";
-    cout << setw(20) << left << "Department";
+    cout << setw(15) << left << "Department";
     cout << setw(25) << left << "Rank" << endl;
     cout << "-------------------------------------------------------------------------------------" << endl;
 
     for (int i = 0; i < dataProf.size(); ++i) {
+        string printFirstName = dataProf.at(i).getFirstName();
+        string printLastName = dataProf.at(i).getLastName();
+        if(printFirstName.length() > 14) {
+            printFirstName = (printFirstName.find(" ") != string::npos) ? printLastName.substr(0, printLastName.find(" ")) : printLastName.substr(0, 14);
+        }
+
+        if(printLastName.length() > 14) {
+            printLastName = (printLastName.find(" ") != string::npos) ? printLastName.substr(0, printLastName.find(" ")) : printLastName.substr(0, 14);
+        }
+
         cout << setw(5) << left << i + 1;
-        cout << setw(15) << left << dataProf.at(i).getFirstName();
-        cout << setw(15) << left << dataProf.at(i).getLastName();
-        cout << setw(20) << left << dataProf.at(i).getDepartment();
+        cout << setw(15) << left << printFirstName;
+        cout << setw(15) << left << printLastName;
+        cout << setw(15) << left << dataProf.at(i).getDepartment();
         cout << setw(25) << left << dataProf.at(i).getRank() << endl;
         cout << "-------------------------------------------------------------------------------------" << endl;
     }
