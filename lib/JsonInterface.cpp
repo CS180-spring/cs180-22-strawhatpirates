@@ -984,7 +984,19 @@ void JsonInterface::updateProfessor() {
         }
     }
 
-    string firstName, lastName, department, EID;
+    string firstName, lastName, department, rank, EID;
+
+    if (index != -1) {
+
+        cout << "Select the field you want to update: " << endl;
+        cout << "1. First name" << endl;
+        cout << "2. Last name" << endl;
+        cout << "3. Department" << endl;
+        cout << "4. Rank" << endl;
+        cout << "5. EID" << endl;
+
+        int choice;
+        cin >> choice;
 
 }
 
