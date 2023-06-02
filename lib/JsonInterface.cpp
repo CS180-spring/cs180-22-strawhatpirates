@@ -86,11 +86,18 @@ vector<Professor> JsonInterface::readFileProf()
         return info;
 }
 
-void JsonInterface::uppercaseStrings(string &firstName, string &lastName, string &major) {
+void JsonInterface::uppercaseStudents(string &firstName, string &lastName, string &major) {
     transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
     transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
     transform(major.begin(), major.end(), major.begin(), ::toupper);
 }
+
+void JsonInterface::uppercaseProfessors(string &firstName, string &lastName, string &department) {
+    transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
+    transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
+    transform(department.begin(), department.end(), department.begin(), ::toupper);
+}
+
 
 void JsonInterface::add() {
     (mode ? addStudent() : addProfessor());
@@ -115,6 +122,7 @@ void JsonInterface::addStudent() {
     cout << "Enter student year number: ";
     getline(cin, yearNumber);
 
+    uppercaseStudents(firstName, lastName, major);
     
     // Create new student object with input values
     Student newStudent(firstName, lastName, GPA, major, SID, yearNumber);
@@ -127,7 +135,32 @@ void JsonInterface::addStudent() {
 }
 
 void JsonInterface::addProfessor() {
-    
+    vector<Professor> dataProf = readFileProf();
+    string firstName, lastName, department, rank, EID;
+
+    cin.ignore();
+    // Get input from user for professor info
+    cout << "Enter professor first name: ";
+    getline(cin, firstName);
+    cout << "Enter professor last name: ";
+    getline(cin, lastName);
+    cout << "Enter professor department: ";
+    getline(cin, department);
+    cout << "Enter professor rank: ";
+    getline(cin, rank);
+    cout << "Enter professor EID: ";
+    getline(cin, EID);
+
+    uppercaseProfessors(firstName, lastName, department);
+
+    // Create new professor object with input values
+    Professor newProfessor(firstName, lastName, department, rank, EID);
+
+    // Add new professor to profVector
+    dataProf.push_back(newProfessor);
+
+    writeFileProf(dataProf);
+    printProfessors(dataProf);
 }
 
 void JsonInterface::sort() {
