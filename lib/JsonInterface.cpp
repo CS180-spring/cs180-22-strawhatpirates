@@ -76,7 +76,8 @@ vector<Professor> JsonInterface::readFileProf()
                 Professor prof (data["professors"][i].value("First Name", "not found"), 
                                 data["professors"][i].value("Last Name", "not found"),
                                 data["professors"][i].value("Department", "not found"),
-                                data["professors"][i].value("Rank", "not found"));
+                                data["professors"][i].value("Rank", "not found"),
+                                data["professors"][i].value("EID", "not found"));
 
                 info.push_back(prof);
         }
@@ -518,6 +519,7 @@ void JsonInterface::searchProfessor() {
     cout << "2. Search by last name" << endl;
     cout << "3. Search by department" << endl;
     cout << "4. Search by rank" << endl;
+    cout << "5. Search by EID" << endl;
 
     cin >> choice;
 
@@ -624,7 +626,7 @@ void JsonInterface::searchProfessor() {
         vector<Professor> ranks;
 
         for (int i = 0; i < dataProf.size(); ++i) {
-            string d = dataProf[i].getDepartment();
+            string d = dataProf[i].getRank();
             if (d == rankList[stoi(rank) - 1]) {
                 ranks.push_back(dataProf[i]);
             }
@@ -637,6 +639,30 @@ void JsonInterface::searchProfessor() {
             cout << "Professor not found!" << endl;
         }
 
+    }
+
+    if (choice == 5) {
+        cin.ignore();
+        cout << "Search by EID: ";
+        
+        string EID;
+        getline(cin, EID);
+
+        vector<Professor> EIDs;
+
+        for (int i = 0; i < dataProf.size(); ++i) {
+            string eid = dataProf[i].getEID();
+            if (eid == EID) {
+                EIDs.push_back(dataProf[i]);
+            } 
+        }
+
+        cout << "\nList of professors with EID: " << EID << endl;
+        if (EIDs.size() != 0) {
+            printProfessors(EIDs);
+        } else {
+            cout << "Professor not found!" << endl;
+        }
     }
 }
 
@@ -811,16 +837,18 @@ void JsonInterface::printProfessors(vector<Professor> data) {
     cout << setw(15) << left << "First Name";
     cout << setw(15) << left << "Last Name";
     cout << setw(20) << left << "Department";
-    cout << setw(25) << left << "Rank" << endl;
-    cout << "-------------------------------------------------------------------------------------" << endl;
+    cout << setw(25) << left << "Rank";
+    cout << setw(30) << left << "EID" << endl;
+    cout << "---------------------------------------------------------------------------------------------" << endl;
 
     for (int i = 0; i < dataProf.size(); ++i) {
         cout << setw(5) << left << i + 1;
         cout << setw(15) << left << dataProf.at(i).getFirstName();
         cout << setw(15) << left << dataProf.at(i).getLastName();
         cout << setw(20) << left << dataProf.at(i).getDepartment();
-        cout << setw(25) << left << dataProf.at(i).getRank() << endl;
-        cout << "-------------------------------------------------------------------------------------" << endl;
+        cout << setw(25) << left << dataProf.at(i).getRank();
+        cout << setw(30) << left << dataProf.at(i).getEID() << endl;
+        cout << "---------------------------------------------------------------------------------------------" << endl;
     }
 }
 

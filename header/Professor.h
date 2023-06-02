@@ -13,24 +13,28 @@ class Professor : public Person {
 public: 
 
     Professor();
-    Professor(string firstName, string lastName, string department, string rank);
+    Professor(string firstName, string lastName, string department, string rank, string EID);
 
     string getDepartment();
     string getRank();
+    string getEID();
 
-    void changeInfo(string firstName, string lastName, string department, string rank);
+    void changeInfo(string firstName, string lastName, string department, string rank, string EID);
     void changeDepartment(string department);
     void changeRank(string rank);
+    void changeEID(string EID);
 
     string getInfo();
 
     bool departmentIsValid(string department);
     bool rankIsValid(string rank);
-    bool infoIsValid(string firstName, string lastName, string department, string rank);
+    bool EIDIsValid(string EID);
+    bool infoIsValid(string firstName, string lastName, string department, string rank, string EID);
 
 private:
     string department;
     string rank;
+    string EID;
 
     vector<string> departmentList{"BIOL","CHEM", "BSNS", "PHYS", "CEN", "CS", "EDU", 
                                 "ENGL", "HIST", "MATH", "PSY", "POLS", "PHIL", "ART", "MUS"};

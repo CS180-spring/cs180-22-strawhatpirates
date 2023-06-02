@@ -186,28 +186,28 @@ TEST(studentTest, majorIsValid) {
 
 // PROFESSOR TEST ---------------------------------------------
 TEST(professorTest, getName) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track");
+    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973481116");
     string expected = "John Dwill";
 
     EXPECT_EQ(professor->getName(), expected);
 }
 
 TEST(professorTest, getDepartment) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track");
+    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973481216");
     string expected = "Computer Science & Engineer";
 
     EXPECT_EQ(professor->getDepartment(), expected);
 }
 
 TEST(professorTest, getRank) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track");
+    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973481128");
     string expected = "Tenure-Track";
 
     EXPECT_EQ(professor->getRank(), expected);
 }
 
 TEST(professorTest, changeName) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track");
+    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973431516");
     string expected = "John Dwayne";
     professor->changeName("John", "Dwayne");
 
@@ -215,7 +215,7 @@ TEST(professorTest, changeName) {
 }
 
 TEST(professorTest, changeDepartment) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track");
+    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973285126");
     string expected = "Material Science & Engineering";
     professor->changeDepartment("Material Science & Engineering");
 
@@ -223,7 +223,7 @@ TEST(professorTest, changeDepartment) {
 }
 
 TEST(professorTest, changeRank) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track");
+    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973451186");
     string expected = "Advocacy Faculty";
     professor->changeRank("Advocacy Faculty");
 
