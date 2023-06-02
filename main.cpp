@@ -23,9 +23,7 @@ int main()
             jsonInterface.remove();
             // jsonInterface.removeStudent();
         else if (a == 3)
-            //jsonInterface.edit();
-            //jsonInterface.editStudent();
-            continue;
+            jsonInterface.update();
         else if (a == 4)
             jsonInterface.sort();
             // jsonInterface.sortStudent();
