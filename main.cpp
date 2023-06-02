@@ -11,32 +11,27 @@ using namespace std;
 
 int main()
 {
-    JsonInterface jsonInterface;
+    JsonInterface *jsonInterface = new JsonInterface();
 
     do {
-        int a = menu(jsonInterface.getMode());
+        int a = menu(jsonInterface->getMode());
 
         if (a == 1)
-            jsonInterface.add();
+            jsonInterface->add();
         else if (a == 2)
-            jsonInterface.remove();
-            // jsonInterface.removeStudent();
+            jsonInterface->remove();
         else if (a == 3)
-            jsonInterface.update();
+            jsonInterface->update();
         else if (a == 4)
-            jsonInterface.sort();
-            // jsonInterface.sortStudent();
+            jsonInterface->sort();
         else if (a == 5)
-            jsonInterface.search();
-            // jsonInterface.searchStudent();
+            jsonInterface->sort();
         else if (a == 5)
-            continue;
+            jsonInterface->search();
         else if (a == 6)
-            jsonInterface.changeMode();
+            jsonInterface->changeMode();
         else if (a == 7) {
-            jsonInterface.print();
-            // jsonInterface.printStudents(); 
-            // jsonInterface.printProfessors();
+            jsonInterface->print();
         }
         else if (a == 8)
             exit(0);

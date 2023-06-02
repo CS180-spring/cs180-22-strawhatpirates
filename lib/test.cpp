@@ -186,28 +186,35 @@ TEST(studentTest, majorIsValid) {
 
 // PROFESSOR TEST ---------------------------------------------
 TEST(professorTest, getName) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973481116");
+    Professor *professor = new Professor("John", "Dwill", "CHEM", "Tenure-Track", "973481216");
     string expected = "John Dwill";
 
     EXPECT_EQ(professor->getName(), expected);
 }
 
 TEST(professorTest, getDepartment) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973481216");
-    string expected = "Computer Science & Engineer";
+    Professor *professor = new Professor("John", "Dwill", "CHEM", "Tenure-Track", "973481216");
+    string expected = "CHEM";
 
     EXPECT_EQ(professor->getDepartment(), expected);
 }
 
 TEST(professorTest, getRank) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973481128");
+    Professor *professor = new Professor("John", "Dwill", "CHEM", "Tenure-Track", "973481216");
     string expected = "Tenure-Track";
 
     EXPECT_EQ(professor->getRank(), expected);
 }
 
+TEST(professorTest, getEID) {
+    Professor *professor = new Professor("John", "Dwill", "CHEM", "Tenure-Track", "973481216");
+    string expected = "973481216";
+
+    EXPECT_EQ(professor->getEID(), expected);
+}
+
 TEST(professorTest, changeName) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973431516");
+    Professor *professor = new Professor("John", "Dwill", "CHEM", "Tenure-Track", "973481216");
     string expected = "John Dwayne";
     professor->changeName("John", "Dwayne");
 
@@ -215,7 +222,7 @@ TEST(professorTest, changeName) {
 }
 
 TEST(professorTest, changeDepartment) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973285126");
+    Professor *professor = new Professor("John", "Dwill", "CHEM", "Tenure-Track", "973481216");
     string expected = "Material Science & Engineering";
     professor->changeDepartment("Material Science & Engineering");
 
@@ -223,16 +230,24 @@ TEST(professorTest, changeDepartment) {
 }
 
 TEST(professorTest, changeRank) {
-    Professor *professor = new Professor("John", "Dwill", "Computer Science & Engineer", "Tenure-Track", "973451186");
+    Professor *professor = new Professor("John", "Dwill", "CHEM", "Tenure-Track", "973481216");
     string expected = "Advocacy Faculty";
     professor->changeRank("Advocacy Faculty");
 
     EXPECT_EQ(professor->getRank(), expected);
 }
 
+TEST(professorTest, changeEID) {
+    Professor *professor = new Professor("John", "Dwill", "CHEM", "Tenure-Track", "973481216");
+    string expected = "973111111";
+    professor->changeEID("973111111");
+
+    EXPECT_EQ(professor->getEID(), expected);
+}
+
 TEST(professorTest, departmentIsValid) {
     Professor prof;
-    string input1 = "Computer Science and Engineering";
+    string input1 = "CHEM";
     string input2 = "5.00";
     string input3 = "c";
 
@@ -250,6 +265,17 @@ TEST(professorTest, rankIsValid) {
     EXPECT_TRUE(prof.rankIsValid(input1));
     EXPECT_FALSE(prof.rankIsValid(input2));
     EXPECT_FALSE(prof.rankIsValid(input3));
+}
+
+TEST(professorTest, EIDIsValid) {
+    Professor prof;
+    string input1 = "973481116";
+    string input2 = "5.00";
+    string input3 = "rewqr";
+
+    EXPECT_TRUE(prof.EIDIsValid(input1));
+    EXPECT_FALSE(prof.EIDIsValid(input2));
+    EXPECT_FALSE(prof.EIDIsValid(input3));
 }
 
 // JsonInterface TEST ---------------------------------------------

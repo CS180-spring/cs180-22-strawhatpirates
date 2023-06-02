@@ -48,10 +48,6 @@ class JsonInterface
         void updateProfessor();
         void updateStudent();
 
-        void edit();
-        void editProfessor();
-        void editStudent();
-
         void print();
         void printStudents(vector<Student> data);
         void printProfessors(vector<Professor> data);

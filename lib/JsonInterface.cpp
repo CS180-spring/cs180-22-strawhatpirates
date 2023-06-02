@@ -4,6 +4,9 @@ using namespace std;
 using json = nlohmann::json;
 
 JsonInterface::JsonInterface() {
+    dataStu = readFileStu();
+    dataProf = readFileProf();
+    // printStudents(dataStu);
     this->mode = true;
 }
 
@@ -97,8 +100,8 @@ vector<Professor> JsonInterface::readFileProf()
                 Professor prof (data["professors"][i].value("First Name", "not found"), 
                                 data["professors"][i].value("Last Name", "not found"),
                                 data["professors"][i].value("Department", "not found"),
-                                data["professors"][i].value("EID", "not found"),
-                                data["professors"][i].value("Rank", "not found"));
+                                data["professors"][i].value("Rank", "not found"),
+                                data["professors"][i].value("EID", "not found"));
 
                 info.push_back(prof);
         }
@@ -107,7 +110,7 @@ vector<Professor> JsonInterface::readFileProf()
         return info;
 }
 
-void JsonInterface::uppercaseStrings(string &firstName, string &lastName, string &major) {
+void JsonInterface::uppercaseStudents(string &firstName, string &lastName, string &major) {
     transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
     transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
     transform(major.begin(), major.end(), major.begin(), ::toupper);
@@ -118,24 +121,79 @@ void JsonInterface::add() {
 }
 
 void JsonInterface::addStudent() {
-    vector<Student> dataStu = readFileStu();
+    // vector<Student> dataStu = readFileStu();
     string firstName, lastName , GPA, SID, yearNumber, major;
 
+    Student stu;
     cin.ignore();
     // Get input from user for student info
-    cout << "Enter student first name: ";
-    getline(cin, firstName);
-    cout << "Enter student last name: ";
-    getline(cin, lastName);
-    cout << "Enter student GPA: ";
-    getline(cin, GPA);
-    cout << "Enter student major: ";
-    getline(cin, major);
-    cout << "Enter student ID: ";
-    getline(cin, SID);
-    cout << "Enter student year number: ";
-    getline(cin, yearNumber);
-
+    int step = 1;
+    while(step < 7) {
+        switch (step) {
+            case 1:
+                cout << "Enter student first name: ";
+                getline(cin, firstName);
+                if(!stu.firstNameIsValid(firstName)) {
+                    cout << "First name invalid! Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 2:
+                cout << "Enter student last name: ";
+                getline(cin, lastName);
+                if(!stu.lastNameIsValid(lastName)) {
+                    cout << "Last name invalid! Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 3:
+                cout << "Enter student GPA: ";
+                getline(cin, GPA);
+                if(!stu.GPAIsValid(GPA)) {
+                    cout << "GPA invalid! Should be a decimal to a hundredths place that is between 0.00 and 4.00 (Ex: 1.46, 3.42). Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 4:
+                cout << "Enter student major: ";
+                getline(cin, major);
+                if(!stu.majorIsValid(major)) {
+                    cout << "Major invalid! Please try again with one of these listed majors: \n" <<
+                    "BIOL, CHEM, BSNS, PHYS, CEN, CS, EDU, ENGL, \n" <<
+                    "HIST, MATH, PSY, POLS, PHIL, ART, MUS, DS" << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 5:
+                cout << "Enter student ID: ";
+                getline(cin, SID);
+                if(!stu.SIDIsValid(SID)) {
+                    cout << "SID invalid! Should be a 9 digit number (Ex: 123456789). Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+            case 6:
+                cout << "Enter student year number: ";
+                getline(cin, yearNumber);
+                if(!stu.yearNumberIsValid(yearNumber)) {
+                    cout << "Year number invalid! Should be an integer. Please try again." << endl;
+                }
+                else {
+                    step++;
+                }
+                break;
+        }
+    }
     
     // Create new student object with input values
     Student newStudent(firstName, lastName, GPA, major, SID, yearNumber);
@@ -181,7 +239,7 @@ void JsonInterface::sort() {
 
 void JsonInterface::sortStudent()
 {
-    vector<Student> dataStu = readFileStu();
+    // vector<Student> dataStu = readFileStu();
     cout << "\nYou have chosen to sort students" << endl;
 
     int choice;
@@ -267,7 +325,7 @@ void JsonInterface::sortStudent()
 
 void JsonInterface::sortProfessor()
 {
-    vector<Student> dataProf = readFileProf();
+    // vector<Professor> dataProf = readFileProf();
     cout << "\nYou have chosen to sort professors" << endl;
 
     int choice;
@@ -358,7 +416,7 @@ void JsonInterface::search() {
 
 void JsonInterface::searchStudent() {
 
-    vector<Student> dataStu = readFileStu();
+    // vector<Student> dataStu = readFileStu();
     cout << "\nYou have chosen to search for a student" << endl;
 
     int choice;
@@ -615,7 +673,7 @@ void JsonInterface::searchStudent() {
 }
 
 void JsonInterface::searchProfessor() {
-    vector<Professor> dataProf = readFileProf();
+    // vector<Professor> dataProf = readFileProf();
     cout << "\nYou have chosen to search for a professor" << endl;
 
     int choice;
@@ -754,7 +812,7 @@ void JsonInterface::removeStudent()
 {
     bool found = false;
     string SID;
-    vector<Student> dataStu = readFileStu();
+    // vector<Student> dataStu = readFileStu();
 
     cout << "\nYou have chosen to delete a student" << endl;
 
@@ -792,7 +850,7 @@ void JsonInterface::update() {
 }
 
 void JsonInterface::updateStudent() {
-    vector<Student> dataStu = readFileStu();
+    // vector<Student> dataStu = readFileStu();
     string SID;
     
     cout << "Enter the SID of the student you want to update: ";
@@ -872,9 +930,13 @@ void JsonInterface::updateStudent() {
     }
 }
 
+void JsonInterface::updateProfessor() {
+    
+}
+
 void JsonInterface::print() {
-    vector<Student> dataStu = readFileStu();
-    vector<Professor> dataProf = readFileProf();
+    // vector<Student> dataStu = readFileStu();
+    // vector<Professor> dataProf = readFileProf();
     (mode ? printStudents(dataStu) : printProfessors(dataProf));
 }
 
@@ -893,9 +955,18 @@ void JsonInterface::printStudents(vector<Student> data) {
     cout << "-------------------------------------------------------------------------------------" << endl;
 
     for (int i = 0; i < dataStu.size(); ++i) {
+        string printFirstName = dataStu.at(i).getFirstName();
+        string printLastName = dataStu.at(i).getLastName();
+        if(printFirstName.length() > 14) {
+            printFirstName = (printFirstName.find(" ") != string::npos) ? printLastName.substr(0, printLastName.find(" ")) : printLastName.substr(0, 14);
+        }
+
+        if(printLastName.length() > 14) {
+            printLastName = (printLastName.find(" ") != string::npos) ? printLastName.substr(0, printLastName.find(" ")) : printLastName.substr(0, 14);
+        }
         cout << setw(5) << left << i + 1;
-        cout << setw(15) << left << dataStu.at(i).getFirstName();
-        cout << setw(15) << left << dataStu.at(i).getLastName();
+        cout << setw(15) << left << printFirstName;
+        cout << setw(15) << left << printLastName;
         cout << setw(10) << left << dataStu.at(i).getGPA();
         cout << setw(15) << left << dataStu.at(i).getMajor();
         cout << setw(15) << left << dataStu.at(i).getSID();
@@ -911,15 +982,25 @@ void JsonInterface::printProfessors(vector<Professor> data) {
     cout << setw(5) << left << "No.";
     cout << setw(15) << left << "First Name";
     cout << setw(15) << left << "Last Name";
-    cout << setw(20) << left << "Department";
+    cout << setw(15) << left << "Department";
     cout << setw(25) << left << "Rank" << endl;
     cout << "-------------------------------------------------------------------------------------" << endl;
 
     for (int i = 0; i < dataProf.size(); ++i) {
+        string printFirstName = dataProf.at(i).getFirstName();
+        string printLastName = dataProf.at(i).getLastName();
+        if(printFirstName.length() > 14) {
+            printFirstName = (printFirstName.find(" ") != string::npos) ? printLastName.substr(0, printLastName.find(" ")) : printLastName.substr(0, 14);
+        }
+
+        if(printLastName.length() > 14) {
+            printLastName = (printLastName.find(" ") != string::npos) ? printLastName.substr(0, printLastName.find(" ")) : printLastName.substr(0, 14);
+        }
+
         cout << setw(5) << left << i + 1;
-        cout << setw(15) << left << dataProf.at(i).getFirstName();
-        cout << setw(15) << left << dataProf.at(i).getLastName();
-        cout << setw(20) << left << dataProf.at(i).getDepartment();
+        cout << setw(15) << left << printFirstName;
+        cout << setw(15) << left << printLastName;
+        cout << setw(15) << left << dataProf.at(i).getDepartment();
         cout << setw(25) << left << dataProf.at(i).getRank() << endl;
         cout << "-------------------------------------------------------------------------------------" << endl;
     }
