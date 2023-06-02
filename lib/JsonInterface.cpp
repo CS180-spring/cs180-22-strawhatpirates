@@ -148,7 +148,31 @@ void JsonInterface::addStudent() {
 }
 
 void JsonInterface::addProfessor() {
+    vector<Professor> dataProf = readFileProf();
+    string firstName, lastName , department, rank, EID;
     
+    cin.ignore();
+    // Get input from user for professor info
+    cout << "Enter professor first name: ";
+    getline(cin, firstName);
+    cout << "Enter professor last name: ";
+    getline(cin, lastName);
+    cout << "Enter professor department: ";
+    getline(cin, department);
+    cout << "Enter professor rank: ";
+    getline(cin, rank);
+    cout << "Enter professor EID: ";
+    getline(cin, EID);
+    
+    
+    // Create new professor object with input values
+    Professor newProfessor(firstName, lastName, department, rank, EID);
+    
+    // Add new professor to stuVector
+    dataProf.push_back(newProfessor);
+    
+    writeFileProf(dataProf);
+    printProfessors(dataProf);
 }
 
 void JsonInterface::sort() {
