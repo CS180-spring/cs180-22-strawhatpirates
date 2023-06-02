@@ -32,8 +32,8 @@ private:
     string department;
     string rank;
 
-    vector<string> departmentList{"Computer Science and Engineering", "Electrical and Computer Engineering", "Bioengineering", "Chemical/Environmenta; Engineering",
-                                "Mathematics", "Physics and Astronomy", "Biochemistry", "Chemistry", "Botany and Plant Sciences"};
+    vector<string> departmentList{"BIOL","CHEM", "BSNS", "PHYS", "CEN", "CS", "EDU", 
+                                "ENGL", "HIST", "MATH", "PSY", "POLS", "PHIL", "ART", "MUS"};
     vector<string> rankList{"Tenure-Track", "Emeritus", "Adjunct", "Cooperating"};
 };
 
