@@ -969,7 +969,89 @@ void JsonInterface::updateStudent() {
 }
 
 void JsonInterface::updateProfessor() {
-    
+    string EID;
+    cout << "Enter the EID of the professor you want to update: ";
+    cin >> EID;
+
+    // Search for the professor by SID
+    int index = -1
+
+    int index = -1;
+    for (int i = 0; i < dataStu.size(); i++) {
+        if (dataStu[i].getSID() == SID) {
+            index = i;
+            break;
+        }
+    }
+
+    string firstName, lastName, department, rank, EID;
+
+    if (index != -1) {
+
+        cout << "Select the field you want to update: " << endl;
+        cout << "1. First name" << endl;
+        cout << "2. Last name" << endl;
+        cout << "3. Department" << endl;
+        cout << "4. Rank" << endl;
+        cout << "5. EID" << endl;
+
+        int choice;
+        cin >> choice;
+    }
+
+    switch (choice)
+        {
+        case 1:
+            cin.ignore();
+            cout << "Enter updated first name: ";
+            getline(cin, firstName);
+            dataProf[index].changeFirstName(firstName);
+            break;
+
+        case 2:
+            cin.ignore();
+            cout << "Enter updated last name: ";
+            getline(cin, lastName);
+            dataProf[index].changeLastName(lastName);
+            break;
+
+        case 3:
+            cin.ignore();
+            cout << "Enter updated Department: ";
+            getline(cin, department);
+            dataProf[index].changeDepartment(department);
+            break;
+
+        case 4:
+            cin.ignore();
+            cout << "Enter updated Rank: ";
+            getline(cin, rank);
+            dataProf[index].changeRank(rank);
+            break;
+
+         case 5:
+            cin.ignore();
+            cout << "Enter updated EID: ";
+            getline(cin, EID);
+            dataStu[index].changeEID(EID);
+            break;
+        
+        default:
+            break;
+        }
+        
+        // Write the updated student data to the file
+        writeFileProf(dataProf);
+
+        cout << "Professor with EID " << EID << " has been updated." << endl;
+    } else {
+        cout << "Professor with EID " << EID << " not found." << endl;
+    }
+}
+
+        
+
+
 }
 
 void JsonInterface::print() {
