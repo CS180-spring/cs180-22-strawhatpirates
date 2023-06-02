@@ -335,7 +335,20 @@ void JsonInterface::sortProfessor()
         }
     }
     
-    // writeFileProf(dataProf);
+    if (choice == 5) {
+        cout << "You have chosen to sort by Employee ID." << endl;
+        for (i = 0; i < dataProf.size(); i++) {
+            for (j = i + 1; j < dataProf.size(); j++) {
+                if (dataProf[j].getEID() < dataProf[i].getEID()) {
+                    temp = dataProf[i];
+                    dataProf[i] = dataProf[j];
+                    dataProf[j] = temp;
+                }
+            }
+        }
+    }
+    
+    writeFileProf(dataProf);
 }
 
 void JsonInterface::search() {
