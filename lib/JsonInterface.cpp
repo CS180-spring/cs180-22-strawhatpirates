@@ -1008,6 +1008,13 @@ void JsonInterface::updateProfessor() {
             dataProf[index].changeFirstName(firstName);
             break;
 
+        case 2:
+            cin.ignore();
+            cout << "Enter updated last name: ";
+            getline(cin, lastName);
+            dataProf[index].changeLastName(lastName);
+            break;
+
 }
 
 void JsonInterface::print() {
