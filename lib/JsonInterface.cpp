@@ -969,7 +969,23 @@ void JsonInterface::updateStudent() {
 }
 
 void JsonInterface::updateProfessor() {
-    
+    string EID;
+    cout << "Enter the EID of the professor you want to update: ";
+    cin >> EID;
+
+    // Search for the professor by SID
+    int index = -1
+
+    int index = -1;
+    for (int i = 0; i < dataStu.size(); i++) {
+        if (dataStu[i].getSID() == SID) {
+            index = i;
+            break;
+        }
+    }
+
+    string firstName, lastName, department, EID;
+
 }
 
 void JsonInterface::print() {
