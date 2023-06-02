@@ -1029,12 +1029,26 @@ void JsonInterface::updateProfessor() {
             dataProf[index].changeRank(rank);
             break;
 
-            case 5:
+         case 5:
             cin.ignore();
             cout << "Enter updated EID: ";
             getline(cin, EID);
             dataStu[index].changeEID(EID);
             break;
+        
+        default:
+            break;
+        }
+        
+        // Write the updated student data to the file
+        writeFileProf(dataProf);
+
+        cout << "Professor with EID " << EID << " has been updated." << endl;
+    } else {
+        cout << "Professor with EID " << EID << " not found." << endl;
+    }
+}
+
 
 }
 
