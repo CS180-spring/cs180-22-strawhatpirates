@@ -6,6 +6,7 @@
 #include <regex>
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
@@ -20,6 +21,7 @@ public:
     string getSID();
     string getYearNumber();
     string getMajor();
+    string getInfo();
 
     // void changeName(string firstName, string lastName);
     void changeGPA(string GPA);
@@ -34,8 +36,6 @@ public:
     bool majorIsValid(string major);
     bool infoIsValid(string firstName, string lastName, string GPA, string major, string SID, string yearNumber);
 
-    string getInfo();
-
 private:
     // string name;
     string GPA;
@@ -43,8 +43,8 @@ private:
     string yearNumber;
     string major;
     enum major {Freshman, Sophomore, Junior, Senior};
-    vector<string> majorList{"CS", "CE", "ME", "EE", "CSBA",
-                            "BIO", "CHEM", "PHYS", "MATH"};
+    vector<string> majorList{"BIOL","CHEM", "BSNS", "PHYS", "CEN", "CS", "EDU",
+                             "ENGL", "HIST", "MATH", "PSY", "POLS", "PHIL", "ART", "MUS", "DS"};
 };
 
 #endif

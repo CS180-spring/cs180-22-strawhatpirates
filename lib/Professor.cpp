@@ -1,10 +1,9 @@
 #include "../header/Professor.h"
-#include "iostream"
 
 using namespace std;
 
 Professor::Professor() : 
-    Professor("", "", "", "")
+    Professor("", "", "", "", "")
 {
     // firstName = "";
     // lastName = "";
@@ -12,10 +11,11 @@ Professor::Professor() :
     // rank = "";
 }
 
-Professor::Professor(string firstName, string lastName, string department, string rank) :
+Professor::Professor(string firstName, string lastName, string department, string rank, string EID) :
     Person(firstName, lastName),
     department(department),
-    rank(rank)
+    rank(rank),
+    EID(EID)
 {
     // this->firstName = firstName;
     // this->lastName = lastName;
@@ -31,6 +31,17 @@ string Professor::getRank() {
     return rank;
 }
 
+string Professor::getEID() {
+    return EID;
+}
+
+string Professor::getInfo() {
+    string out = "Name: " + this->firstName + " " + this->lastName + "\n"
+        + "Department: " + department + "\n"
+        + "Rank: " + rank;
+    return out;
+}
+
 void Professor::changeDepartment(string department) {
     this->department = department;
 }
@@ -39,17 +50,15 @@ void Professor::changeRank(string rank) {
     this->rank = rank;
 }
 
-void Professor::changeInfo(string firstName, string lastName, string department, string rank) {
+void Professor::changeEID(string EID) {
+    this->EID = EID;
+}
+
+void Professor::changeInfo(string firstName, string lastName, string department, string rank, string EID) {
     changeName(firstName, lastName);
     changeDepartment(department);
     changeRank(rank);
-}
-
-string Professor::getInfo() {
-    string out = "Name: " + this->firstName + " " + this->lastName + "\n"
-        + "Department: " + department + "\n"
-        + "Rank: " + rank;
-    return out;
+    changeEID(EID);
 }
 
 bool Professor::departmentIsValid(string department) {
@@ -82,8 +91,13 @@ bool Professor::rankIsValid(string rank) {
     return false;
 }
 
-bool Professor::infoIsValid(string firstName, string lastName, string department, string rank) {
+bool Professor::EIDIsValid(string EID) {
+    return regex_match (EID, regex("\\d\\d\\d\\d\\d\\d\\d\\d\\d"));
+}
+
+bool Professor::infoIsValid(string firstName, string lastName, string department, string rank, string EID) {
     return nameIsValid(firstName, lastName) 
             && departmentIsValid(department) 
-            && rankIsValid(rank);
+            && rankIsValid(rank)
+            && EIDIsValid(EID);
 }
