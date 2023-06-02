@@ -265,7 +265,7 @@ void JsonInterface::searchStudent() {
             } 
         }
 
-        cout << "\nList of students with first name: " << first << endl << endl;
+        cout << "\nList of students with first name: " << first << endl;
         if (firstNames.size() != 0) {
             printStudents(firstNames);
         } else {
@@ -294,7 +294,7 @@ void JsonInterface::searchStudent() {
             } 
         }
 
-        cout << "\nList of students with last name: " << last << endl << endl;
+        cout << "\nList of students with last name: " << last << endl;
         if (lastNames.size() != 0) {
             printStudents(lastNames);
         } else {
@@ -395,7 +395,7 @@ void JsonInterface::searchStudent() {
             }
 
 
-            cout << "\nList of students with GPA:" << GPA << endl << endl;
+            cout << "\nList of students with GPA:" << GPA << endl;
             if (GPAs.size() != 0) {
                 printStudents(GPAs);
             } else {
@@ -420,7 +420,7 @@ void JsonInterface::searchStudent() {
             } 
         }
 
-        cout << "\nList of students with SID: " << SID << endl << endl;
+        cout << "\nList of students with SID: " << SID << endl;
         if (SIDs.size() != 0) {
             printStudents(SIDs);
         } else {
@@ -432,7 +432,8 @@ void JsonInterface::searchStudent() {
         cin.ignore();
         cout << "Search by Major: " << endl;
 
-        vector<string> majorList{"CS", "CE", "ME", "EE", "CSBA", "BIO", "CHEM", "PHYS", "MATH"};
+        vector<string> majorList{"BIOL","CHEM", "BSNS", "PHYS", "CEN", "CS", "EDU", "ENGL",
+                                "HIST", "MATH", "PSY", "POLS", "PHIL", "ART", "MUS"};
         for (int i = 1; i < majorList.size() + 1; ++i) {
             cout << i << ". " << majorList[i - 1] << endl;
         }
@@ -449,7 +450,7 @@ void JsonInterface::searchStudent() {
             }
         }
 
-        cout << "\nList of students with major: " << majorList[stoi(major) - 1] << endl << endl;
+        cout << "\nList of students with major: " << majorList[stoi(major) - 1] << endl;
         if (majors.size() != 0) {
             printStudents(majors);
         } else {
@@ -473,7 +474,7 @@ void JsonInterface::searchStudent() {
             }
         }
 
-        cout << "\nList of students with year number: " << year << endl << endl;
+        cout << "\nList of students with year number: " << year << endl;
         if (years.size() != 0) {
             printStudents(years);
         } else {
@@ -518,7 +519,7 @@ void JsonInterface::searchProfessor() {
             } 
         }
 
-        cout << "\nList of professors with first name: " << first << endl << endl;
+        cout << "\nList of professors with first name: " << first << endl;
         if (firstNames.size() != 0) {
             printProfessors(firstNames);
         } else {
@@ -547,12 +548,72 @@ void JsonInterface::searchProfessor() {
             } 
         }
 
-        cout << "\nList of professors with last name: " << last << endl << endl;
+        cout << "\nList of professors with last name: " << last << endl;
         if (lastNames.size() != 0) {
             printProfessors(lastNames);
         } else {
             cout << "Professor not found!" << endl;
         }
+    }
+
+    if (choice == 3) {
+        cin.ignore();
+        cout << "Search by Department: " << endl;
+
+        vector<string> depList{"BIOL","CHEM", "BSNS", "PHYS", "CEN", "CS", "EDU", 
+                                "ENGL", "HIST", "MATH", "PSY", "POLS", "PHIL", "ART", "MUS"};
+        for (int i = 1; i < depList.size() + 1; ++i) {
+            cout << i << ". " << depList[i - 1] << endl;
+        }
+
+        string dep;
+        getline(cin, dep);
+
+        vector<Professor> deps;
+
+        for (int i = 0; i < dataProf.size(); ++i) {
+            string d = dataProf[i].getDepartment();
+            if (d == depList[stoi(dep) - 1]) {
+                deps.push_back(dataProf[i]);
+            }
+        }
+
+        cout << "\nList of professors with department: " << depList[stoi(dep) - 1] << endl;
+        if (deps.size() != 0) {
+            printProfessors(deps);
+        } else {
+            cout << "Professor not found!" << endl;
+        }
+    }
+
+    if (choice == 4) {
+        cin.ignore();
+        cout << "Search by Rank: " << endl;
+
+        vector<string> rankList{"Tenure-Track", "Emeritus", "Adjunct", "Cooperating"};
+        for (int i = 1; i < rankList.size() + 1; ++i) {
+            cout << i << ". " << rankList[i - 1] << endl;
+        }
+
+        string rank;
+        getline(cin, rank);
+
+        vector<Professor> ranks;
+
+        for (int i = 0; i < dataProf.size(); ++i) {
+            string d = dataProf[i].getDepartment();
+            if (d == rankList[stoi(rank) - 1]) {
+                ranks.push_back(dataProf[i]);
+            }
+        }
+
+        cout << "\nList of professors with rank: " << rankList[stoi(rank) - 1] << endl;
+        if (ranks.size() != 0) {
+            printProfessors(ranks);
+        } else {
+            cout << "Professor not found!" << endl;
+        }
+
     }
 }
 
