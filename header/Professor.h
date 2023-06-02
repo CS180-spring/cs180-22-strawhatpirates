@@ -37,7 +37,7 @@ private:
     string EID;
 
     vector<string> departmentList{"BIOL","CHEM", "BSNS", "PHYS", "CEN", "CS", "EDU", 
-                                "ENGL", "HIST", "MATH", "PSY", "POLS", "PHIL", "ART", "MUS"};
+                                "ENGL", "HIST", "MATH", "PSY", "POLS", "PHIL", "ART", "MUS", "DS"};
     vector<string> rankList{"Tenure-Track", "Emeritus", "Adjunct", "Cooperating"};
 };
 
