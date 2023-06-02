@@ -97,8 +97,8 @@ vector<Professor> JsonInterface::readFileProf()
                 Professor prof (data["professors"][i].value("First Name", "not found"), 
                                 data["professors"][i].value("Last Name", "not found"),
                                 data["professors"][i].value("Department", "not found"),
-                                data["professors"][i].value("Rank", "not found"),
-                                data["professors"][i].value("EID", "not found"));
+                                data["professors"][i].value("EID", "not found"),
+                                data["professors"][i].value("Rank", "not found"));
 
                 info.push_back(prof);
         }
