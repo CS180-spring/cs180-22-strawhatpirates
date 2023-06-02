@@ -32,7 +32,6 @@ void JsonInterface::sortStudent()
     cout << "Enter your selection: ";
     cin >> choice;
 
-    Student temp;
     int i;
     int j;
 
@@ -130,6 +129,31 @@ void JsonInterface::Student::updateStudent()
                 SIDs.push_back(dataStu[i]);
             } 
         }
+
+    cin.ignore();
+        cout << "Search by SID: ";
+        
+        string SID;
+        getline(cin, SID);
+
+        vector<Student> SIDs;
+
+        for (int i = 0; i < dataStu.size(); ++i) {
+            string sid = dataStu[i].getSID();
+            if (sid == SID) {
+                SIDs.push_back(dataStu[i]);
+            } 
+        }
+
+        cout << "\nList of students with SID:" << SID << endl << endl;
+        if (SIDs.size() != 0) {
+            for (int i = 0; i < SIDs.size(); ++i) {
+                cout << SIDs[i].getInfo() << endl << endl;
+            }
+        } else {
+            cout << "Student not found!" << endl;
+        }
+    }
 
     if (choice == 1) {
         cout << "You have chosen to update first name." << endl;
