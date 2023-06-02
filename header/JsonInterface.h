@@ -1,36 +1,44 @@
-#ifndef JSONINTERFACE_H
-#define JSONINTERFACE_H
+#ifndef PROFESSOR_H
+#define PROFESSOR_H
 
-#include <iostream> 
+#include "Person.h"
+#include <string>
+#include <regex>
+#include <iostream>
 #include <vector>
-#include "Professor.h"
-#include "Student.h"
+#include <iomanip>
 
 using namespace std;
 
-class JsonInterface
-{
-	public:
-		JsonInterface(); //mode = true
-		void uppercaseStrings(string& firstName, string& lastName, string& major);
-		void addProfessor();
-		void addStudent(vector<Student> &dataStu);
-		void removeProfessor();
-		void removeStudent(string SID, vector<Student> stussy);
-		void updateProfessor();
-		void updateStudent(string SID, vector<Student> stussy);
-		void editProfessor();
-		void editStudent();
-		void searchProfessor();
-		void searchStudent();
-		void changeMode();
-		void writeFileStu(vector<Student> theStudents);
-		void writeFileProf(vector<Professor> theProfessors);
-		bool getMode();
-	private:
-		vector<Professor> profVector;
-		vector<Student> stuVector;
-		bool mode;
+class Professor : public Person {
+public: 
+
+    Professor();
+    Professor(string firstName, string lastName, string department, string rank, string EID);
+
+    string getDepartment();
+    string getRank();
+    string getEID();
+    string getInfo();
+
+    void changeDepartment(string department);
+    void changeRank(string rank);
+    void changeEID(string EID);
+    void changeInfo(string firstName, string lastName, string department, string rank, string EID);
+
+    bool departmentIsValid(string department);
+    bool rankIsValid(string rank);
+    bool EIDIsValid(string EID);
+    bool infoIsValid(string firstName, string lastName, string department, string rank, string EID);
+
+private:
+    string department;
+    string rank;
+    string EID;
+
+    vector<string> departmentList{"BIOL","CHEM", "BSNS", "PHYS", "CEN", "CS", "EDU", 
+                                "ENGL", "HIST", "MATH", "PSY", "POLS", "PHIL", "ART", "MUS", "DS"};
+    vector<string> rankList{"Tenure-Track", "Emeritus", "Adjunct", "Cooperating"};
 };
 
-#endif // JSONINTERFACE_H
+#endif
