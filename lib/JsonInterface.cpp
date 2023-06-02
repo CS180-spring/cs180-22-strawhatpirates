@@ -1,20 +1,136 @@
-#include <iostream>
-#include <fstream>
-#include <algorithm>
-#include <limits>
-#include <string>
-#include <vector>
-#include <cstring>
 #include "../header/JsonInterface.h"
-#include "../lib/Person.cpp"
-#include "../lib/json.hpp"
-
 
 using namespace std;
 using json = nlohmann::json;
 
 JsonInterface::JsonInterface() {
     this->mode = true;
+}
+
+void JsonInterface::writeFileStu(vector<Student> dataStu)
+{
+    ofstream file;
+    file.open("student1.json");
+    file << "{\n\t\"students\": [\n";
+    for (int i = 0; i < dataStu.size(); i++) 
+    {
+        file << "\t\t{\n";
+        file << "\t\t\t\"First Name\": \"" << dataStu[i].getFirstName() << "\",\n";
+        file << "\t\t\t\"Last Name\": \"" << dataStu[i].getLastName() << "\",\n";
+        file << "\t\t\t\"GPA\": \"" << dataStu[i].getGPA() << "\",\n";
+        file << "\t\t\t\"Major\": \"" << dataStu[i].getMajor() << "\",\n";
+        file << "\t\t\t\"SID\": \"" << dataStu[i].getSID() << "\",\n";
+        file << "\t\t\t\"Year\": \"" << dataStu[i].getYearNumber() << "\"\n";
+
+        if(i == dataStu.size() - 1) {
+            file << "\t\t}\n";
+        }
+        else {
+            file << "\t\t},\n";
+        }
+    }
+    file << "\t]\n}";
+    file.close();
+}
+
+void JsonInterface::writeFileProf(vector<Professor> dataProf) {
+
+}
+
+vector<Student> JsonInterface::readFileStu()
+{
+        string fileName;
+        ofstream fileC;
+        vector<Student> info;
+        ifstream fin("student1.json");
+        json data = json::parse(fin);
+
+        int stuSize = data["students"].size();
+
+        for (int i = 0; i < stuSize; ++i) {
+                Student stu (data["students"][i].value("First Name", "not found"), 
+                                data["students"][i].value("Last Name", "not found"),
+                                data["students"][i].value("GPA", "not found"),
+                                data["students"][i].value("Major", "not found"),
+                                data["students"][i].value("SID", "not found"),
+                                data["students"][i].value("Year", "not found"));
+
+                info.push_back(stu);
+        }
+
+        // return stu;
+        return info;
+}
+
+vector<Professor> JsonInterface::readFileProf()
+{
+        string fileName;
+        ofstream fileC;
+        vector<Professor> info;
+        ifstream fin("professor.json");
+        json data = json::parse(fin);
+
+        int profSize = data["professors"].size();
+
+        for (int i = 0; i < profSize; ++i) {
+                Professor prof (data["professors"][i].value("First Name", "not found"), 
+                                data["professors"][i].value("Last Name", "not found"),
+                                data["professors"][i].value("Department", "not found"),
+                                data["professors"][i].value("Rank", "not found"));
+
+                info.push_back(prof);
+        }
+
+        // return stu;
+        return info;
+}
+
+void JsonInterface::uppercaseStrings(string &firstName, string &lastName, string &major) {
+    transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
+    transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
+    transform(major.begin(), major.end(), major.begin(), ::toupper);
+}
+
+void JsonInterface::add() {
+    (mode ? addStudent() : addProfessor());
+}
+
+void JsonInterface::addStudent() {
+    vector<Student> dataStu = readFileStu();
+    string firstName, lastName , GPA, SID, yearNumber, major;
+
+    cin.ignore();
+    // Get input from user for student info
+    cout << "Enter student first name: ";
+    getline(cin, firstName);
+    cout << "Enter student last name: ";
+    getline(cin, lastName);
+    cout << "Enter student GPA: ";
+    getline(cin, GPA);
+    cout << "Enter student major: ";
+    getline(cin, major);
+    cout << "Enter student ID: ";
+    getline(cin, SID);
+    cout << "Enter student year number: ";
+    getline(cin, yearNumber);
+
+    
+    // Create new student object with input values
+    Student newStudent(firstName, lastName, GPA, major, SID, yearNumber);
+    
+    // // Add new student to stuVector
+    dataStu.push_back(newStudent);
+
+    writeFileStu(dataStu);
+    printStudents(dataStu);
+}
+
+void JsonInterface::addProfessor() {
+    
+}
+
+void JsonInterface::sort() {
+    (mode ? sortStudent() : sortProfessor());
 }
 
 void JsonInterface::sortStudent()
@@ -32,6 +148,7 @@ void JsonInterface::sortStudent()
     cout << "Enter your selection: ";
     cin >> choice;
 
+    Student temp;
     int i;
     int j;
 
@@ -98,12 +215,12 @@ void JsonInterface::sortStudent()
                 }
             }
         }
-    }                       
+    }
     writeFileStu(dataStu);
 }
 
-void JsonInterface::updateProfessor() {
-    
+void JsonInterface::sortProfessor() {
+
 }
 
 void JsonInterface::update() {
@@ -191,35 +308,8 @@ void JsonInterface::updateStudent() {
     }
 }
 
-void JsonInterface::addStudent() {
-    vector<Student> dataStu = readFileStu();
-    string firstName, lastName , GPA, SID, yearNumber, major;
-
-    cin.ignore();
-    // Get input from user for student info
-    cout << "Enter student first name: ";
-    getline(cin, firstName);
-    cout << "Enter student last name: ";
-    getline(cin, lastName);
-    cout << "Enter student GPA: ";
-    getline(cin, GPA);
-    cout << "Enter student major: ";
-    getline(cin, major);
-    cout << "Enter student ID: ";
-    getline(cin, SID);
-    cout << "Enter student year number: ";
-    getline(cin, yearNumber);
-    
-    uppercaseStrings(firstName, lastName, major);
-    
-    // Create new student object with input values
-    Student newStudent(firstName, lastName, GPA, major, SID, yearNumber);
-    
-    // // Add new student to stuVector
-    dataStu.push_back(newStudent);
-
-    writeFileStu(dataStu);
-    printStudents();
+void JsonInterface::search() {
+    (mode ? searchStudent() : searchProfessor());
 }
 
 void JsonInterface::searchStudent() {
@@ -234,8 +324,10 @@ void JsonInterface::searchStudent() {
     cout << "3. Search by GPA" << endl;
     cout << "4. Search by SID" << endl;
     cout << "5. Search by Major" << endl;
+    cout << "6. Search by Year" << endl;
 
     cin >> choice;
+    cout << endl;
 
     if (choice == 1) {
         cin.ignore();
@@ -258,11 +350,9 @@ void JsonInterface::searchStudent() {
             } 
         }
 
-        cout << "\nList of students with first name:" << first << endl << endl;
+        cout << "\nList of students with first name: " << first << endl << endl;
         if (firstNames.size() != 0) {
-            for (int i = 0; i < firstNames.size(); ++i) {
-                cout << firstNames[i].getInfo() << endl << endl;
-            }
+            printStudents(firstNames);
         } else {
             cout << "Student not found!" << endl;
         }
@@ -289,11 +379,9 @@ void JsonInterface::searchStudent() {
             } 
         }
 
-        cout << "\nList of students with last name:" << last << endl << endl;
+        cout << "\nList of students with last name: " << last << endl << endl;
         if (lastNames.size() != 0) {
-            for (int i = 0; i < lastNames.size(); ++i) {
-                cout << lastNames[i].getInfo() << endl << endl;
-            }
+            printStudents(lastNames);
         } else {
             cout << "Student not found!" << endl;
         }
@@ -323,7 +411,7 @@ void JsonInterface::searchStudent() {
             vector<Student> GPAs;
 
             for (int i = 0; i < dataStu.size(); ++i) {
-                int gpa = stoi(dataStu[i].getGPA());
+                double gpa = stod(dataStu[i].getGPA());
                 if (bot <= gpa && gpa <= top) {
                     GPAs.push_back(dataStu[i]);
                 }
@@ -331,9 +419,7 @@ void JsonInterface::searchStudent() {
 
             cout << "\nList of students with GPA between " << bot << "-" << top << ":" << endl;
             if (GPAs.size() != 0) {
-                for (int i = 0; i < GPAs.size(); ++i) {
-                    cout << GPAs[i].getInfo() << endl << endl;
-                }
+                printStudents(GPAs);
             } else {
                 cout << "Student not found!" << endl;
             }
@@ -396,9 +482,7 @@ void JsonInterface::searchStudent() {
 
             cout << "\nList of students with GPA:" << GPA << endl << endl;
             if (GPAs.size() != 0) {
-                for (int i = 0; i < GPAs.size(); ++i) {
-                    cout << GPAs[i].getInfo() << endl << endl;
-                }
+                printStudents(GPAs);
             } else {
                 cout << "Student not found!" << endl;
             }
@@ -421,21 +505,144 @@ void JsonInterface::searchStudent() {
             } 
         }
 
-        cout << "\nList of students with SID:" << SID << endl << endl;
+        cout << "\nList of students with SID: " << SID << endl << endl;
         if (SIDs.size() != 0) {
-            for (int i = 0; i < SIDs.size(); ++i) {
-                cout << SIDs[i].getInfo() << endl << endl;
-            }
+            printStudents(SIDs);
         } else {
             cout << "Student not found!" << endl;
         }
     }
+
+    if (choice == 5) {
+        cin.ignore();
+        cout << "Search by Major: " << endl;
+
+        vector<string> majorList{"CS", "CE", "ME", "EE", "CSBA", "BIO", "CHEM", "PHYS", "MATH"};
+        for (int i = 1; i < majorList.size() + 1; ++i) {
+            cout << i << ". " << majorList[i - 1] << endl;
+        }
+
+        string major;
+        getline(cin, major);
+
+        vector<Student> majors;
+
+        for (int i = 0; i < dataStu.size(); ++i) {
+            string m = dataStu[i].getMajor();
+            if (m == majorList[stoi(major) - 1]) {
+                majors.push_back(dataStu[i]);
+            }
+        }
+
+        cout << "\nList of students with major: " << majorList[stoi(major) - 1] << endl << endl;
+        if (majors.size() != 0) {
+            printStudents(majors);
+        } else {
+            cout << "Student not found!" << endl;
+        }
+    }
+
+    if (choice == 6) {
+        cin.ignore();
+        cout << "Search by Year: " << endl;
+
+        string year;
+        getline(cin, year);
+
+        vector<Student> years;
+
+        for (int i = 0; i < dataStu.size(); ++i) {
+            string y = dataStu[i].getYearNumber();
+            if (y == year) {
+                years.push_back(dataStu[i]);
+            }
+        }
+
+        cout << "\nList of students with year number: " << year << endl << endl;
+        if (years.size() != 0) {
+            printStudents(years);
+        } else {
+            cout << "Student not found!" << endl;
+        }
+    }
+
+
 }
 
-void JsonInterface::uppercaseStrings(string &firstName, string &lastName, string &major) {
-    transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
-    transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
-    transform(major.begin(), major.end(), major.begin(), ::toupper);
+void JsonInterface::searchProfessor() {
+    vector<Professor> dataProf = readFileProf();
+    cout << "\nYou have chosen to search for a professor" << endl;
+
+    int choice;
+
+    cout << "1. Search by first name" << endl;
+    cout << "2. Search by last name" << endl;
+    cout << "3. Search by department" << endl;
+    cout << "4. Search by rank" << endl;
+
+    cin >> choice;
+
+    if (choice == 1) {
+        cin.ignore();
+        string first;
+
+        cout << "Search by First Name: ";
+        getline(cin, first);
+
+        string upperFirst;
+        upperFirst = first;
+        transform(upperFirst.begin(), upperFirst.end(), upperFirst.begin(), ::toupper);
+
+        vector<Professor> firstNames;
+
+        for (int i = 0; i < dataProf.size(); ++i) {
+            string firstName = dataProf[i].getFirstName();
+            transform(firstName.begin(), firstName.end(), firstName.begin(), ::toupper);
+            if (firstName == upperFirst) {
+                firstNames.push_back(dataProf[i]);
+            } 
+        }
+
+        cout << "\nList of professors with first name: " << first << endl << endl;
+        if (firstNames.size() != 0) {
+            printProfessors(firstNames);
+        } else {
+            cout << "Professor not found!" << endl;
+        }
+        
+    }
+
+    if (choice == 2) {
+        cin.ignore();
+        string last;
+        cout << "Search by Last Name: ";
+        getline(cin, last);
+
+        string upperLast;
+        upperLast = last;
+        transform(upperLast.begin(), upperLast.end(), upperLast.begin(), ::toupper);
+
+        vector<Professor> lastNames;
+
+        for (int i = 0; i < dataProf.size(); ++i) {
+            string lastName = dataProf[i].getLastName();
+            transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
+            if (lastName == upperLast) {
+                lastNames.push_back(dataProf[i]);
+            } 
+        }
+
+        cout << "\nList of professors with last name: " << last << endl << endl;
+        if (lastNames.size() != 0) {
+            printProfessors(lastNames);
+        } else {
+            cout << "Professor not found!" << endl;
+        }
+    }
+}
+
+void JsonInterface::remove() {
+    (mode ? removeStudent() : removeProfessor());
 }
 
 void JsonInterface::removeStudent()
@@ -446,7 +653,7 @@ void JsonInterface::removeStudent()
 
     cout << "\nYou have chosen to delete a student" << endl;
 
-    printStudents();
+    printStudents(dataStu);
     
     cout << "\nEnter the SID of the student to remove: ";
     cin.ignore();
@@ -471,85 +678,21 @@ void JsonInterface::removeStudent()
     return;
 }
 
-void JsonInterface::writeFileStu(vector<Student> dataStu)
-{
-    ofstream file;
-    file.open("student1.json");
-    file << "{\n\t\"students\": [\n";
-    for (int i = 0; i < dataStu.size(); i++) 
-    {
-        file << "\t\t{\n";
-        file << "\t\t\t\"First Name\": \"" << dataStu[i].getFirstName() << "\",\n";
-        file << "\t\t\t\"Last Name\": \"" << dataStu[i].getLastName() << "\",\n";
-        file << "\t\t\t\"GPA\": \"" << dataStu[i].getGPA() << "\",\n";
-        file << "\t\t\t\"Major\": \"" << dataStu[i].getMajor() << "\",\n";
-        file << "\t\t\t\"SID\": \"" << dataStu[i].getSID() << "\",\n";
-        file << "\t\t\t\"Year\": \"" << dataStu[i].getYearNumber() << "\"\n";
+void JsonInterface::removeProfessor() {
 
-        if(i == dataStu.size() - 1) {
-            file << "\t\t}\n";
-        }
-        else {
-            file << "\t\t},\n";
-        }
-    }
-    file << "\t]\n}";
-    file.close();
 }
 
-vector<Student> JsonInterface::readFileStu()
-{
-        string fileName;
-        ofstream fileC;
-        vector<Student> info;
-        ifstream fin("student1.json");
-        json data = json::parse(fin);
-
-        int stuSize = data["students"].size();
-
-        for (int i = 0; i < stuSize; ++i) {
-                Student stu (data["students"][i].value("First Name", "not found"), 
-                                data["students"][i].value("Last Name", "not found"),
-                                data["students"][i].value("GPA", "not found"),
-                                data["students"][i].value("Major", "not found"),
-                                data["students"][i].value("SID", "not found"),
-                                data["students"][i].value("Year", "not found"));
-
-                info.push_back(stu);
-        }
-
-        // return stu;
-        return info;
+void JsonInterface::print() {
+    vector<Student> dataStu = readFileStu();
+    vector<Professor> dataProf = readFileProf();
+    (mode ? printStudents(dataStu) : printProfessors(dataProf));
 }
 
-vector<Professor> JsonInterface::readFileProf()
-{
-        string fileName;
-        ofstream fileC;
-        vector<Professor> info;
-        ifstream fin("professor.json");
-        json data = json::parse(fin);
-
-        int profSize = data["professors"].size();
-
-        for (int i = 0; i < profSize; ++i) {
-                Professor prof (data["professors"][i].value("First Name", "not found"), 
-                                data["professors"][i].value("Last Name", "not found"),
-                                data["professors"][i].value("Department", "not found"),
-                                data["professors"][i].value("Rank", "not found"));
-
-                info.push_back(prof);
-        }
-
-        // return stu;
-        return info;
-}
-
-void JsonInterface::printStudents() {
+void JsonInterface::printStudents(vector<Student> data) {
 
     //table view of students
     cout << "\n----- Student info -----" << endl;
-    vector<Student> dataStu = readFileStu();
+    vector<Student> dataStu = data;
     cout << setw(5) << left << "No.";
     cout << setw(15) << left << "First Name";
     cout << setw(15) << left << "Last Name";
@@ -570,12 +713,11 @@ void JsonInterface::printStudents() {
         cout << "-------------------------------------------------------------------------------------" << endl;
     }
 }
-
-void JsonInterface::printProfessors() {
+void JsonInterface::printProfessors(vector<Professor> data) {
 
     //table view of professors
     cout << "\n----- Professor info -----" << endl;
-    vector<Professor> dataProf = readFileProf();
+    vector<Professor> dataProf = data;
     cout << setw(5) << left << "No.";
     cout << setw(15) << left << "First Name";
     cout << setw(15) << left << "Last Name";

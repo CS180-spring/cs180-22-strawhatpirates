@@ -21,8 +21,7 @@ int main()
         else if (a == 2)
             jsonInterface.removeStudent();
         else if (a == 3)
-            //jsonInterface.editStudent();
-            continue;
+            jsonInterface.update();
         else if (a == 4)
             jsonInterface.sortStudent();
         else if (a == 5)
