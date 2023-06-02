@@ -1022,6 +1022,13 @@ void JsonInterface::updateProfessor() {
             dataProf[index].changeDepartment(department);
             break;
 
+        case 4:
+            cin.ignore();
+            cout << "Enter updated Rank: ";
+            getline(cin, rank);
+            dataProf[index].changeRank(rank);
+            break;
+
 }
 
 void JsonInterface::print() {
