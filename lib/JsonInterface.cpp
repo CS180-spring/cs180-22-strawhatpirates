@@ -6,7 +6,6 @@ using json = nlohmann::json;
 JsonInterface::JsonInterface() {
     dataStu = readFileStu();
     dataProf = readFileProf();
-    // printStudents(dataStu);
     this->mode = true;
 }
 
@@ -121,7 +120,6 @@ void JsonInterface::add() {
 }
 
 void JsonInterface::addStudent() {
-    // vector<Student> dataStu = readFileStu();
     string firstName, lastName , GPA, SID, yearNumber, major;
 
     Student stu;
@@ -206,7 +204,6 @@ void JsonInterface::addStudent() {
 }
 
 void JsonInterface::addProfessor() {
-    // vector<Professor> dataProf = readFileProf();
     string firstName, lastName , department, rank, EID;
     Professor prof;
     
@@ -287,7 +284,6 @@ void JsonInterface::sort() {
 
 void JsonInterface::sortStudent()
 {
-    // vector<Student> dataStu = readFileStu();
     cout << "\nYou have chosen to sort students" << endl;
 
     int choice;
@@ -373,7 +369,6 @@ void JsonInterface::sortStudent()
 
 void JsonInterface::sortProfessor()
 {
-    // vector<Professor> dataProf = readFileProf();
     cout << "\nYou have chosen to sort professors" << endl;
 
     int choice;
@@ -463,8 +458,6 @@ void JsonInterface::search() {
 }
 
 void JsonInterface::searchStudent() {
-
-    // vector<Student> dataStu = readFileStu();
     cout << "\nYou have chosen to search for a student" << endl;
 
     int choice;
@@ -721,7 +714,6 @@ void JsonInterface::searchStudent() {
 }
 
 void JsonInterface::searchProfessor() {
-    // vector<Professor> dataProf = readFileProf();
     cout << "\nYou have chosen to search for a professor" << endl;
 
     int choice;
@@ -860,7 +852,6 @@ void JsonInterface::removeStudent()
 {
     bool found = false;
     string SID;
-    // vector<Student> dataStu = readFileStu();
 
     cout << "\nYou have chosen to delete a student" << endl;
 
@@ -898,7 +889,6 @@ void JsonInterface::update() {
 }
 
 void JsonInterface::updateStudent() {
-    // vector<Student> dataStu = readFileStu();
     string SID;
     
     cout << "Enter the SID of the student you want to update: ";
@@ -983,8 +973,6 @@ void JsonInterface::updateProfessor() {
 }
 
 void JsonInterface::print() {
-    // vector<Student> dataStu = readFileStu();
-    // vector<Professor> dataProf = readFileProf();
     (mode ? printStudents(dataStu) : printProfessors(dataProf));
 }
 
