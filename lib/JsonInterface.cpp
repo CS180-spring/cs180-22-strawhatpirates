@@ -483,6 +483,29 @@ void JsonInterface::searchStudent() {
     }
 
 
+    if (choice == 6) {
+        cin.ignore();
+        cout << "Search by Year: " << endl;
+
+        string year;
+        getline(cin, year);
+
+        vector<Student> years;
+
+        for (int i = 0; i < dataStu.size(); ++i) {
+            string y = dataStu[i].getYearNumber();
+            if (y == year) {
+                years.push_back(dataStu[i]);
+            }
+        }
+
+        cout << "\nList of students with year number: " << year << endl;
+        if (years.size() != 0) {
+            printStudents(years);
+        } else {
+            cout << "Student not found!" << endl;
+        }
+    }
 }
 
 void JsonInterface::searchProfessor() {
@@ -746,6 +769,7 @@ void JsonInterface::updateStudent() {
         cout << "Student with SID " << SID << " not found." << endl;
     }
 }
+
 
 void JsonInterface::print() {
     vector<Student> dataStu = readFileStu();
