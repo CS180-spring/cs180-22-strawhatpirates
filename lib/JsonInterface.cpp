@@ -469,6 +469,34 @@ void JsonInterface::searchProfessor() {
         }
         
     }
+
+    if (choice == 2) {
+        cin.ignore();
+        string last;
+        cout << "Search by Last Name: ";
+        getline(cin, last);
+
+        string upperLast;
+        upperLast = last;
+        transform(upperLast.begin(), upperLast.end(), upperLast.begin(), ::toupper);
+
+        vector<Professor> lastNames;
+
+        for (int i = 0; i < dataProf.size(); ++i) {
+            string lastName = dataProf[i].getLastName();
+            transform(lastName.begin(), lastName.end(), lastName.begin(), ::toupper);
+            if (lastName == upperLast) {
+                lastNames.push_back(dataProf[i]);
+            } 
+        }
+
+        cout << "\nList of professors with last name: " << last << endl << endl;
+        if (lastNames.size() != 0) {
+            printProfessors(lastNames);
+        } else {
+            cout << "Professor not found!" << endl;
+        }
+    }
 }
 
 void JsonInterface::remove() {
