@@ -14,29 +14,29 @@ int main()
     JsonInterface jsonInterface;
 
     do {
-        int a = menu();
+        int a = menu(jsonInterface.getMode());
 
         if (a == 1)
-            jsonInterface.addStudent();
+            jsonInterface.add();
         else if (a == 2)
-            jsonInterface.removeStudent();
+            jsonInterface.remove();
+            // jsonInterface.removeStudent();
         else if (a == 3)
-            //jsonInterface.editStudent();
-            continue;
+            jsonInterface.update();
         else if (a == 4)
-            jsonInterface.sortStudent();
+            jsonInterface.sort();
+            // jsonInterface.sortStudent();
         else if (a == 5)
-            jsonInterface.searchStudent();
+            jsonInterface.search();
+            // jsonInterface.searchStudent();
         else if (a == 5)
             continue;
         else if (a == 6)
-            continue;
+            jsonInterface.changeMode();
         else if (a == 7) {
-            cout << "----- Student info -----" << endl;
-            jsonInterface.printStudents(); 
-
-            cout << "----- Professor info -----" << endl;
-            jsonInterface.printProfessors();
+            jsonInterface.print();
+            // jsonInterface.printStudents(); 
+            // jsonInterface.printProfessors();
         }
         else if (a == 8)
             exit(0);

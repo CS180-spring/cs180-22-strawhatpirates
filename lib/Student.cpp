@@ -113,9 +113,9 @@ bool Student::majorIsValid(string major) {
 bool Student::infoIsValid(string firstName, string lastName, string GPA, string major, string SID, string yearNumber) {
     return nameIsValid(firstName, lastName)
         && GPAIsValid(GPA) 
-        && SIDIsValid(major) 
-        && yearNumberIsValid(SID)
-        && majorIsValid(yearNumber);
+        && SIDIsValid(SID) 
+        && yearNumberIsValid(yearNumber)
+        && majorIsValid(major);
 }
 
 string Student::getInfo() {

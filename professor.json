@@ -1,15 +1,704 @@
 {
     "professors": [
-    {
-        "First Name" : "Rick",
-	    "Last Name" : "Chungus",
-	    "Department": "Mathematics",
-	    "Rank" : "Researcher"
-    },
-    {
-        "First Name" : "Morty",
-        "Last Name" : "Chungus",
-        "Department": "Mathematics",
-        "Rank" : "Researcher"
-    }
-]}
+        {
+            "First Name": "AMBER",
+            "Last Name": "RILEY",
+            "Department": "BIOL",
+            "Rank": "Tenure-Track",
+            "EID": "973861657"
+        },
+        {
+            "First Name": "GEORGE",
+            "Last Name": "HERNANDEZ",
+            "Department": "PSY",
+            "Rank": "Adjunct",
+            "EID": "973481116"
+        },
+        {
+            "First Name": "HAYLEY",
+            "Last Name": "WILSON",
+            "Department": "ART",
+            "Rank": "Emeritus",
+            "EID": "973457684"
+        },
+        {
+            "First Name": "EMILY",
+            "Last Name": "PETERSON",
+            "Department": "PSY",
+            "Rank": "Adjunct",
+            "EID": "973068734"
+        },
+        {
+            "First Name": "ASHLEY",
+            "Last Name": "PRINCE",
+            "Department": "HIST",
+            "Rank": "Cooperating",
+            "EID": "973150029"
+        },
+        {
+            "First Name": "DANIELLE",
+            "Last Name": "WHITE",
+            "Department": "PHIL",
+            "Rank": "Adjunct",
+            "EID": "973056153"
+        },
+        {
+            "First Name": "ROBERT",
+            "Last Name": "NUNEZ",
+            "Department": "POLS",
+            "Rank": "Tenure-Track",
+            "EID": "973158142"
+        },
+        {
+            "First Name": "MATTHEW",
+            "Last Name": "CARR",
+            "Department": "BIOL",
+            "Rank": "Tenure-Track",
+            "EID": "973412727"
+        },
+        {
+            "First Name": "JASMINE",
+            "Last Name": "JACOBS",
+            "Department": "CEN",
+            "Rank": "Emeritus",
+            "EID": "973848049"
+        },
+        {
+            "First Name": "JUSTIN",
+            "Last Name": "MCGEE",
+            "Department": "CS",
+            "Rank": "Tenure-Track",
+            "EID": "973682397"
+        },
+        {
+            "First Name": "SAMANTHA",
+            "Last Name": "TURNER",
+            "Department": "ART",
+            "Rank": "Adjunct",
+            "EID": "973609499"
+        },
+        {
+            "First Name": "SUZANNE",
+            "Last Name": "FARMER",
+            "Department": "HIST",
+            "Rank": "Tenure-Track",
+            "EID": "973044707"
+        },
+        {
+            "First Name": "JAMIE",
+            "Last Name": "BREWER",
+            "Department": "HIST",
+            "Rank": "Tenure-Track",
+            "EID": "973086463"
+        },
+        {
+            "First Name": "TAMARA",
+            "Last Name": "ADAMS",
+            "Department": "PHYS",
+            "Rank": "Adjunct",
+            "EID": "973561591"
+        },
+        {
+            "First Name": "TARA",
+            "Last Name": "LANE",
+            "Department": "CEN",
+            "Rank": "Emeritus",
+            "EID": "973626932"
+        },
+        {
+            "First Name": "DENISE",
+            "Last Name": "SANFORD",
+            "Department": "ENGL",
+            "Rank": "Adjunct",
+            "EID": "973420783"
+        },
+        {
+            "First Name": "TAYLOR",
+            "Last Name": "GREEN",
+            "Department": "PHYS",
+            "Rank": "Cooperating",
+            "EID": "973496641"
+        },
+        {
+            "First Name": "DAVID",
+            "Last Name": "MALONE",
+            "Department": "EDU",
+            "Rank": "Adjunct",
+            "EID": "973266082"
+        },
+        {
+            "First Name": "JOSHUA",
+            "Last Name": "SOLOMON",
+            "Department": "BIOL",
+            "Rank": "Emeritus",
+            "EID": "973427150"
+        },
+        {
+            "First Name": "AMY",
+            "Last Name": "LARA",
+            "Department": "EDU",
+            "Rank": "Adjunct",
+            "EID": "973600846"
+        },
+        {
+            "First Name": "DIANE",
+            "Last Name": "HORTON",
+            "Department": "ENGL",
+            "Rank": "Adjunct",
+            "EID": "973546016"
+        },
+        {
+            "First Name": "RICHARD",
+            "Last Name": "HALL",
+            "Department": "MATH",
+            "Rank": "Cooperating",
+            "EID": "973922051"
+        },
+        {
+            "First Name": "LESLIE",
+            "Last Name": "GOMEZ",
+            "Department": "BSNS",
+            "Rank": "Cooperating",
+            "EID": "973623232"
+        },
+        {
+            "First Name": "MARY",
+            "Last Name": "FORD",
+            "Department": "BIOL",
+            "Rank": "Adjunct",
+            "EID": "973006458"
+        },
+        {
+            "First Name": "RODNEY",
+            "Last Name": "MORAN",
+            "Department": "PHIL",
+            "Rank": "Tenure-Track",
+            "EID": "973866186"
+        },
+        {
+            "First Name": "CASSANDRA",
+            "Last Name": "MILLER",
+            "Department": "CS",
+            "Rank": "Adjunct",
+            "EID": "973011311"
+        },
+        {
+            "First Name": "FRANK",
+            "Last Name": "MOLINA",
+            "Department": "EDU",
+            "Rank": "Emeritus",
+            "EID": "973408986"
+        },
+        {
+            "First Name": "AMANDA",
+            "Last Name": "ROSARIO",
+            "Department": "PHIL",
+            "Rank": "Cooperating",
+            "EID": "973566382"
+        },
+        {
+            "First Name": "JOHN",
+            "Last Name": "HALL",
+            "Department": "HIST",
+            "Rank": "Cooperating",
+            "EID": "973250862"
+        },
+        {
+            "First Name": "KRISTIN",
+            "Last Name": "GILES",
+            "Department": "MUS",
+            "Rank": "Tenure-Track",
+            "EID": "973886464"
+        },
+        {
+            "First Name": "JAMIE",
+            "Last Name": "HERNANDEZ",
+            "Department": "HIST",
+            "Rank": "Tenure-Track",
+            "EID": "973222501"
+        },
+        {
+            "First Name": "RENEE",
+            "Last Name": "PEREZ",
+            "Department": "PHYS",
+            "Rank": "Emeritus",
+            "EID": "973464795"
+        },
+        {
+            "First Name": "MARY",
+            "Last Name": "REYES",
+            "Department": "POLS",
+            "Rank": "Cooperating",
+            "EID": "973485147"
+        },
+        {
+            "First Name": "MICHAEL",
+            "Last Name": "DURAN",
+            "Department": "BSNS",
+            "Rank": "Emeritus",
+            "EID": "973846204"
+        },
+        {
+            "First Name": "ROBERT",
+            "Last Name": "GIBBS",
+            "Department": "CS",
+            "Rank": "Emeritus",
+            "EID": "973547681"
+        },
+        {
+            "First Name": "CHARLES",
+            "Last Name": "PHAM",
+            "Department": "POLS",
+            "Rank": "Emeritus",
+            "EID": "973613454"
+        },
+        {
+            "First Name": "ANDREA",
+            "Last Name": "CLARK",
+            "Department": "EDU",
+            "Rank": "Cooperating",
+            "EID": "973533958"
+        },
+        {
+            "First Name": "EARL",
+            "Last Name": "MOODY",
+            "Department": "PSY",
+            "Rank": "Emeritus",
+            "EID": "973803533"
+        },
+        {
+            "First Name": "MAX",
+            "Last Name": "SANDERS",
+            "Department": "POLS",
+            "Rank": "Adjunct",
+            "EID": "973895402"
+        },
+        {
+            "First Name": "SCOTT",
+            "Last Name": "GARCIA",
+            "Department": "ART",
+            "Rank": "Tenure-Track",
+            "EID": "973075760"
+        },
+        {
+            "First Name": "ANDREW",
+            "Last Name": "DELACRUZ",
+            "Department": "EDU",
+            "Rank": "Cooperating",
+            "EID": "973023379"
+        },
+        {
+            "First Name": "SARAH",
+            "Last Name": "PHILLIPS",
+            "Department": "MUS",
+            "Rank": "Cooperating",
+            "EID": "973764500"
+        },
+        {
+            "First Name": "ZACHARY",
+            "Last Name": "LUNA",
+            "Department": "PHIL",
+            "Rank": "Adjunct",
+            "EID": "973013334"
+        },
+        {
+            "First Name": "RYAN",
+            "Last Name": "ROBBINS",
+            "Department": "ART",
+            "Rank": "Emeritus",
+            "EID": "973662947"
+        },
+        {
+            "First Name": "BETHANY",
+            "Last Name": "SCOTT",
+            "Department": "BIOL",
+            "Rank": "Emeritus",
+            "EID": "973526886"
+        },
+        {
+            "First Name": "BRIANNA",
+            "Last Name": "TAYLOR",
+            "Department": "HIST",
+            "Rank": "Adjunct",
+            "EID": "973283611"
+        },
+        {
+            "First Name": "CHARLES",
+            "Last Name": "JACKSON",
+            "Department": "CHEM",
+            "Rank": "Cooperating",
+            "EID": "973201462"
+        },
+        {
+            "First Name": "JOSHUA",
+            "Last Name": "HERNANDEZ",
+            "Department": "CEN",
+            "Rank": "Cooperating",
+            "EID": "973208220"
+        },
+        {
+            "First Name": "AARON",
+            "Last Name": "BROWN",
+            "Department": "MATH",
+            "Rank": "Emeritus",
+            "EID": "973145898"
+        },
+        {
+            "First Name": "KIMBERLY",
+            "Last Name": "KELLY",
+            "Department": "HIST",
+            "Rank": "Emeritus",
+            "EID": "973457942"
+        },
+        {
+            "First Name": "CHRISTOPHER",
+            "Last Name": "HARTMAN",
+            "Department": "PHYS",
+            "Rank": "Tenure-Track",
+            "EID": "973257724"
+        },
+        {
+            "First Name": "JOYCE",
+            "Last Name": "ADAMS",
+            "Department": "PSY",
+            "Rank": "Adjunct",
+            "EID": "973995080"
+        },
+        {
+            "First Name": "MAUREEN",
+            "Last Name": "RAMIREZ",
+            "Department": "MUS",
+            "Rank": "Cooperating",
+            "EID": "973455520"
+        },
+        {
+            "First Name": "SUZANNE",
+            "Last Name": "ROBERTSON",
+            "Department": "CHEM",
+            "Rank": "Emeritus",
+            "EID": "973351163"
+        },
+        {
+            "First Name": "SEAN",
+            "Last Name": "CLARK",
+            "Department": "POLS",
+            "Rank": "Cooperating",
+            "EID": "973867075"
+        },
+        {
+            "First Name": "ROBERT",
+            "Last Name": "WILSON",
+            "Department": "BSNS",
+            "Rank": "Adjunct",
+            "EID": "973562176"
+        },
+        {
+            "First Name": "CAMERON",
+            "Last Name": "SALAZAR",
+            "Department": "BIOL",
+            "Rank": "Adjunct",
+            "EID": "973251782"
+        },
+        {
+            "First Name": "MELANIE",
+            "Last Name": "WASHINGTON",
+            "Department": "BSNS",
+            "Rank": "Tenure-Track",
+            "EID": "973708753"
+        },
+        {
+            "First Name": "DAVID",
+            "Last Name": "WRIGHT",
+            "Department": "MATH",
+            "Rank": "Adjunct",
+            "EID": "973613125"
+        },
+        {
+            "First Name": "ELIZABETH",
+            "Last Name": "SIMMONS",
+            "Department": "PHIL",
+            "Rank": "Tenure-Track",
+            "EID": "973088498"
+        },
+        {
+            "First Name": "PHILIP",
+            "Last Name": "REYNOLDS",
+            "Department": "POLS",
+            "Rank": "Tenure-Track",
+            "EID": "973185433"
+        },
+        {
+            "First Name": "MICHAEL",
+            "Last Name": "ALLEN",
+            "Department": "BIOL",
+            "Rank": "Tenure-Track",
+            "EID": "973172725"
+        },
+        {
+            "First Name": "PATRICIA",
+            "Last Name": "HALL",
+            "Department": "EDU",
+            "Rank": "Adjunct",
+            "EID": "973385519"
+        },
+        {
+            "First Name": "TODD",
+            "Last Name": "WRIGHT",
+            "Department": "CHEM",
+            "Rank": "Emeritus",
+            "EID": "973214572"
+        },
+        {
+            "First Name": "RENEE",
+            "Last Name": "JACKSON",
+            "Department": "MUS",
+            "Rank": "Adjunct",
+            "EID": "973401373"
+        },
+        {
+            "First Name": "KEVIN",
+            "Last Name": "HARVEY",
+            "Department": "CS",
+            "Rank": "Cooperating",
+            "EID": "973701079"
+        },
+        {
+            "First Name": "BLAKE",
+            "Last Name": "ANDREWS",
+            "Department": "PSY",
+            "Rank": "Adjunct",
+            "EID": "973224675"
+        },
+        {
+            "First Name": "JULIE",
+            "Last Name": "HOLMES",
+            "Department": "PHYS",
+            "Rank": "Cooperating",
+            "EID": "973343762"
+        },
+        {
+            "First Name": "MICHAEL",
+            "Last Name": "REYNOLDS",
+            "Department": "ENGL",
+            "Rank": "Emeritus",
+            "EID": "973042412"
+        },
+        {
+            "First Name": "STEPHANIE",
+            "Last Name": "JOHNSON",
+            "Department": "MUS",
+            "Rank": "Tenure-Track",
+            "EID": "973082883"
+        },
+        {
+            "First Name": "JOHN",
+            "Last Name": "WARREN",
+            "Department": "CHEM",
+            "Rank": "Adjunct",
+            "EID": "973858738"
+        },
+        {
+            "First Name": "MARK",
+            "Last Name": "HOLT",
+            "Department": "EDU",
+            "Rank": "Emeritus",
+            "EID": "973475614"
+        },
+        {
+            "First Name": "ANN",
+            "Last Name": "HINTON",
+            "Department": "PSY",
+            "Rank": "Emeritus",
+            "EID": "973666451"
+        },
+        {
+            "First Name": "BENJAMIN",
+            "Last Name": "WALSH",
+            "Department": "PSY",
+            "Rank": "Adjunct",
+            "EID": "973958665"
+        },
+        {
+            "First Name": "THOMAS",
+            "Last Name": "WALKER",
+            "Department": "CHEM",
+            "Rank": "Tenure-Track",
+            "EID": "973302558"
+        },
+        {
+            "First Name": "CLINTON",
+            "Last Name": "MARTINEZ",
+            "Department": "ENGL",
+            "Rank": "Adjunct",
+            "EID": "973971847"
+        },
+        {
+            "First Name": "ALYSSA",
+            "Last Name": "HUMPHREY",
+            "Department": "BSNS",
+            "Rank": "Emeritus",
+            "EID": "973156948"
+        },
+        {
+            "First Name": "DENNIS",
+            "Last Name": "GRIFFITH",
+            "Department": "HIST",
+            "Rank": "Tenure-Track",
+            "EID": "973168706"
+        },
+        {
+            "First Name": "ANTHONY",
+            "Last Name": "TAYLOR",
+            "Department": "PHIL",
+            "Rank": "Emeritus",
+            "EID": "973108702"
+        },
+        {
+            "First Name": "PATRICIA",
+            "Last Name": "LEE",
+            "Department": "PSY",
+            "Rank": "Adjunct",
+            "EID": "973190853"
+        },
+        {
+            "First Name": "ERIC",
+            "Last Name": "HOLDEN",
+            "Department": "ART",
+            "Rank": "Tenure-Track",
+            "EID": "973744490"
+        },
+        {
+            "First Name": "RUSSELL",
+            "Last Name": "ROBERTS",
+            "Department": "BSNS",
+            "Rank": "Cooperating",
+            "EID": "973804785"
+        },
+        {
+            "First Name": "JESSICA",
+            "Last Name": "PATEL",
+            "Department": "PSY",
+            "Rank": "Emeritus",
+            "EID": "973281647"
+        },
+        {
+            "First Name": "TRACI",
+            "Last Name": "FULLER",
+            "Department": "BSNS",
+            "Rank": "Adjunct",
+            "EID": "973282912"
+        },
+        {
+            "First Name": "LAURA",
+            "Last Name": "BRYAN",
+            "Department": "PHYS",
+            "Rank": "Cooperating",
+            "EID": "973320096"
+        },
+        {
+            "First Name": "LARRY",
+            "Last Name": "WATKINS",
+            "Department": "BIOL",
+            "Rank": "Emeritus",
+            "EID": "973722225"
+        },
+        {
+            "First Name": "LAURA",
+            "Last Name": "DAVIS",
+            "Department": "PSY",
+            "Rank": "Emeritus",
+            "EID": "973858676"
+        },
+        {
+            "First Name": "LORI",
+            "Last Name": "VALDEZ",
+            "Department": "CHEM",
+            "Rank": "Adjunct",
+            "EID": "973273850"
+        },
+        {
+            "First Name": "KATHLEEN",
+            "Last Name": "DAVIS",
+            "Department": "MATH",
+            "Rank": "Emeritus",
+            "EID": "973220578"
+        },
+        {
+            "First Name": "AUSTIN",
+            "Last Name": "CANNON",
+            "Department": "CS",
+            "Rank": "Adjunct",
+            "EID": "973995433"
+        },
+        {
+            "First Name": "JAMES",
+            "Last Name": "KING",
+            "Department": "BIOL",
+            "Rank": "Emeritus",
+            "EID": "973979287"
+        },
+        {
+            "First Name": "DAVID",
+            "Last Name": "CURRY",
+            "Department": "ART",
+            "Rank": "Cooperating",
+            "EID": "973265719"
+        },
+        {
+            "First Name": "JOSHUA",
+            "Last Name": "FISCHER",
+            "Department": "PSY",
+            "Rank": "Tenure-Track",
+            "EID": "973646375"
+        },
+        {
+            "First Name": "JOHN",
+            "Last Name": "BURNS",
+            "Department": "EDU",
+            "Rank": "Cooperating",
+            "EID": "973751456"
+        },
+        {
+            "First Name": "BENJAMIN",
+            "Last Name": "ONEILL",
+            "Department": "EDU",
+            "Rank": "Cooperating",
+            "EID": "973823190"
+        },
+        {
+            "First Name": "CHRISTINE",
+            "Last Name": "AUSTIN",
+            "Department": "ENGL",
+            "Rank": "Adjunct",
+            "EID": "973148567"
+        },
+        {
+            "First Name": "ZACHARY",
+            "Last Name": "BUTLER",
+            "Department": "PSY",
+            "Rank": "Adjunct",
+            "EID": "973390392"
+        },
+        {
+            "First Name": "JASMINE",
+            "Last Name": "PATTERSON",
+            "Department": "BSNS",
+            "Rank": "Tenure-Track",
+            "EID": "973991436"
+        },
+        {
+            "First Name": "MARK",
+            "Last Name": "SCHROEDER",
+            "Department": "CHEM",
+            "Rank": "Cooperating",
+            "EID": "973429077"
+        },
+        {
+            "First Name": "WILLIAM",
+            "Last Name": "BYRD",
+            "Department": "MATH",
+            "Rank": "Adjunct",
+            "EID": "973654944"
+        }
+    ]
+}
